@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: civicaid-api
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      python scripts/build_index.py
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://civicaid.vercel.app
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+      - key: TESSERACT_PATH
+        value: /usr/bin/tesseract

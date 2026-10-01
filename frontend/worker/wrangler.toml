@@ -1,0 +1,11 @@
+name = "civicaid-proxy"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Set ANTHROPIC_API_KEY as a secret:
+# wrangler secret put ANTHROPIC_API_KEY
+
+[[routes]]
+pattern = "civicaid-proxy.your-subdomain.workers.dev/api/chat"
+zone_name = "workers.dev"

@@ -1,0 +1,64 @@
+{
+  "project": "CivicAid — Village Legal & Government Assistance Platform",
+  "version": "2.0",
+  "stage": "Stage 1 — Complete Land Issues (8 Categories)",
+  "last_updated": "2026-09-30",
+  "knowledge_base": {
+    "total_chunks": 59,
+    "categories": 8,
+    "category_breakdown": {
+      "patta_transfer": 10,
+      "land_records": 6,
+      "land_disputes": 8,
+      "land_classification": 5,
+      "inheritance": 6,
+      "land_acquisition": 3,
+      "land_tax": 3,
+      "registration": 6,
+      "community_certificate": 2,
+      "income_certificate": 1,
+      "fir_police": 2,
+      "court_notice": 1,
+      "mnrega": 2,
+      "legal_aid": 1,
+      "ration_card": 1,
+      "womens_rights": 1,
+      "pension": 1
+    },
+    "verification_status": "All 59 chunks default to verified=false as of 2026-09-30. None have yet been checked against primary sources (Acts, TN Revenue Standing Orders, Government Orders). See scripts/add_verification_fields.py.",
+    "note": "Run GET /api/eval/coverage for live accurate counts"
+  },
+  "evaluation": {
+    "benchmark_file": "benchmark_150q.json",
+    "total_questions": 150,
+    "categories": 8,
+    "difficulty_split": {
+      "easy": 45,
+      "medium": 65,
+      "hard": 40
+    },
+    "caveat": "These 150 questions were authored alongside the knowledge base itself, not independently by a legal professional. They measure retrieval consistency, not legal accuracy."
+  },
+  "model": {
+    "embedding": "paraphrase-multilingual-MiniLM-L12-v2",
+    "llm_primary": "Groq (model set via GROQ_MODEL in .env; see app/services/ai_service.py MODEL_CANDIDATES)",
+    "retrieval": "Hybrid BM25 + Dense (FAISS IndexFlatIP) via Reciprocal Rank Fusion",
+    "rrf_reference": "Cormack et al., SIGIR 2009",
+    "rrf_dense_weight": 0.7,
+    "rrf_bm25_weight": 0.3,
+    "confidence_threshold": 0.35,
+    "top_k": 5
+  },
+  "pages": {
+    "home": "Landing page with bilingual hero, feature grid, how-it-works",
+    "chat": "RAG-augmented AI chat with voice input, offline queue, verified/unverified source labels, confidence score",
+    "upload": "Document OCR analysis with real extracted text, document vault, deadline reminders",
+    "procedures": "Step-by-step offline government service guides with progress tracking",
+    "about": "Mission, corruption reporting, feedback form"
+  },
+  "languages": ["english", "tamil"],
+  "voice_input": "Web Speech API — ta-IN locale, best on Android Chrome",
+  "offline_capability": "Procedures page and local chat fallbacks work without internet",
+  "target_users": "Rural Tamil Nadu village residents",
+  "helpline": "1516 (Tamil Nadu State Legal Services Authority, toll-free, 24/7)"
+}

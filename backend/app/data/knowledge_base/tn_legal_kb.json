@@ -1,0 +1,1104 @@
+[
+  {
+    "id": "patta_001",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — Eligibility and Overview",
+    "content": "Patta (Record of Rights) mutation or transfer in Tamil Nadu is governed by the Tamil Nadu Land Reforms (Record of Rights) Act and Tamil Nadu Revenue Standing Orders (TNRSO). A Patta transfer is mandatory when ownership changes due to: (1) Purchase through registered sale deed, (2) Inheritance after death of owner, (3) Gift deed (settlement deed), (4) Court decree or partition. The application must be filed within 90 days of the triggering event. Patta mutation is free of cost — no government fee is required.",
+    "source": "TN Revenue Standing Orders §4.1–4.3",
+    "keywords": [
+      "patta",
+      "mutation",
+      "transfer",
+      "ownership",
+      "record of rights",
+      "TNRSO"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_002",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — Required Documents",
+    "content": "Documents required for Patta transfer in Tamil Nadu: (1) Application in Form A (available free at Taluk office or e-Sevai centre), (2) Registered sale deed or death certificate + legal heir certificate (for inheritance), (3) Copy of existing Patta, (4) Encumbrance Certificate (EC) — must be obtained within 30 days of application, (5) Aadhaar card of applicant, (6) Ration card, (7) Survey sketch or FMB (Field Measurement Book) copy if boundary dispute exists, (8) Affidavit of possession (notarised, ₹20 stamp paper) for inherited land. For inheritance cases: additionally submit death certificate of previous owner and Legal Heir Certificate from Taluk office.",
+    "source": "TN Revenue Standing Orders §4.5; Revenue Dept Circular 2021",
+    "keywords": [
+      "patta documents",
+      "form A",
+      "EC",
+      "encumbrance certificate",
+      "legal heir",
+      "sale deed"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_003",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — Step-by-Step Process",
+    "content": "Step-by-step Patta transfer process in Tamil Nadu: Step 1 — Obtain Encumbrance Certificate (EC) from Sub-Registrar office for the last 30 years. Cost: ₹200 approx. Takes 1–2 days. Step 2 — Fill Form A at your Taluk office (free). Step 3 — Submit Form A with all documents at the Taluk office Patta Section (Counter 3 typically). Get an acknowledgement receipt — this is your tracking number. Step 4 — Field inspection: A Village Administrative Officer (VAO) will visit your land within 7–15 working days. Be present. Step 5 — 30-day public notice period. No fee. Any objections must be filed during this period. Step 6 — If no objections, the Tahsildar approves and issues the new Patta. Step 7 — Collect new Patta from Taluk office. Update Chitta and Adangal with VAO. Total timeline: 30–45 working days.",
+    "source": "TN Revenue Standing Orders §4.6–4.12; e-District TN SOP 2021",
+    "keywords": [
+      "patta process",
+      "VAO inspection",
+      "Tahsildar",
+      "taluk office",
+      "30 days",
+      "objection period"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_004",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — After Death (Inheritance)",
+    "content": "For Patta transfer after death of owner in Tamil Nadu: Additional documents needed beyond standard set: (1) Death certificate of deceased owner — obtain from Panchayat office (₹30) or e-Sevai centre, (2) Legal Heir Certificate — apply at Taluk office, takes 15–30 days, submit with: ration card showing family members, affidavit on ₹20 stamp paper declaring all legal heirs, photos of all heirs. (3) If multiple legal heirs exist, a partition deed or No Objection Certificate (NOC) from all other heirs (notarised) is required. If any heir is a minor, court approval may be needed. Key law: Hindu Succession Act 1956 — daughters have equal inheritance rights as sons.",
+    "source": "Hindu Succession Act 1956 §6; TN Revenue Standing Orders §4.8; Legal Heir Certificate SOP",
+    "keywords": [
+      "patta death",
+      "inheritance",
+      "legal heir certificate",
+      "death certificate",
+      "partition",
+      "succession"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_005",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — Rejection and Appeal",
+    "content": "If Patta transfer is rejected in Tamil Nadu: Common rejection reasons: (1) EC submitted was older than 30 days at time of filing, (2) Documents incomplete or inconsistent, (3) Objection filed during 30-day notice period, (4) Encumbrance (loan/mortgage) on the property. Appeal process: File appeal to the Revenue Divisional Officer (RDO) within 30 days of rejection. Appeal must include: copy of rejection order, your original application, supporting documents. Second appeal to District Collector within 60 days. For mortgage encumbrances: obtain No Dues Certificate from lender bank first. Legal aid: call Tamil Nadu State Legal Services Authority (TNSLSA) helpline 1516 — free legal representation available.",
+    "source": "TN Revenue Standing Orders §4.15; Tamil Nadu Revenue Appeals Rules; Legal Aid Act 1987",
+    "keywords": [
+      "patta rejection",
+      "appeal",
+      "RDO",
+      "revenue divisional officer",
+      "encumbrance",
+      "mortgage"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_006",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — Partition Among Multiple Heirs",
+    "content": "When land is inherited by multiple legal heirs in Tamil Nadu, partition of Patta is required: Option 1 — Mutual Agreement Partition: All heirs sign a registered partition deed at Sub-Registrar office. Stamp duty: 1% of property value (minimum ₹1000, maximum ₹40,000). After registration, apply separately for individual Pattas at Taluk office for each share. Option 2 — Court Partition: If heirs disagree, any one heir can file a Partition Suit in Civil Court (District Munsiff Court). Court will appoint a Commissioner to survey and divide land. This takes 1–3 years. Cost: court fee based on land value. During partition suit: no heir can sell or mortgage the land without court permission. Interim injunction can be obtained if one heir attempts to sell. Legal aid available via 1516 for court partition suits for eligible applicants.",
+    "source": "Partition Act 1893; Hindu Succession Act 1956 §6; CPC Order XX Rule 18; TN Stamp Act",
+    "keywords": [
+      "partition",
+      "multiple heirs",
+      "partition deed",
+      "partition suit",
+      "civil court",
+      "joint ownership",
+      "divide land"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_007",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — Purchase via Sale Deed",
+    "content": "Patta transfer after land purchase in Tamil Nadu: Step 1 — Ensure the sale deed is registered at the Sub-Registrar office in whose jurisdiction the land falls. Stamp duty: 7% of guideline value. Registration fee: 1% of guideline value (max ₹4,000). Step 2 — After registration, apply for Patta mutation within 90 days. Submit: registered sale deed (original + 2 copies), EC for last 30 years, Form A, Aadhaar, ration card. Step 3 — Verify the seller's name matches the existing Patta exactly. Mismatch is a common rejection cause. Step 4 — Check EC carefully before purchasing — if encumbrances (mortgage, court attachment, lease) exist, the land should not be purchased without clearing them first. Step 5 — After Patta is updated, update Chitta and Adangal with VAO by submitting new Patta copy. VAO update is done within 7 days, free of cost.",
+    "source": "Registration Act 1908 §17; TN Stamp Act; TN Revenue Standing Orders §4.4; TNRSO §4.7",
+    "keywords": [
+      "sale deed",
+      "purchase",
+      "stamp duty",
+      "registration",
+      "guideline value",
+      "Sub-Registrar",
+      "patta mutation"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_008",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — Gift Deed and Settlement Deed",
+    "content": "Patta transfer via gift deed or settlement deed in Tamil Nadu: Gift Deed: Used to transfer land as a gift to anyone (family or outsider). Must be registered at Sub-Registrar office. Stamp duty: 7% for non-family transfers; 1% for transfers to blood relatives (spouse, children, siblings, parents, grandchildren) — minimum ₹1,000. Cannot be revoked after registration without the donee's consent. Settlement Deed: Used to settle property among family members during the owner's lifetime. Often used by parents to divide land among children before death to avoid future disputes. Stamp duty: 1% (if between specified family members). After registration: apply for Patta mutation at Taluk office within 90 days using the registered deed + EC + Form A + Aadhaar. Timeline for Patta update: 30–45 days same as standard process.",
+    "source": "Transfer of Property Act 1882 §122; TN Stamp Act Schedule I; Registration Act 1908 §17; TNRSO §4.4",
+    "keywords": [
+      "gift deed",
+      "settlement deed",
+      "family transfer",
+      "stamp duty",
+      "blood relatives",
+      "property transfer",
+      "patta gift"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_009",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — VAO Refuses to Inspect or Delays",
+    "content": "If VAO (Village Administrative Officer) refuses to visit for field inspection or delays beyond 15 days in Tamil Nadu: Step 1 — Write a complaint letter to the Tahsildar with your application number, date of submission, and details of VAO delay. Submit in person at Taluk office and get acknowledgement. Step 2 — If Tahsildar does not act within 7 days: Escalate to Revenue Divisional Officer (RDO) in writing. Step 3 — File complaint through Tamil Nadu Government Online Grievance Portal: cms.tn.gov.in. All grievances must be resolved within 30 days per TN CM's Special Programme. Step 4 — Approach the District Collector's office Grievance Cell (open Monday and Friday, 10am–1pm). Bring all documents and correspondence. Step 5 — Call TNSLSA 1516 for free legal guidance if delay exceeds 60 days with no action. Demanding bribe is a criminal offence under Prevention of Corruption Act 1988 — any demand should be reported to Vigilance and Anti-Corruption (DVAC): 044-28592750.",
+    "source": "TN CM Special Programme for Grievance Redressal; Prevention of Corruption Act 1988; TNRSO §4.9; CMS Portal Guidelines",
+    "keywords": [
+      "VAO delay",
+      "VAO refuses",
+      "grievance",
+      "CMS portal",
+      "Tahsildar complaint",
+      "bribe",
+      "DVAC",
+      "corruption"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_010",
+    "category": "patta_transfer",
+    "title": "Patta Transfer — Missing or Never-Registered Land",
+    "content": "If your land has no Patta or was never registered in Tamil Nadu: Situation 1 — Land was always in family possession but Patta was never issued: Apply to Tahsildar for fresh Patta issuance. Submit: possession affidavit (notarised), tax payment receipts (Kist receipts) for as many years as possible, witness statements from village elders, VAO certificate of possession, survey sketch. Tahsildar will conduct inquiry and can issue Patta if possession is established. Situation 2 — Patta exists but in grandfather's or great-grandfather's name: File for inheritance Patta mutation with genealogy affidavit tracing ownership through each generation with death certificates. Situation 3 — Land is in revenue records but no one claims Patta: File application to District Collector to establish claim. Limitation period: possession for 12 years creates adverse possession claim under Limitation Act 1963 §65. Call 1516 for free legal guidance in all these situations.",
+    "source": "Limitation Act 1963 §65; TN Land Revenue Act; TN Revenue Standing Orders §5.1; TN Board of Revenue Manual",
+    "keywords": [
+      "missing patta",
+      "no patta",
+      "first patta",
+      "adverse possession",
+      "possession proof",
+      "tax receipt",
+      "kist",
+      "ancestral land"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "land_rec_001",
+    "category": "land_records",
+    "title": "Land Records — Patta, Chitta, Adangal, FMB, EC Explained",
+    "content": "Tamil Nadu land record documents explained: (1) Patta — Record of Rights. Shows: owner name, survey number, land area, type (wet/dry/nanjai/punjai). Primary ownership proof. Issued by Tahsildar. (2) Chitta — Record of cultivation. Shows who actually cultivates the land, crop type, season. Maintained by VAO. (3) Adangal (Field Register) — Detailed cultivation record with season-wise crop data. VAO maintains this. Adangal correction needed when cultivation details are wrong. (4) FMB (Field Measurement Book) — Survey sketch showing exact boundary measurements and adjacent land details. Maintained by Surveyor under Taluk Survey Office. (5) EC (Encumbrance Certificate) — Shows all transactions (sales, mortgages, gifts, court attachments) on a survey number for a specific period. Issued by Sub-Registrar. (6) A-Register (Ownership Register) — Master land record maintained at Taluk level. All documents together give complete picture of land ownership and status.",
+    "source": "TN Land Records Manual; Tamil Nadu Survey Act 1920; Registration Act 1908; TNRSO Manual",
+    "keywords": [
+      "patta",
+      "chitta",
+      "adangal",
+      "FMB",
+      "EC",
+      "A-register",
+      "survey number",
+      "land records",
+      "VAO",
+      "field register"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "land_rec_002",
+    "category": "land_records",
+    "title": "Land Records — How to Obtain Copies",
+    "content": "How to obtain land record copies in Tamil Nadu: (1) Patta copy: Apply at Taluk office (free) or download from eservices.tn.gov.in. Online Patta verification also available at tnlrs.gov.in. (2) Chitta and Adangal: Available from VAO office (free) or from eservices.tn.gov.in online. (3) FMB (Field Measurement Book sketch): Apply at Taluk Survey Office. Fee: ₹100–200. Takes 3–7 days. (4) EC (Encumbrance Certificate): Apply at Sub-Registrar office with survey number and time period. Fee: ₹200 for first year + ₹10 per additional year. Or apply online at tnreginet.gov.in. Takes 1–2 days. (5) A-Register copy: Apply at Taluk office. Free. (6) All these can also be obtained at e-Sevai centres for a service fee of ₹20–60. Important: Always verify that your survey number, owner name, and extent (area) match across all records. Discrepancies must be corrected before any transfer.",
+    "source": "TN e-Governance Portal Guidelines; Sub-Registrar Office Circular 2022; eservices.tn.gov.in SOP",
+    "keywords": [
+      "patta copy",
+      "chitta copy",
+      "adangal copy",
+      "EC copy",
+      "FMB copy",
+      "online land records",
+      "tnreginet",
+      "eservices",
+      "e-Sevai"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "land_rec_003",
+    "category": "land_records",
+    "title": "Land Records — Chitta and Adangal Correction",
+    "content": "How to correct Chitta and Adangal errors in Tamil Nadu: Common errors: wrong owner name, wrong crop, wrong area, old owner's name still shown after Patta transfer. Step 1 — Obtain current Chitta/Adangal copy from VAO to confirm the error. Step 2 — Submit written application to VAO with: current Patta copy, EC, correct information you want updated, supporting documents (death certificate if name needs updating after death). Step 3 — VAO must make corrections within 7–15 working days. VAO cannot charge any fee for Chitta/Adangal corrections. Step 4 — If VAO delays or refuses: file complaint with Tahsildar. Bring VAO's written reason for refusal if available. Step 5 — After every Patta transfer, proactively submit new Patta copy to VAO and request Chitta/Adangal update — do not wait for automatic update as it may not happen. Step 6 — For survey extent errors (area mismatch): requires fresh survey by Taluk Surveyor. Apply at Taluk office, fee ₹200–500.",
+    "source": "TN Revenue Standing Orders §6.1–6.4; VAO Manual; TN Board of Revenue Circular",
+    "keywords": [
+      "chitta correction",
+      "adangal correction",
+      "VAO update",
+      "area mismatch",
+      "name correction",
+      "cultivation record",
+      "field register update"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "land_rec_004",
+    "category": "land_records",
+    "title": "Land Records — Encumbrance Certificate (EC) — How to Read",
+    "content": "How to read an Encumbrance Certificate (EC) in Tamil Nadu: An EC lists all registered transactions on a property for a specified period from Sub-Registrar records. Parts of EC: (1) Property details — survey number, village, taluk, district, extent. (2) Transaction entries — each row is one transaction: date, nature (sale, mortgage, release, court attachment), parties, amount. (3) Nil encumbrance — if EC shows no entries for the period, it is a 'Nil EC' meaning no registered transactions. What each transaction type means: 'Sale' — property was sold to someone. 'Simple Mortgage / Equitable Mortgage' — property was pledged as loan security. 'Release Deed' — mortgage was discharged. 'Court Attachment (Kaippu)' — court has frozen the property due to a case. 'Lease' — property was leased. Danger signs in EC: Active mortgage, court attachment, lease not yet expired, or a sale you are not aware of — all must be investigated before purchasing. EC period: For sale purposes, obtain EC for last 30 years minimum.",
+    "source": "Registration Act 1908 §57; TN Registration Manual; tnreginet.gov.in EC Guide",
+    "keywords": [
+      "encumbrance certificate",
+      "EC",
+      "mortgage",
+      "court attachment",
+      "nil EC",
+      "sale deed",
+      "encumbrance",
+      "how to read EC"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "land_rec_005",
+    "category": "land_records",
+    "title": "Land Records — FMB (Field Measurement Book) and Survey",
+    "content": "FMB (Field Measurement Book) in Tamil Nadu: FMB is the official survey sketch prepared by a licensed surveyor. It shows: exact land area, shape, dimensions, adjacent survey numbers, north/south/east/west boundaries, and any internal divisions. How to use FMB: (1) To verify that your physical land boundaries match official records, (2) To resolve boundary disputes — FMB is primary evidence, (3) To apply for building plan approval — DTCP requires FMB. How to obtain FMB: Apply at Taluk Survey Office with survey number. Fee: ₹150–300. If FMB shows errors: File application for resurvey at Taluk Survey Office. A licensed Surveyor will remeasure and correct. Cost: ₹500–1500. Timeline: 30–90 days. Digital FMB now available on tnlrs.gov.in for many areas. Important: FMB is prepared when land is first surveyed. If land has been subdivided (by sale or partition) without a fresh survey, FMB may not reflect current state — always obtain fresh FMB before any major transaction.",
+    "source": "Tamil Nadu Survey Act 1920; Survey Settlement Manual TN; TN Board of Revenue Survey Circular 2019",
+    "keywords": [
+      "FMB",
+      "field measurement book",
+      "survey sketch",
+      "boundaries",
+      "resurvey",
+      "surveyor",
+      "taluk survey office",
+      "land dimensions"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "land_rec_006",
+    "category": "land_records",
+    "title": "Land Records — A-Register and Village Revenue Records",
+    "content": "A-Register (Ownership Register) in Tamil Nadu: The A-Register is the master land ownership record maintained at the Taluk level. It contains: survey number, owner's name, area, land type (wet/dry), tax assessment, and history of transfers. Why it matters: A-Register is the basis for issuing Patta. Any discrepancy between A-Register and Patta must be corrected through Tahsildar. How to verify: Request A-Register extract at Taluk office (free). Cross-check with your Patta — survey number, owner name, area must match exactly. Common problems: (1) A-Register shows old owner after inheritance — correct by submitting legal heir certificate + death certificate + Patta to Tahsildar. (2) Survey number in A-Register differs from Patta — requires survey re-verification. (3) Area discrepancy — requires fresh survey. Village Revenue Records (Kiraiyaadam): Old village revenue ledgers maintained at Taluk level. Useful for tracing ancestral ownership going back 50–100 years. Available for inspection at Taluk office records room.",
+    "source": "TN Revenue Standing Orders §7.1–7.5; TN Board of Revenue Manual; TNRSO Village Records",
+    "keywords": [
+      "A-register",
+      "ownership register",
+      "village revenue records",
+      "taluk records",
+      "land history",
+      "survey number",
+      "area discrepancy"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "dispute_001",
+    "category": "land_disputes",
+    "title": "Land Boundary Dispute — Process and Resolution",
+    "content": "Land boundary dispute resolution in Tamil Nadu: Step 1 — Obtain FMB (Field Measurement Book) from Taluk Survey Office. Compare with your actual land. Fee: ₹150–300. Step 2 — Request a Revenue Survey through the Taluk Surveyor (file application at Taluk office). The surveyor will measure and establish boundaries officially. Takes 30–60 days. Fee: ₹500–1500. Step 3 — If dispute persists after survey: file application to Revenue Divisional Officer (RDO) with FMB, Patta, EC, and survey report. RDO has jurisdiction over boundary disputes under TN Land Encroachment Act 1905. Step 4 — Mediation: District Collector's office offers free land dispute mediation. Step 5 — Lok Adalat: Free, fast, and final — available at District Legal Services Authority. Step 6 — Civil Court: file civil suit in District Munsiff Court under CPC as last resort. Important: Do NOT physically alter boundaries while dispute is pending — this is criminal trespass (IPC §447) with up to 3 months imprisonment.",
+    "source": "TN Land Encroachment Act 1905; TN Revenue Standing Orders; CPC Order XXXIX; IPC §447; Legal Services Authorities Act §19",
+    "keywords": [
+      "boundary dispute",
+      "FMB",
+      "survey",
+      "RDO",
+      "revenue divisional officer",
+      "land encroachment",
+      "criminal trespass",
+      "IPC 447"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "dispute_002",
+    "category": "land_disputes",
+    "title": "Fraudulent Patta — Someone Transferred Your Land Without Consent",
+    "content": "If someone has fraudulently transferred your Patta without your knowledge in Tamil Nadu: Step 1 — Obtain a copy of the fraudulent Patta and EC from Taluk office and Sub-Registrar. These are public records — you are entitled to them. Step 2 — File a police complaint (FIR) immediately at your local police station under: IPC §420 (cheating), §467 (forgery of document), §468 (forgery for cheating), §471 (using forged document as genuine). These are cognizable offences — police must register FIR. Step 3 — File a civil suit for declaration of title and cancellation of fraudulent deed in District Munsiff Court. Apply for interim injunction to prevent any further sale. Step 4 — File complaint to Tahsildar and Sub-Registrar requesting cancellation of fraudulent Patta/deed. Step 5 — Lodge complaint with Inspector General of Registration (IGR) if Sub-Registrar fails to act. Step 6 — Call TNSLSA 1516 for immediate free legal aid. Time is critical — fraudulent buyers may try to sell the land again quickly.",
+    "source": "IPC §420, §467, §468, §471; Registration Act 1908 §49; CPC Order XXXIX (Injunction); TNRSO §4.20",
+    "keywords": [
+      "fraudulent patta",
+      "fake transfer",
+      "forged deed",
+      "IPC 467",
+      "IPC 420",
+      "cheating",
+      "forgery",
+      "fraudulent registration",
+      "stolen land"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "dispute_003",
+    "category": "land_disputes",
+    "title": "Neighbour Encroachment — How to File and Resolve",
+    "content": "Neighbour encroaching on your land in Tamil Nadu: Step 1 — Gather evidence: Photos with dates, FMB copy, Patta, EC, witness statements from neighbours. Step 2 — File written complaint to VAO (Village Administrative Officer) requesting inspection. VAO must inspect within 7 days. Step 3 — If VAO confirms encroachment but neighbour refuses to remove: File complaint with Tahsildar under TN Land Encroachment Act 1905. Tahsildar can issue eviction notice and impose fine (₹500–5000). Step 4 — If encroachment involves fencing/wall already built: File complaint with RDO. RDO can order demolition of encroaching structure. Step 5 — For immediate relief: File civil suit in District Munsiff Court with application for interim injunction under CPC Order XXXIX to stop further encroachment immediately. Step 6 — For criminal prosecution: File FIR under IPC §447 (criminal trespass) at police station if encroacher uses force or threat. Free legal aid via 1516 for eligible applicants.",
+    "source": "TN Land Encroachment Act 1905 §3–6; IPC §447; CPC Order XXXIX; TNRSO §8.2",
+    "keywords": [
+      "encroachment",
+      "neighbour dispute",
+      "land grabbing",
+      "VAO complaint",
+      "Tahsildar",
+      "TN Land Encroachment Act",
+      "injunction",
+      "trespass"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "dispute_004",
+    "category": "land_disputes",
+    "title": "Double Registration — Same Land Registered Twice",
+    "content": "Double registration (same land sold to two different people) in Tamil Nadu: This occurs when a seller fraudulently sells the same land twice. Legal position: Under Registration Act 1908 §47, the deed registered first in time has priority, even if the second buyer paid first. How to identify: EC will show both sale deeds registered. What to do if you are the second buyer: Step 1 — File a civil suit immediately for cancellation of the first deed if you can prove fraud or forgery. Apply for interim injunction to protect your possession. Step 2 — File police FIR against the seller under IPC §420 and §467. Step 3 — If you are the first registered buyer and someone else has taken possession: File suit for recovery of possession. You have the right to physical possession. What to do if you are a subsequent buyer who didn't check EC: You bear the risk of not verifying EC before purchase. Always obtain EC before any purchase. Call 1516 for free legal aid.",
+    "source": "Registration Act 1908 §47; IPC §420, §467; TN Specific Relief Act §33; Transfer of Property Act 1882 §53A",
+    "keywords": [
+      "double registration",
+      "same land sold twice",
+      "priority deed",
+      "Registration Act 47",
+      "fraudulent sale",
+      "EC verification",
+      "cheating seller"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "dispute_005",
+    "category": "land_disputes",
+    "title": "Benami Land — Land in Someone Else's Name",
+    "content": "Benami property in Tamil Nadu — land registered in another person's name but paid for by someone else: The Prohibition of Benami Property Transactions Act 1988 (amended 2016) applies. Key facts: (1) Benami transactions are illegal and prohibited. (2) The real owner (beneficial owner) cannot legally claim the property in civil court as the basis of the claim. (3) Government can confiscate benami property. What to do if you suspect benami property: File complaint with Income Tax Department (Benami Prohibition Unit) — they investigate. If you are a genuine beneficial owner who paid but property is in relative's name: You may establish claim through money trail (bank transfers, receipts, witnesses) in civil court, though outcome is uncertain as courts apply the Benami Act strictly since 2016. Prevention: Always register property in the actual purchaser's name. Never agree to benami arrangements. For family disputes involving benami claims: Consult a lawyer — call 1516.",
+    "source": "Prohibition of Benami Property Transactions Act 1988 (amended 2016) §2, §3, §24; Income Tax Act §285A",
+    "keywords": [
+      "benami property",
+      "benami land",
+      "land in another's name",
+      "benami act",
+      "beneficial owner",
+      "income tax",
+      "confiscation"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "dispute_006",
+    "category": "land_disputes",
+    "title": "Land Dispute — Adverse Possession Claim",
+    "content": "Adverse possession (squatter's rights) in Tamil Nadu: Under Limitation Act 1963 §65, a person who has been in continuous, open, uninterrupted, peaceful possession of land for 12 years can claim ownership through adverse possession, even without a Patta or deed — but only against a private owner. Against government land: adverse possession does not apply. Requirements for valid adverse possession claim: (1) Actual physical possession for 12 continuous years, (2) Possession was open and known (not hidden), (3) Possession was hostile to the real owner (i.e., not with owner's permission), (4) Possession was uninterrupted. How to claim: File a declaratory suit in District Munsiff Court with evidence: tax receipts, cultivation records, VAO certificates, electricity bills, photos. The burden of proof is on the claimant. Important: If the original owner files a recovery suit, you must prove adverse possession as a defence. Call 1516 for free legal aid — these cases require a lawyer.",
+    "source": "Limitation Act 1963 §65; TN Specific Relief Act; Transfer of Property Act 1882; Supreme Court judgment in Karnataka Board of Wakf v GOI (2004)",
+    "keywords": [
+      "adverse possession",
+      "squatter rights",
+      "12 years possession",
+      "limitation act",
+      "declaratory suit",
+      "prescription",
+      "possessory title"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "dispute_007",
+    "category": "land_disputes",
+    "title": "Land Dispute — Forged Documents and How to Report",
+    "content": "Forged land documents in Tamil Nadu — what to do: Types of forgery: forged sale deed, fake Patta, altered survey number, fabricated legal heir certificate. How to detect: (1) Compare documents with records at Sub-Registrar / Taluk office — they maintain originals, (2) EC will not show the forged transaction if it was not registered, (3) Forged documents often have inconsistencies in stamp, seal, officer signatures. Reporting forged documents: Step 1 — File FIR at police station under IPC §467 (forgery), §468 (forgery for fraud), §471 (using forged document). These are cognizable, non-bailable offences. Step 2 — File complaint with Sub-Registrar if a forged deed was registered — they can flag the deed. Step 3 — File civil suit for cancellation of forged document in District Court under Specific Relief Act §31. Step 4 — File complaint with District Collector's Vigilance Cell. Evidence to preserve: Original documents, EC, previous owner's records, any correspondence. Call 1516 immediately for free legal guidance.",
+    "source": "IPC §467, §468, §471; Specific Relief Act §31; Registration Act 1908 §35; TN District Collector Vigilance Circular",
+    "keywords": [
+      "forged documents",
+      "fake patta",
+      "document forgery",
+      "IPC 467",
+      "IPC 471",
+      "cancel forged deed",
+      "specific relief act",
+      "Sub-Registrar complaint"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "dispute_008",
+    "category": "land_disputes",
+    "title": "Land Dispute — Lok Adalat and Mediation for Fast Resolution",
+    "content": "Lok Adalat and mediation for land disputes in Tamil Nadu: Lok Adalat (People's Court) under Legal Services Authorities Act 1987: (1) Free — no court fees, (2) Fast — cases resolved in 1 day typically, (3) Final — award has same force as a court decree and cannot be appealed, (4) Voluntary — both parties must agree to participate. Types of land disputes suitable for Lok Adalat: boundary disputes, partition disputes, co-ownership disputes, minor document correction disputes. Not suitable: fraud, criminal cases, government land disputes. How to approach Lok Adalat: Walk in to District Legal Services Authority (DLSA) at District Court Complex — no appointment needed. For pending court cases: request transfer to Lok Adalat through your lawyer or write to DLSA. Permanent Lok Adalat: For cases involving public utility services. National Lok Adalat: Held quarterly across all districts — check TNSLSA website for dates. Call 1516 for assistance. Revenue Court: Tahsildar and RDO also have quasi-judicial powers for land disputes — their orders can be faster than civil court.",
+    "source": "Legal Services Authorities Act 1987 §19–22; TNSLSA Guidelines; TN Revenue Court Manual",
+    "keywords": [
+      "Lok Adalat",
+      "mediation",
+      "free dispute resolution",
+      "DLSA",
+      "land mediation",
+      "fast resolution",
+      "revenue court",
+      "out of court settlement"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "classify_001",
+    "category": "land_classification",
+    "title": "Land Classification — Wet, Dry, Nanjai, Punjai Explained",
+    "content": "Land classification in Tamil Nadu — understanding your Patta: (1) Wet land (Nanjai): Irrigated agricultural land — receives water from tank, canal, or river. Higher tax rate. Produces paddy and other irrigated crops. Protected under TN Agricultural Land (Restriction on Alienation) Act in some areas. (2) Dry land (Punjai): Rain-fed agricultural land. Produces groundnut, millets, pulses, cotton. Lower tax rate than wet land. (3) Garden land (Tottam): Land with fruit trees, coconut, areca nut. Specific tax category. (4) Waste land: Uncultivated, unirrigated land. (5) Poromboke: Government land — roads, tanks, commons, burial grounds. Cannot be privately owned. Classification determines: Tax rate, permissible crops, eligibility for agricultural loans, water rights, conversion requirements. To check your classification: Look at Patta and Chitta — it will state Nanjai, Punjai, or Tottam. To change classification (e.g., wet to dry if irrigation stopped): Apply to Tahsildar with proof of loss of irrigation source. VAO will verify.",
+    "source": "TN Land Revenue Act 1955; TN Agricultural Land Records Manual; TN Revenue Standing Orders §9.1–9.5",
+    "keywords": [
+      "wet land",
+      "dry land",
+      "nanjai",
+      "punjai",
+      "garden land",
+      "land type",
+      "land classification",
+      "irrigated land",
+      "rain-fed land"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "classify_002",
+    "category": "land_classification",
+    "title": "Poromboke Land — Government Common Land Rights",
+    "content": "Poromboke land in Tamil Nadu: Poromboke refers to government common lands — includes: tank beds (eri), tank foreshores, channels, roads, burial grounds (smashan), commons (podu meidu), village greens. Poromboke is listed in village revenue records as government property. Key facts: (1) Poromboke CANNOT be privately owned or transferred. (2) Encroachment on poromboke is a criminal offence under TN Land Encroachment Act 1905 and can result in eviction and fine. (3) Government can reclaim encroached poromboke at any time without compensation. (4) No adverse possession claim is valid against poromboke land. Common issue — Poromboke shown on private land by error: If your agricultural land is wrongly classified as Poromboke in revenue records: File application to Collector for reclassification with: old title documents, EC, tax receipts, genealogy affidavit, VAO certificate. Collector will conduct inquiry. If genuine private land wrongly classified: It can be corrected. Patta will be issued after reclassification. Call 1516 for legal help.",
+    "source": "TN Land Encroachment Act 1905 §2–3; TN Revenue Standing Orders §10.1–10.5; TN District Gazetteer",
+    "keywords": [
+      "poromboke",
+      "government land",
+      "common land",
+      "tank bed",
+      "encroachment",
+      "eviction",
+      "land classification error",
+      "podu meidu"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "classify_003",
+    "category": "land_classification",
+    "title": "Natham Land — Residential Village Land",
+    "content": "Natham land in Tamil Nadu — village residential land: Natham is land within a village settlement used for residential purposes. It is distinct from agricultural land (Nanjai/Punjai) and has different legal rules. Key features: (1) Natham land is exempt from agricultural land ceiling laws. (2) No Patta is issued for Natham land traditionally — instead, a Natham Patta (different from agricultural Patta) is issued by the Revenue Department. (3) House sites in Natham area are distributed by government under schemes (e.g., housing schemes for SC/ST). (4) Natham residents can apply for regularization of house sites under TN Government schemes if they have been in possession but do not have Patta. How to apply for Natham Patta: Apply to Tahsildar with: possession proof (tax receipt, electricity bill, Aadhaar with address), Aadhaar, ration card, affidavit of possession, VAO certificate. For SC/ST residents: Special provisions under district housing schemes — contact District Social Welfare Office. Call 1516 for guidance.",
+    "source": "TN Revenue Standing Orders §11.1; TN Housing Board Act; TN SC/ST Housing Scheme Guidelines",
+    "keywords": [
+      "natham",
+      "natham land",
+      "village residential land",
+      "house site",
+      "natham patta",
+      "SC ST housing",
+      "residential patta"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "classify_004",
+    "category": "land_classification",
+    "title": "Agricultural to Non-Agricultural Land Conversion",
+    "content": "Converting agricultural land to non-agricultural use in Tamil Nadu: Agricultural land cannot be used for residential, commercial, or industrial purposes without official conversion (change of land use). Who approves conversion: (1) For residential layout/plot development: DTCP (Directorate of Town and Country Planning) — District Collector approves. (2) For industrial use: SIPCOT/TIDCO involvement, Collector approval. (3) For small house construction in rural areas: Panchayat approval (within Panchayat limits). Step-by-step: (1) Apply to Collector with: Patta, EC, FMB, No-objection from Agriculture Dept, site plan. (2) Collector refers to DTCP/Agriculture Dept for remarks. (3) If approved: Pay conversion tax (typically 1–5% of guideline value). (4) Revenue records are updated to show non-agricultural use. (5) Then apply for building plan approval from Panchayat or local body. Restriction: Wetland (Nanjai) conversion is heavily restricted — Ministry of Agriculture clearance required in many cases. Unauthorized construction on agricultural land is illegal and subject to demolition.",
+    "source": "TN Town and Country Planning Act 1971; DTCP Guidelines; TN Panchayat Act 1994 §218; TN Agricultural Land Conversion Rules",
+    "keywords": [
+      "land conversion",
+      "agricultural to non-agricultural",
+      "DTCP",
+      "change of land use",
+      "layout approval",
+      "building permission",
+      "wetland conversion"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "classify_005",
+    "category": "land_classification",
+    "title": "Wet Land Reclassification — Nanjai to Punjai",
+    "content": "Reclassification of wet land (Nanjai) to dry land (Punjai) in Tamil Nadu: Reasons why reclassification may be needed: (1) Irrigation source (canal, tank) has dried up or closed permanently, (2) Land has been converted to rain-fed cultivation for many years, (3) Government irrigation facility was abolished. How to apply for reclassification: Step 1 — Apply to Tahsildar with written petition explaining why land should be reclassified. Step 2 — Attach: current Patta, Chitta/Adangal showing current cultivation pattern, photographs of the land, VAO certificate confirming loss of irrigation. Step 3 — Tahsildar will depute VAO and Surveyor for joint inspection. Step 4 — If loss of irrigation is confirmed, Tahsildar approves reclassification and updates revenue records. Step 5 — Patta and Chitta/Adangal are updated to show Punjai. Tax rate will be reduced accordingly. Impact: Lower Kist (land tax), higher flexibility for crop choice, easier conversion approval later. Reverse (Punjai to Nanjai) requires proof of new irrigation source — approval of Revenue Divisional Officer needed.",
+    "source": "TN Revenue Standing Orders §9.8–9.12; TN Agricultural Land Records Act; TN Irrigation Dept Circular",
+    "keywords": [
+      "nanjai to punjai",
+      "wet to dry",
+      "land reclassification",
+      "irrigation lost",
+      "canal closed",
+      "land type change",
+      "kist tax",
+      "cultivation change"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "inherit_001",
+    "category": "inheritance",
+    "title": "Legal Heir Certificate — How to Get It",
+    "content": "Legal Heir Certificate in Tamil Nadu — who needs it and how to get it: Who needs it: Anyone inheriting property, bank accounts, or benefits after death of a family member. Process: Step 1 — Apply at Taluk office (free) or e-Sevai centre (₹60 fee). Step 2 — Submit: Death certificate of deceased (original), Ration card showing all family members, Affidavit on ₹20 stamp paper declaring all legal heirs and their relationship to the deceased, Aadhaar cards of all heirs, Passport-size photos of all heirs. Step 3 — Revenue Inspector visits home to verify family members. Step 4 — Tahsildar issues certificate within 15–30 days. Certificate contains: Name of deceased, names and relationship of all legal heirs, date of death. Uses: Patta mutation, bank account access, pension transfer, insurance claim, EPF claim, service benefits. Note: Legal Heir Certificate ≠ Succession Certificate. For movable assets (bank accounts, shares, debentures): you need a Succession Certificate from Civil Court, which takes longer.",
+    "source": "Legal Heir Certificate TN SOP; Hindu Succession Act 1956; TN Revenue Dept Circular 2020",
+    "keywords": [
+      "legal heir certificate",
+      "succession",
+      "heir",
+      "death of owner",
+      "Tahsildar",
+      "inheritance",
+      "family members",
+      "legal heir"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "inherit_002",
+    "category": "inheritance",
+    "title": "Succession Certificate — When It Is Needed",
+    "content": "Succession Certificate in Tamil Nadu — when and how to get it: Succession Certificate is required (not Legal Heir Certificate) for: bank accounts and deposits, shares, debentures, insurance policies, provident fund (if not nominated), post office deposits. It is issued by Civil Court (District Munsiff Court), NOT by the Tahsildar. Process: Step 1 — File petition in District Munsiff Court under Indian Succession Act 1925 §372. Fee: Court fee based on value of assets (ad valorem fee under TN Court Fees Act). Step 2 — Court publishes notice in newspaper inviting objections. Waiting period: 45 days. Step 3 — If no objections, court issues Succession Certificate. Total time: 3–6 months. For SC/ST and low-income applicants: Free legal aid via DLSA (District Legal Services Authority) at District Court Complex — call 1516. Alternative for bank accounts: Banks often accept Legal Heir Certificate + Indemnity Bond for accounts below ₹5 lakh — check with your specific bank.",
+    "source": "Indian Succession Act 1925 §372–379; TN Court Fees Act; DLSA Free Legal Aid Guidelines; RBI Circular on Deceased Accounts",
+    "keywords": [
+      "succession certificate",
+      "civil court",
+      "bank account after death",
+      "shares after death",
+      "District Munsiff Court",
+      "Indian Succession Act",
+      "deceased account"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "inherit_003",
+    "category": "inheritance",
+    "title": "Hindu Succession — Rules for Tamil Nadu Families",
+    "content": "Hindu succession law applicable in Tamil Nadu (Hindu Succession Act 1956, amended 2005): For agricultural and other property: Class I Heirs (first priority): spouse, sons, daughters, mother, son of pre-deceased son, daughter of pre-deceased son, widow of pre-deceased son. Daughters' rights (2005 amendment §6): Daughters have EQUAL rights as sons in father's property — including agricultural land. This right exists whether the father was alive or not on 9 September 2005 (Supreme Court: Vineeta Sharma v Rakesh Sharma 2020). This is the most important rule — many daughters in Tamil Nadu villages are unaware of this right. Class II Heirs (if no Class I): father, then siblings and their children. Self-acquired vs ancestral property: Ancestral property (received through 4 generations) — each coparcener (son/daughter) has a birth right. Self-acquired property — owner can will it to anyone. Intestate succession (no will): Property divided equally among all Class I heirs. Call 1516 if inheritance rights are being denied.",
+    "source": "Hindu Succession Act 1956 §8, §6 (amended 2005); Supreme Court Vineeta Sharma v Rakesh Sharma (2020) AIR SC 3717",
+    "keywords": [
+      "Hindu succession",
+      "daughters rights",
+      "inheritance",
+      "Class I heirs",
+      "equal rights",
+      "ancestral property",
+      "intestate",
+      "2005 amendment",
+      "Vineeta Sharma"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "inherit_004",
+    "category": "inheritance",
+    "title": "Will — Registered vs Unregistered, How to Challenge",
+    "content": "Wills in Tamil Nadu — key facts under Indian Succession Act 1925: A will (Vasiyatnama) allows a person to decide how their self-acquired property is distributed after death. Valid will requirements: (1) Must be in writing, (2) Signed by testator (will maker) in the presence of at least 2 witnesses, (3) Witnesses must attest (sign) the will, (4) Testator must be of sound mind and at least 18 years old. Registration of will: Registration is NOT mandatory but strongly recommended. Registered wills are stored at Sub-Registrar office and are much harder to challenge. Unregistered will is still valid if authentic. Challenging a will: Grounds for challenge: (1) Testator was of unsound mind or under undue influence, (2) Will is forged or fabricated, (3) Will was not properly witnessed. How to challenge: File a probate suit in District Court within 3 years of learning of the will. Court will examine witnesses and evidence. Important: A will cannot deprive daughters of their share in ancestral (joint family) property — daughters' share in ancestral property is a birth right that cannot be willed away.",
+    "source": "Indian Succession Act 1925 §63, §68, §213; Hindu Succession Act 1956 §30; Registration Act §18; TN Civil Courts",
+    "keywords": [
+      "will",
+      "vasiyatnama",
+      "registered will",
+      "unregistered will",
+      "challenge will",
+      "probate",
+      "testator",
+      "witnesses",
+      "forged will"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "inherit_005",
+    "category": "inheritance",
+    "title": "Women's Equal Inheritance Rights — Tamil Nadu",
+    "content": "Women's equal inheritance rights in Tamil Nadu — critical information: Legal rights of women regarding land inheritance: (1) Daughters have equal share as sons in father's ancestral property (Hindu Succession Amendment Act 2005 §6). This was confirmed by Supreme Court in 2020. (2) Married daughters retain this right — marriage does not remove inheritance right. (3) Daughters can claim this right even if father died before 2005 amendment, as long as the daughter was alive on 9 September 2005. (4) Wife's right: Wife is a Class I heir. She inherits equal share alongside children. (5) Mother's right: Mother is a Class I heir in son's property. (6) Daughter-in-law (widow of deceased son): Has equal share as other Class I heirs. Practical steps if inheritance rights are being denied: Step 1 — Send a legal notice through lawyer. Step 2 — File partition suit in District Munsiff Court if family refuses to give share. Step 3 — Call TNSLSA 1516 — women get free legal aid in all cases. District Women Welfare Officer at Collectorate can also assist. Women cannot be pressured to waive inheritance rights — any such waiver under duress is void in law.",
+    "source": "Hindu Succession Act 1956 §6 (amended 2005); Supreme Court Vineeta Sharma v Rakesh Sharma (2020); Protection of Women from Domestic Violence Act 2005; TN Women Welfare Dept",
+    "keywords": [
+      "women inheritance",
+      "daughters rights",
+      "equal share",
+      "wife rights",
+      "2005 amendment",
+      "Vineeta Sharma",
+      "married daughter",
+      "waiver void",
+      "women land rights"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "inherit_006",
+    "category": "inheritance",
+    "title": "Minor Heirs — Protecting Children's Land Rights",
+    "content": "Protecting minor heirs' land rights in Tamil Nadu: A minor (below 18 years) cannot independently deal with property. Key protections: (1) Natural guardian (surviving parent) manages minor's property but cannot alienate (sell, mortgage, gift) it without court permission. (2) Court permission (from District Court) is required for any sale of minor's inherited property under Hindu Minority and Guardianship Act 1956 §8. Any sale without court permission is voidable. (3) If natural guardian is deceased or unfit: Any relative can petition District Court to appoint a legal guardian. (4) Minor's share in partition: Court must approve any partition that affects a minor's share. How to protect a minor's inherited Patta: File the Patta mutation in the minor's name with natural guardian as manager. EC on the Patta should show no transactions until the child turns 18. On turning 18: Minor can independently manage and transfer their Patta. If someone is trying to sell a minor's land illegally: File injunction application in District Court immediately + call 1516.",
+    "source": "Hindu Minority and Guardianship Act 1956 §8, §10; Guardian and Wards Act 1890; CPC Order XXXII; Hindu Succession Act 1956",
+    "keywords": [
+      "minor heir",
+      "child inheritance",
+      "guardian",
+      "court permission",
+      "sell minor property",
+      "natural guardian",
+      "minor patta",
+      "children land rights"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "acquire_001",
+    "category": "land_acquisition",
+    "title": "Government Land Acquisition — Your Rights Under LARR Act",
+    "content": "Government land acquisition in Tamil Nadu — rights under Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act 2013 (LARR Act): When government acquires your land: (1) You must be given notice — Section 11 preliminary notification published in Official Gazette and local newspapers. (2) You have the right to object — within 60 days of Section 11 notification, file objections to District Collector in writing. (3) Social Impact Assessment (SIA) must be done — government must assess social and economic impact. (4) Consent required for PPP projects: 70% of affected persons must consent. For private company acquisition: 80% consent required. Compensation: (1) Market value of land (4x the market value in rural areas, 2x in urban areas), (2) Compensation for assets on land (house, tree, well), (3) Solatium: 100% additional on top of market value, (4) Rehabilitation and resettlement package: housing, employment preference, skill development. Important: If compensation offered is inadequate, you can challenge before Land Acquisition Rehabilitation and Resettlement Authority (LARRA), which is a quasi-judicial body. Call 1516 for free legal aid.",
+    "source": "LARR Act 2013 §4, §11, §26, §29, §46; TN Land Acquisition (Amendment) Rules 2014",
+    "keywords": [
+      "land acquisition",
+      "LARR Act",
+      "government takes land",
+      "compensation",
+      "fair compensation",
+      "Section 11 notice",
+      "objection",
+      "solatium",
+      "rehabilitation"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "acquire_002",
+    "category": "land_acquisition",
+    "title": "Land Acquisition — Challenging Inadequate Compensation",
+    "content": "Challenging inadequate land acquisition compensation in Tamil Nadu: Step 1 — File Reference Petition to District Collector under LARR Act §64 if you are dissatisfied with the award within 6 weeks of award date. Step 2 — LARRA (Land Acquisition Rehabilitation and Resettlement Authority): If Collector's reference is not resolved satisfactorily, appeal to LARRA. LARRA is a court equivalent for land acquisition disputes. File within 60 days. Step 3 — High Court: Challenge LARRA orders in Madras High Court under Article 226 if legal grounds exist. Documents to collect: Award copy showing the compensation amount, your Patta, sale deeds of nearby land (to argue market value), valuation reports, EC. Common grounds for challenge: (1) Guideline value used instead of actual market value, (2) Assets on land not considered, (3) Crops not compensated, (4) Rehabilitation package not provided. Important: Accept interim compensation without prejudice to your right to challenge — accepting interim payment does not waive your right to claim more. Call 1516 for free legal aid for acquisition disputes.",
+    "source": "LARR Act 2013 §64, §74, §77; Madras High Court Civil Jurisdiction; TN LARRA Rules 2014",
+    "keywords": [
+      "compensation challenge",
+      "LARRA",
+      "inadequate compensation",
+      "land acquisition appeal",
+      "award challenge",
+      "market value",
+      "LARR Act 64"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "acquire_003",
+    "category": "land_acquisition",
+    "title": "Land Acquisition — Urgency Clause and Emergency Acquisition",
+    "content": "Emergency/urgency clause in land acquisition in Tamil Nadu: Under LARR Act §40, government can invoke urgency clause for: national defence, national security, natural calamity, or when declared specially urgent by Central Government. Urgency acquisition differences: (1) Physical possession can be taken immediately (within 15 days of Section 19 declaration) without waiting for full award. (2) SIA (Social Impact Assessment) can be bypassed. (3) Consent requirement is waived. However: (1) Compensation rights are fully preserved — you will be paid the same amount as regular acquisition. (2) You can still challenge the compensation amount through LARRA. (3) You have the right to temporary sheltered accommodation and advance payment before possession is taken. (4) Urgency clause CANNOT be invoked merely for commercial projects. If invoked improperly, file Writ Petition in Madras High Court under Article 226 challenging the invocation. Frequently misused — courts have struck down improper urgency declarations. Call 1516 for immediate legal guidance if urgency acquisition is invoked on your land.",
+    "source": "LARR Act 2013 §40, §41; Article 226 Constitution of India; Madras HC judgments on urgency clause 2018–2022",
+    "keywords": [
+      "urgency clause",
+      "emergency acquisition",
+      "LARR 40",
+      "immediate possession",
+      "urgency challenge",
+      "national defence",
+      "advance payment"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "tax_001",
+    "category": "land_tax",
+    "title": "Land Tax (Kist) — How to Pay and Check",
+    "content": "Land tax (Kist) in Tamil Nadu — what it is and how to pay: Kist is the annual land revenue tax paid to the government for agricultural land. It is very small — typically ₹5–200 per year depending on land type, size, and classification (Nanjai pays more than Punjai). Importance of paying Kist: (1) Kist receipt is strong evidence of continuous possession — critical for Patta transfer, adverse possession claims, and inheritance. (2) Kist arrears can result in government action, though this is rare for small amounts. How to pay: (1) At VAO office (Village Administrative Officer) — VAO collects Kist twice a year (Fasli year — Chittirai and Adi months). (2) At Taluk office (for larger amounts). (3) Online: Pay at tn.payitonline.com or through e-Sevai. Always get a Kist receipt (Kiraiyaadam receipt). How to check Kist dues: Visit Taluk office or VAO with your survey number. Request statement of account. How to get Kist receipts for past years: Apply at Taluk Records Room — copies of old receipts available for small fee. Keep Kist receipts safely — they are irreplaceable possession evidence.",
+    "source": "TN Land Revenue Act 1955 §4–7; TN Kist Collection Manual; TN e-Governance Payment Portal",
+    "keywords": [
+      "land tax",
+      "kist",
+      "land revenue",
+      "kist receipt",
+      "annual tax",
+      "VAO collection",
+      "possession proof",
+      "kist arrears",
+      "pay kist"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "tax_002",
+    "category": "land_tax",
+    "title": "Land Tax — Patta-Chitta-Tax Record Mismatch Correction",
+    "content": "Patta, Chitta, and tax record mismatch in Tamil Nadu — how to correct: Common mismatches: (1) Patta shows new owner but Kist records still show old owner, (2) Survey number in Patta and tax records differ, (3) Area (extent) in tax records doesn't match Patta, (4) Land type (Nanjai/Punjai) differs across records. Why mismatches happen: Tax records may not be automatically updated when Patta is transferred. You must proactively update them. How to correct: Step 1 — Identify all discrepancies by obtaining Patta, Chitta/Adangal, and Kist account statement simultaneously. Step 2 — Submit written application to VAO for Chitta/Adangal correction with new Patta as supporting document. Step 3 — Submit application to Taluk Revenue Inspector for Kist account name correction. Step 4 — For survey number or area discrepancy: apply to Taluk Survey Office for re-survey — this takes 30–90 days. Step 5 — For land type (Nanjai/Punjai) mismatch: apply to Tahsildar for reclassification inspection. No fee for name corrections in Kist records. Call 1516 if corrections are unreasonably delayed.",
+    "source": "TN Revenue Standing Orders §6.1–6.5; TN Land Revenue Act 1955 §9; VAO Manual §4; TN Board of Revenue Circular 2020",
+    "keywords": [
+      "patta chitta mismatch",
+      "tax record correction",
+      "kist name change",
+      "survey mismatch",
+      "record inconsistency",
+      "VAO correction",
+      "taluk correction",
+      "area mismatch"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "tax_003",
+    "category": "land_tax",
+    "title": "Survey Number Changes — Resurvey and Impact on Patta",
+    "content": "Survey number changes in Tamil Nadu — how resurvey affects your Patta: Survey numbers can change due to: (1) Government resurvey of an entire village (Adangal Puranarachchi — periodic settlement resurvey), (2) Sub-division of a survey number when land is partially sold, (3) Merger of adjacent survey numbers, (4) Correction of historic measurement errors. Impact on Patta: When survey numbers change, Patta must be updated to reflect new survey number — this may not happen automatically. How to update: Step 1 — Obtain the village resurvey report from Taluk Survey Office confirming old vs new survey numbers. Step 2 — Submit report with current Patta to Tahsildar requesting Patta update to reflect new survey number. Step 3 — Tahsildar issues updated Patta. Step 4 — Update EC reference at Sub-Registrar (file B-Memo). Sub-division of survey number: When you sell part of a land, the remaining portion gets a new sub-division number (e.g., 45/2A becomes 45/2A1 and 45/2A2). Both portions must have separate Patta. Apply for sub-division Patta at Taluk office. Call 1516 for guidance on complex survey number disputes.",
+    "source": "TN Survey Act 1920; TN Settlement Manual; TN Board of Revenue Resurvey Guidelines; Registration Act 1908 §17",
+    "keywords": [
+      "survey number change",
+      "resurvey",
+      "sub-division",
+      "village resurvey",
+      "patta update",
+      "new survey number",
+      "settlement survey",
+      "FMB change"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "reg_001",
+    "category": "registration",
+    "title": "Sale Deed Registration — Complete Process",
+    "content": "Sale deed registration for land in Tamil Nadu — complete process: Step 1 — Prepare sale deed: Written on ₹20 stamp paper, drafted by a licensed deed writer or lawyer. Must include: seller name (matching Patta exactly), buyer name, survey number, village, taluk, district, extent of land, consideration amount, boundaries (North/South/East/West), delivery of possession. Step 2 — Calculate stamp duty: 7% of guideline value (from Sub-Registrar office or tnreginet.gov.in) or transaction value — whichever is higher. Registration fee: 1% of guideline value, maximum ₹4,000. Step 3 — Pay stamp duty at any authorized bank (Indian Bank, Canara Bank, IOB) and get stamp paper or challan. Step 4 — Both seller and buyer must appear at Sub-Registrar office with: original documents, Aadhaar cards (original + copy), 2 witnesses (with Aadhaar). Step 5 — Sub-Registrar will capture biometrics (fingerprints), photograph, and witnesses' signatures. Step 6 — Document is returned within 2–3 working days after registration. Step 7 — Apply for Patta mutation within 90 days. Guideline value: Fixed by government — check at tnreginet.gov.in or Sub-Registrar office (free).",
+    "source": "Registration Act 1908 §17; TN Stamp Act Schedule I; TN Sub-Registrar Office Manual; tnreginet.gov.in",
+    "keywords": [
+      "sale deed registration",
+      "stamp duty",
+      "Sub-Registrar",
+      "guideline value",
+      "registration fee",
+      "sale deed",
+      "witnesses",
+      "biometric",
+      "tnreginet"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "reg_002",
+    "category": "registration",
+    "title": "Gift Deed and Settlement Deed — Registration and Tax",
+    "content": "Gift deed and settlement deed registration in Tamil Nadu: Gift Deed (Daanapathram): Voluntary transfer of property without payment. Must be: in writing, registered at Sub-Registrar, delivered and accepted during donor's lifetime. Stamp duty: 7% of guideline value for non-relatives. For specified relatives (spouse, father, mother, son, daughter, grandchild, sibling): 1% stamp duty with minimum ₹1,000 and maximum ₹25,000. Cannot be revoked without donee's consent after registration. Settlement Deed (Samadaana Pathram): Used by parents to distribute property to children during their lifetime. Common to avoid succession disputes. Stamp duty: Same as gift deed — 1% for family members. Benefits over will: Takes effect immediately on registration, no probate needed, cannot be challenged as easily as a will. Process: Same as sale deed — both parties appear at Sub-Registrar with Aadhaar, witnesses, deed. After registration: Apply for Patta mutation at Taluk office within 90 days. Note: If donor is receiving any benefit in return (e.g., lifetime maintenance), this may be treated as a sale for stamp duty purposes.",
+    "source": "Transfer of Property Act 1882 §122; TN Stamp Act Schedule I Article 23; Registration Act 1908 §17; TN Court Circular 2019",
+    "keywords": [
+      "gift deed",
+      "settlement deed",
+      "family transfer",
+      "stamp duty family",
+      "daanapathram",
+      "samadaana pathram",
+      "donation land",
+      "parents to children"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "reg_003",
+    "category": "registration",
+    "title": "Release Deed — Relinquishing Share in Joint Property",
+    "content": "Release deed (Vittu Koduthal Pathram) in Tamil Nadu — when one co-owner gives up their share: When used: When one or more co-owners of jointly held property want to give up their share in favour of other co-owners. Common in inherited land where siblings want to transfer their share to one sibling. Key facts: (1) Release deed must be in favour of a co-owner only — cannot release to a total stranger. (2) Must be registered at Sub-Registrar office. (3) Stamp duty: If release is without consideration (free): 1% of value (minimum ₹1,000, maximum ₹25,000) if between relatives. If with consideration (payment received): treated as sale deed, stamp duty 7%. Step-by-step: (1) Draft release deed with all releasing parties and receiving party, (2) All parties appear at Sub-Registrar with Aadhaar, (3) After registration, apply for Patta mutation at Taluk office. Release deed is final and irrevocable after registration — the releasing party permanently loses their share. Call 1516 for free legal guidance before signing a release deed to ensure you fully understand your rights.",
+    "source": "Transfer of Property Act 1882; TN Stamp Act Schedule I Article 53; Registration Act 1908 §17; TN Revenue Standing Orders",
+    "keywords": [
+      "release deed",
+      "relinquish share",
+      "vittu koduthal",
+      "co-owner",
+      "joint property",
+      "family settlement",
+      "give up share",
+      "stamp duty release"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "reg_004",
+    "category": "registration",
+    "title": "Mortgage Deed — Pledging Land as Loan Security",
+    "content": "Mortgage deed for agricultural land in Tamil Nadu — pledging land as loan security: Types of mortgage: (1) Simple Mortgage (Sadhaarana Adiyanam): Mortgage is registered but possession stays with mortgagor. If loan not repaid, mortgagee can file civil suit for sale. (2) Mortgage by Deposit of Title Deeds (Equitable Mortgage): Deposit Patta and documents with bank/lender without formal registration — creates equitable mortgage. Common for agricultural loans. (3) Usufructuary Mortgage (Bhoola Adiyanam): Mortgagee takes possession and uses income from land until loan is repaid. Stamp duty for simple mortgage: 1% of loan amount (minimum ₹25, maximum ₹40,000). Registration: Mandatory for mortgages above ₹100 at Sub-Registrar. How to redeem (release) mortgage: Pay back full loan amount + interest. Obtain 'No Dues Certificate' from bank/lender. Register 'Reconveyance Deed' or 'Mortgage Release Deed' at Sub-Registrar. Update EC to show mortgage discharge. Important: EC will show active mortgage — any buyer seeing this must insist on release before purchase. Agricultural land mortgage rules: NABARD-linked agricultural loans have special rules — check with your bank.",
+    "source": "Transfer of Property Act 1882 §58–60; TN Stamp Act; Registration Act 1908 §17; NABARD Agricultural Credit Guidelines",
+    "keywords": [
+      "mortgage deed",
+      "adiyanam",
+      "loan security",
+      "simple mortgage",
+      "equitable mortgage",
+      "usufructuary mortgage",
+      "redeem mortgage",
+      "no dues certificate"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "reg_005",
+    "category": "registration",
+    "title": "Cancellation of Registered Documents — When and How",
+    "content": "Cancellation of a registered document (deed cancellation) in Tamil Nadu: When cancellation is possible: (1) Mutual consent of all parties — both seller and buyer agree to cancel. (2) Court order declaring the document void due to fraud, coercion, misrepresentation, or mistake. (3) One party fails to perform their obligations under the deed. How to cancel by mutual consent: Both parties appear at Sub-Registrar office together and register a Cancellation Deed. Stamp duty: ₹100 (if original transaction is being reversed). This is clean and final. How to cancel through court: File suit under Specific Relief Act §31 for cancellation of void or voidable documents. Court will issue decree of cancellation. Sub-Registrar must then note cancellation in records. Important: You cannot unilaterally cancel a registered deed — both parties must agree, or court must order it. If other party refuses: go to court. Partial cancellation: If only part of the deed needs correction (e.g., area, name), file a Rectification Deed at Sub-Registrar — this is simpler than full cancellation. Call 1516 for guidance on how to proceed.",
+    "source": "Specific Relief Act 1963 §31; Registration Act 1908 §32; TN Sub-Registrar Cancellation Deed Guidelines; TN Stamp Act",
+    "keywords": [
+      "cancel deed",
+      "deed cancellation",
+      "rectification deed",
+      "Specific Relief Act 31",
+      "mutual consent cancellation",
+      "court cancellation",
+      "void deed",
+      "voidable deed"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "reg_006",
+    "category": "registration",
+    "title": "Power of Attorney for Land — Risks and Legal Rules",
+    "content": "Power of Attorney (POA) for land transactions in Tamil Nadu — important warnings: A Power of Attorney authorises another person to deal with your land on your behalf. Types: General POA (all powers) vs Specific POA (limited powers for one transaction). Supreme Court ruling (2011 — Suraj Lamp and Industries v State of Haryana): POA-based land sales are NOT valid as substitutes for registered sale deeds. Land can only be legally transferred through a registered sale deed — not through POA. Risks of giving POA for land: (1) POA holder can sell, mortgage, or gift your land — POA is frequently misused for fraud. (2) If you die, POA automatically terminates — but the POA holder may still act fraudulently before news spreads. (3) You cannot give POA to an NRI for land sale in Tamil Nadu without specific registration at Consulate or Sub-Registrar. Safe use of POA: For specific, time-limited purposes only (e.g., represent me in Patta mutation process). Register the POA at Sub-Registrar if giving any land-related powers. Always revoke POA (by registering Revocation of POA) when purpose is complete. Never give blank or undated POA for land. Call 1516 before giving anyone POA over your land.",
+    "source": "Power of Attorney Act 1882; Supreme Court Suraj Lamp v State of Haryana (2011) 11 SCC 438; Registration Act 1908 §17; TN Stamp Act",
+    "keywords": [
+      "power of attorney",
+      "POA land",
+      "GPA",
+      "SPA",
+      "land POA risks",
+      "Suraj Lamp judgment",
+      "POA sale invalid",
+      "revoke POA",
+      "fraudulent POA"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "comm_001",
+    "category": "community_certificate",
+    "title": "Community Certificate — Overview and Eligibility",
+    "content": "Community Certificate (Caste Certificate) in Tamil Nadu is issued by the Tahsildar to certify a person's caste/community for availing reservations in education, employment, and government schemes. Valid for: BC (Backward Class), MBC (Most Backward Class), SC (Scheduled Caste), ST (Scheduled Tribe), OBC (Other Backward Class). Governed by: Tamil Nadu Backward Classes, Scheduled Castes and Scheduled Tribes (Reservation of Seats in Educational Institutions and of Appointments or Posts in the Services under the State) Act 1993. Certificate is valid for 2 years for educational purposes, permanent for employment under Tamil Nadu Government.",
+    "source": "TN BC/MBC/SC/ST Act 1993; Revenue Dept Circular CC/2020/01",
+    "keywords": [
+      "community certificate",
+      "caste certificate",
+      "BC",
+      "MBC",
+      "SC",
+      "ST",
+      "OBC",
+      "backward class"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "comm_002",
+    "category": "community_certificate",
+    "title": "Community Certificate — Documents and Process",
+    "content": "Documents for Community Certificate: (1) Parent's community certificate or Transfer Certificate (TC) from school showing community, (2) Aadhaar card, (3) Ration card (family card), (4) Application form (free at e-Sevai or Taluk office). Process: Step 1 — Apply at nearest e-Sevai centre or Taluk office (Mon–Sat, 9am–5pm). Fee: ₹60 at e-Sevai, free at Taluk office. Step 2 — Revenue Inspector visits home for community verification within 3–7 days. Step 3 — Tahsildar digitally approves within 2–3 days post-verification. Step 4 — Collect from e-Sevai centre or download from edistrict.tn.gov.in using application number. Total time: 7–15 working days. Free legal aid if denied: call 1516.",
+    "source": "e-Sevai Guidelines 2019; Revenue Dept Circular 2021; TN e-District SOP",
+    "keywords": [
+      "community certificate process",
+      "e-Sevai",
+      "Tahsildar",
+      "Revenue Inspector",
+      "edistrict"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "income_001",
+    "category": "income_certificate",
+    "title": "Income Certificate — Process and Requirements",
+    "content": "Income Certificate in Tamil Nadu certifies annual family income for scholarship, government scheme, and fee concession purposes. Issued by Tahsildar. Documents required: (1) Aadhaar card, (2) Ration card, (3) Salary slips (for salaried) OR self-declaration affidavit (₹20–50 notarised) for agricultural/daily wage workers stating total annual income, (4) Application form (free). Process: Apply at e-Sevai centre (fee ₹60) or Taluk office (free). Revenue Inspector verifies income within 2–5 days. Tahsildar issues within 2–3 days. Certificate valid for 1 year. Download from edistrict.tn.gov.in. Total: 7–10 working days.",
+    "source": "TN Revenue Dept Order RT/02/2022; e-Sevai SOP 2020",
+    "keywords": [
+      "income certificate",
+      "annual income",
+      "salary certificate",
+      "affidavit",
+      "scholarship",
+      "fee concession"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "fir_001",
+    "category": "fir_police",
+    "title": "FIR Notice — Rights and Immediate Steps",
+    "content": "If you receive an FIR notice in Tamil Nadu: An FIR (First Information Report) is registered under CrPC Section 154. Your rights: (1) You are entitled to a free copy of the FIR — this is a legal right (CrPC §207). Go to the police station and request it. (2) You have the right to a lawyer before questioning (CrPC §41D). (3) If you cannot afford a lawyer, call Tamil Nadu Legal Services Authority: 1516 (toll-free, 24/7) — they must provide a free lawyer. Immediate steps: Step 1 — Obtain FIR copy and read carefully: note the section (IPC/BNS), date to appear, investigating officer's name. Step 2 — Call 1516 immediately. Do not appear without legal counsel. Step 3 — Appear on the specified date with valid photo ID (Aadhaar/Voter ID). Step 4 — Do NOT sign any document without reading fully.",
+    "source": "CrPC Section 154, 207, 41D; BNSS 2023 §173; Legal Aid Act 1987 §12",
+    "keywords": [
+      "FIR",
+      "police notice",
+      "first information report",
+      "IPC",
+      "BNSS",
+      "arrest",
+      "accused",
+      "legal rights"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "fir_002",
+    "category": "fir_police",
+    "title": "FIR — Cognizable vs Non-Cognizable Offences",
+    "content": "Types of offences in FIR: Cognizable offence — police can arrest without warrant (IPC 379 theft, 420 cheating, 302 murder, 376 rape, 307 attempt to murder). Non-cognizable offence — police need magistrate's permission to arrest (IPC 323 simple hurt, 504 insult). Bailable vs Non-bailable: Bailable — you can get bail at the police station itself. Non-bailable — bail must be granted by a court (magistrate). If FIR is against you: contact a lawyer via 1516 immediately. If you file an FIR (you are complainant): police must register it. If they refuse, send complaint to Superintendent of Police or use CrPC §156(3) before a Magistrate.",
+    "source": "CrPC Schedule I; IPC §379, 420, 302; BNSS 2023; TN Police Manual §12",
+    "keywords": [
+      "cognizable",
+      "non-cognizable",
+      "bailable",
+      "non-bailable",
+      "bail",
+      "police",
+      "magistrate",
+      "accused",
+      "complainant"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "court_001",
+    "category": "court_notice",
+    "title": "Court Notice / Civil Summons — What To Do",
+    "content": "If you receive a court notice/civil summons in Tamil Nadu: A civil summons means someone has filed a civil suit against you. Immediate steps: Step 1 — Read the notice carefully. Note: court name, case number, date of first hearing, deadline to file written statement. Step 2 — Hire a lawyer immediately. Call 1516 for free legal aid. Step 3 — File your Written Statement (WS) BEFORE the deadline shown in the notice. If you miss this deadline, the court may proceed ex-parte (decide without your side). Step 4 — Appear in court on the date shown. Bring all land documents: Patta, EC, FMB, sale deed, chitta/adangal. Consequence of ignoring summons: Court will pass an ex-parte decree against you — this can result in loss of property rights.",
+    "source": "CPC Order V (Summons); CPC Order VIII (Written Statement deadline 30 days); TN Civil Courts Act",
+    "keywords": [
+      "court notice",
+      "civil summons",
+      "written statement",
+      "ex-parte",
+      "civil suit",
+      "land dispute",
+      "district court"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "mnrega_001",
+    "category": "mnrega",
+    "title": "MNREGA — Wage Complaint Process",
+    "content": "MNREGA wage complaints in Tamil Nadu: You are entitled to: (1) Minimum 100 days of employment per household per year, (2) Wages within 15 days of work completion — delay entitles compensation at 0.05% per day. Complaint process: Step 1 — Obtain Muster Roll and Job Card from Gram Panchayat. Step 2 — File written complaint at Gram Panchayat. Step 3 — Escalate to Block Development Officer (BDO) if no action in 15 days. Step 4 — Attend Gram Sabha Social Audit. Step 5 — National helpline: 1800-345-22-44 (toll-free). Tamil Nadu MNREGA state wage rate (2024): ₹294 per day.",
+    "source": "MGNREGA Act 2005 §6, §7, §16; Social Audit Guidelines 2011; TN State Labour Dept Circular 2022",
+    "keywords": [
+      "MNREGA",
+      "MGNREGA",
+      "wage complaint",
+      "job card",
+      "muster roll",
+      "BDO",
+      "gram panchayat",
+      "employment guarantee"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "mnrega_002",
+    "category": "mnrega",
+    "title": "MNREGA — Rights and Entitlements",
+    "content": "MNREGA legal rights: (1) Any adult rural household member willing to do unskilled work is entitled to demand employment. (2) Work must be provided within 5 km; beyond 5 km, 10% extra wages. (3) Worksite facilities: drinking water, shade, first aid, creche. (4) Equal wages for men and women — legally mandated. (5) You cannot be discriminated against for filing a complaint. (6) Gram Panchayat must publicly display MIS data — if not displayed, that is a violation reportable to BDO.",
+    "source": "MGNREGA Act 2005 §6, §25, §27; TN MNREGA State Wage Rate Notification 2024; Schedule II MGNREGA",
+    "keywords": [
+      "MNREGA rights",
+      "wages",
+      "equal pay",
+      "worksite facilities",
+      "MIS data",
+      "unemployment allowance"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "legal_aid_001",
+    "category": "legal_aid",
+    "title": "Free Legal Aid — Tamil Nadu SLSA",
+    "content": "Free legal aid in Tamil Nadu — Tamil Nadu State Legal Services Authority (TNSLSA): Helpline: 1516 (toll-free, 24/7). Who is eligible: (1) Annual income below ₹3 lakh, (2) SC/ST communities, (3) Women (all cases), (4) Children, (5) Victims of trafficking, disaster, or violence, (6) Persons with disabilities. Services: Free lawyer for court cases, legal advice, mediation (Lok Adalat), documentation help. Lok Adalat awards have same legal force as court decree and cannot be appealed. District Legal Services Authority (DLSA): One in every district at District Court Complex. No appointment needed.",
+    "source": "Legal Aid Act 1987 §12; TNSLSA Guidelines; Lok Adalat under Legal Services Authorities Act 1987 §19",
+    "keywords": [
+      "legal aid",
+      "free lawyer",
+      "1516",
+      "TNSLSA",
+      "Lok Adalat",
+      "DLSA",
+      "eligibility",
+      "free legal help"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "ration_001",
+    "category": "ration_card",
+    "title": "Ration Card — New Application and Corrections",
+    "content": "Ration card in Tamil Nadu: Apply at nearest Taluk Supply Office (TSO) or e-Sevai centre. Documents: Aadhaar of all family members, proof of address, proof of family relationship. Three types: White card (APL), Tan/Brown card (BPL), AAY card. Application is free. Processing: 30–45 days. For corrections: Apply at TSO. Right to appeal denial to District Supply Officer within 30 days.",
+    "source": "TN Public Distribution System (Control) Order; National Food Security Act 2013; NFSA §10",
+    "keywords": [
+      "ration card",
+      "APL",
+      "BPL",
+      "Antyodaya",
+      "TSO",
+      "Taluk Supply Office",
+      "food security",
+      "ration"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "women_001",
+    "category": "womens_rights",
+    "title": "Domestic Violence — Rights and Protection",
+    "content": "Protection from domestic violence in Tamil Nadu under PWDVA 2005: Covers physical, emotional, economic, sexual, and verbal abuse. Who can file: Women in domestic relationships. Where to file: (1) Protection Officer at District Social Welfare Office, (2) Magistrate Court, (3) Police station (NCW helpline: 7827170170). Relief: Protection order, residence order, monetary relief, child custody, compensation. Free legal aid: call TNSLSA at 1516. Emergency shelter: One Stop Centres (OSC) in all districts.",
+    "source": "Protection of Women from Domestic Violence Act 2005 §12, §18, §19, §20; PWDVA Rules 2006",
+    "keywords": [
+      "domestic violence",
+      "PWDVA",
+      "protection order",
+      "women rights",
+      "abuse",
+      "shelter",
+      "one stop centre"
+    ],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "pension_001",
+    "category": "pension",
+    "title": "Old Age Pension — Tamil Nadu IGNOAPS",
+    "content": "Old Age Pension in Tamil Nadu: Eligibility: Age 60+ and BPL. Amount: ₹1000/month (age 60–79), ₹1500/month (age 80+). Apply at Panchayat office or e-Sevai centre. Documents: Aadhaar, ration card, age proof, BPL certificate. Payment via DBT to bank account. For widows: IGNWPS — ₹600/month for BPL widows aged 40–79.",
+    "source": "IGNOAPS Guidelines 2007; TN Social Welfare Dept GO Ms No 52/2020; NSAP Guidelines",
+    "keywords": [
+      "old age pension",
+      "IGNOAPS",
+      "widow pension",
+      "IGNWPS",
+      "elderly",
+      "BPL",
+      "senior citizen",
+      "pension"
+    ],
+    "verified": false,
+    "last_checked": null
+  }
+]

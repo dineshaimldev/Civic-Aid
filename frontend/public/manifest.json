@@ -1,0 +1,23 @@
+{
+  "name": "CivicAid — Free Legal Help",
+  "short_name": "CivicAid",
+  "description": "AI-powered free legal and government assistance for Tamil Nadu village residents",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F0E8",
+  "theme_color": "#6B9E6B",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable any" }
+  ],
+  "categories": ["legal", "government", "utilities"],
+  "lang": "en-IN",
+  "screenshots": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ]
+}
