@@ -8,9 +8,11 @@ interface Props {
   presetRecipientDesignation?: string
   presetRecipientOffice?: string
   presetSubject?: string
+  presetDetailsHint?: string
+  presetDetails?: string
 }
 
-export default function LetterDraftModal({ open, onClose, presetRecipientDesignation, presetRecipientOffice, presetSubject }: Props) {
+export default function LetterDraftModal({ open, onClose, presetRecipientDesignation, presetRecipientOffice, presetSubject, presetDetailsHint, presetDetails }: Props) {
   const { addToast, lang } = useApp()
   const [applicantName, setApplicantName] = useState('')
   const [fatherName, setFatherName] = useState('')
@@ -30,9 +32,10 @@ export default function LetterDraftModal({ open, onClose, presetRecipientDesigna
       setRecipientDesignation(presetRecipientDesignation ?? '')
       setRecipientOffice(presetRecipientOffice ?? '')
       setSubject(presetSubject ?? '')
+      setDetails(presetDetails ?? '')
       setLetterText('')
     }
-  }, [open, presetRecipientDesignation, presetRecipientOffice, presetSubject])
+  }, [open, presetRecipientDesignation, presetRecipientOffice, presetSubject, presetDetails])
 
   if (!open) return null
 
@@ -109,7 +112,7 @@ export default function LetterDraftModal({ open, onClose, presetRecipientDesigna
               <input value={recipientOffice} onChange={e => setRecipientOffice(e.target.value)} placeholder="Office (e.g. Taluk Office, Thiruvallur) *" className="rounded-full border border-[#c4ccc1] bg-white px-4 py-2.5 font-['DM_Sans'] text-sm outline-none focus:border-[#193d2c]" />
             </div>
             <input value={subject} onChange={e => setSubject(e.target.value)} placeholder="Subject of your letter *" className="rounded-full border border-[#c4ccc1] bg-white px-4 py-2.5 font-['DM_Sans'] text-sm outline-none focus:border-[#193d2c]" />
-            <textarea value={details} onChange={e => setDetails(e.target.value)} placeholder="Describe what happened, clearly and factually *" className="min-h-28 rounded-2xl border border-[#c4ccc1] bg-white p-4 font-['DM_Sans'] text-sm outline-none focus:border-[#193d2c]" />
+            <textarea value={details} onChange={e => setDetails(e.target.value)} placeholder={presetDetailsHint ? `${presetDetailsHint} *` : 'Describe what happened, clearly and factually *'} className="min-h-28 rounded-2xl border border-[#c4ccc1] bg-white p-4 font-['DM_Sans'] text-sm outline-none focus:border-[#193d2c]" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <input value={surveyNumber} onChange={e => setSurveyNumber(e.target.value)} placeholder="Survey number (if land-related)" className="rounded-full border border-[#c4ccc1] bg-white px-4 py-2.5 font-['DM_Sans'] text-sm outline-none focus:border-[#193d2c]" />

@@ -1,9 +1,11 @@
 import logging
+import secrets
 from fastapi import APIRouter, HTTPException, Request
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from app.models.schemas import CorruptionReportCreate, CorruptionReportResponse
 from app.services.corruption_service import get_corruption_service
+from app.core.config import get_settings
 
 router  = APIRouter(prefix="/api/corruption-report", tags=["corruption"])
 logger  = logging.getLogger(__name__)
@@ -55,10 +57,16 @@ async def dvac_contact():
 
 
 @router.get("/stats")
-async def corruption_aggregate_stats():
+@limiter.limit("10/minute")
+async def corruption_aggregate_stats(request: Request):
     """
     Anonymized aggregate stats — total reports and office-level counts.
     No personal data exposed. Useful for NGOs/researchers.
     """
+    configured_token = get_settings().reminder_sweep_token.strip()
+    supplied_token = request.headers.get("X-Admin-Token", "")
+    if not configured_token or not secrets.compare_digest(supplied_token, configured_token):
+        raise HTTPException(status_code=401, detail="Unauthorized.")
+
     service = get_corruption_service()
     return service.get_aggregate_stats()

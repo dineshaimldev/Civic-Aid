@@ -3,6 +3,8 @@ import { useState, useRef, useCallback, useEffect } from 'react'
 interface UseVoiceInputOptions {
   onResult: (text: string) => void
   onError?: (msg: string) => void
+  /** BCP-47 recognition language, e.g. 'ta-IN' or 'en-IN'. Defaults to Tamil. */
+  recogLang?: string
 }
 
 // Detect if browser genuinely supports Tamil voice recognition.
@@ -22,7 +24,7 @@ function detectTamilVoiceSupport(): boolean {
   return true
 }
 
-export function useVoiceInput({ onResult, onError }: UseVoiceInputOptions) {
+export function useVoiceInput({ onResult, onError, recogLang = 'ta-IN' }: UseVoiceInputOptions) {
   const [isRecording, setIsRecording]   = useState(false)
   const [isSupported]                   = useState(detectTamilVoiceSupport)
   const recognitionRef                   = useRef<any>(null)
@@ -43,7 +45,7 @@ export function useVoiceInput({ onResult, onError }: UseVoiceInputOptions) {
 
     rec.continuous      = false
     rec.interimResults  = false
-    rec.lang            = 'ta-IN'
+    rec.lang            = recogLang
     rec.maxAlternatives = 3   // get top 3 so we can pick the best
 
     rec.onstart = () => setIsRecording(true)
@@ -96,7 +98,7 @@ export function useVoiceInput({ onResult, onError }: UseVoiceInputOptions) {
       setIsRecording(false)
       onError?.('Could not start voice input. Please type your question.')
     }
-  }, [isSupported, onResult, onError])
+  }, [isSupported, onResult, onError, recogLang])
 
   const stop = useCallback(() => {
     recognitionRef.current?.stop()

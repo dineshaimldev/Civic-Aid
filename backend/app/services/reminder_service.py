@@ -9,9 +9,12 @@ No new infrastructure required — reuses what's already built.
 """
 import uuid
 import logging
+import hashlib
+import secrets
 from datetime import datetime, timedelta
 from typing import Optional
 from app.services.cache_service import get_cache
+from app.services.persistence_service import get_persistence
 
 logger = logging.getLogger(__name__)
 
@@ -33,9 +36,14 @@ class ReminderService:
         deadline_date: str,
         description: str = "",
         source: str = "manual",
+        access_token: Optional[str] = None,
     ) -> dict:
         cache = get_cache()
         reminder_id = str(uuid.uuid4())[:12]
+        existing_token = cache.get(self._token_key(phone))
+        if existing_token and not self.verify_access_token(phone, access_token or ""):
+            raise PermissionError("Reminder access token required.")
+        token = access_token if existing_token else self.issue_access_token(phone)
 
         reminder = {
             "id": reminder_id,
@@ -48,31 +56,49 @@ class ReminderService:
             "notified": False,
         }
 
-        cache.set(f"reminder:{reminder_id}", reminder, ttl=REMINDER_TTL)
+        get_persistence().save_record(
+            "reminder",
+            reminder_id,
+            reminder,
+            reminder["created_at"],
+            owner_hash=hashlib.sha256(phone.encode()).hexdigest(),
+        )
 
         # Add to this phone's reminder list
-        phone_key = f"reminders:phone:{phone}"
-        phone_reminders = cache.get(phone_key) or []
-        phone_reminders.append(reminder_id)
-        cache.set(phone_key, phone_reminders, ttl=REMINDER_TTL)
+        logger.info("[Reminder] Created %s — deadline %s", reminder_id, deadline_date)
+        return {**reminder, "access_token": token}
 
-        # Add to global index for the daily sweep
-        all_ids = cache.get(REMINDER_INDEX_KEY) or []
-        all_ids.append(reminder_id)
-        cache.set(REMINDER_INDEX_KEY, all_ids, ttl=REMINDER_TTL)
+    def _token_key(self, phone: str) -> str:
+        return f"reminders:token:{hashlib.sha256(phone.encode()).hexdigest()}"
 
-        logger.info(f"[Reminder] Created {reminder_id} for {phone} — deadline {deadline_date}")
-        return reminder
+    def issue_access_token(self, phone: str) -> str:
+        token = secrets.token_urlsafe(32)
+        get_cache().set(
+            self._token_key(phone),
+            hashlib.sha256(token.encode()).hexdigest(),
+            ttl=REMINDER_TTL,
+        )
+        return token
+
+    def verify_access_token(self, phone: str, token: str) -> bool:
+        stored = get_cache().get(self._token_key(phone))
+        if not stored or not token:
+            return False
+        return secrets.compare_digest(
+            stored,
+            hashlib.sha256(token.encode()).hexdigest(),
+        )
+
+    def has_access_token(self, phone: str) -> bool:
+        return bool(get_cache().get(self._token_key(phone)))
 
     def get_reminders_for_phone(self, phone: str) -> list[dict]:
-        cache = get_cache()
-        phone_key = f"reminders:phone:{phone}"
-        ids = cache.get(phone_key) or []
-        reminders = []
-        for rid in ids:
-            r = cache.get(f"reminder:{rid}")
-            if r:
-                reminders.append(r)
+        reminders = get_persistence().list_records(
+            "reminder",
+            hashlib.sha256(phone.encode()).hexdigest(),
+        )
+        for reminder in reminders:
+            reminder.pop("access_token", None)
         # Sort by deadline date, soonest first
         reminders.sort(key=lambda r: r["deadline_date"])
         return reminders
@@ -95,6 +121,7 @@ class ReminderService:
         phone: str,
         doc_title: str,
         dates: list[dict],
+        access_token: str,
     ) -> list[dict]:
         """
         Auto-create reminders from dates extracted during document analysis.
@@ -113,6 +140,7 @@ class ReminderService:
                     deadline_date=parsed.isoformat()[:10],
                     description=f"Extracted from your uploaded document: {doc_title}",
                     source="document_analysis",
+                    access_token=access_token,
                 )
                 created.append(reminder)
         return created
@@ -133,14 +161,11 @@ class ReminderService:
         days and have not yet been notified. Returns them so the caller
         (e.g. a cron endpoint or scheduler) can send WhatsApp/SMS alerts.
         """
-        cache = get_cache()
-        all_ids = cache.get(REMINDER_INDEX_KEY) or []
         due = []
         now = datetime.now()
         warn_cutoff = now + timedelta(days=warn_days_before)
 
-        for rid in all_ids:
-            r = cache.get(f"reminder:{rid}")
+        for r in get_persistence().list_records("reminder"):
             if not r or r.get("notified"):
                 continue
             try:
@@ -153,11 +178,16 @@ class ReminderService:
         return due
 
     def mark_notified(self, reminder_id: str):
-        cache = get_cache()
-        r = cache.get(f"reminder:{reminder_id}")
+        r = get_persistence().get_record("reminder", reminder_id)
         if r:
             r["notified"] = True
-            cache.set(f"reminder:{reminder_id}", r, ttl=REMINDER_TTL)
+            get_persistence().save_record(
+                "reminder",
+                reminder_id,
+                r,
+                r["created_at"],
+                owner_hash=hashlib.sha256(r["phone"].encode()).hexdigest(),
+            )
 
     def send_due_reminders_via_whatsapp(self) -> int:
         """

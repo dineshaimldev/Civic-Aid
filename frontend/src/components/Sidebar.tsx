@@ -14,6 +14,7 @@ const getNavItems = (lang: Lang) => [
   { page: 'chat' as Page, label: T(lang, 'chat'), icon: 'M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z' },
   { page: 'upload' as Page, label: T(lang, 'upload'), icon: 'M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z M14 2v6h6' },
   { page: 'procedures' as Page, label: T(lang, 'procedures'), icon: 'M8 6h13 M8 12h13 M8 18h13 M3 6h.01 M3 12h.01 M3 18h.01' },
+  { page: 'vault' as Page, label: lang === 'tamil' ? 'ஆவண பெட்டகம்' : 'Document vault', icon: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' },
   { page: 'about' as Page, label: T(lang, 'about'), icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
 ]
 
@@ -23,9 +24,33 @@ export default function Sidebar({ activePage, onNavigate, lang, setLang }: Props
     <nav style={{ width: 260, background: '#193d2c' }} className="flex flex-col h-full">
       {/* Logo */}
       <div className="flex items-center gap-3 px-5 h-[74px]" style={{ borderBottom: '1px solid rgba(246,241,230,0.12)' }}>
-        <span className="grid place-items-center rounded-full flex-shrink-0" style={{ width: 36, height: 36, background: '#f6f1e6', color: '#193d2c', fontSize: 16 }}>✦</span>
+        {/* C-arc + scales mark */}
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+          {/* Outer C arc */}
+          <path d="M34 8.5A17 17 0 1 0 34 31.5" stroke="#b8cfaf" strokeWidth="3.2" strokeLinecap="round" fill="none"/>
+          {/* Balance pole (vertical) */}
+          <line x1="20" y1="12" x2="20" y2="28" stroke="#e6ad36" strokeWidth="1.8" strokeLinecap="round"/>
+          {/* Balance beam (horizontal) */}
+          <line x1="12" y1="16" x2="28" y2="16" stroke="#e6ad36" strokeWidth="1.8" strokeLinecap="round"/>
+          {/* Left pan string */}
+          <line x1="13" y1="16" x2="11" y2="22" stroke="#e6ad36" strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="13" y1="16" x2="15" y2="22" stroke="#e6ad36" strokeWidth="1.4" strokeLinecap="round"/>
+          {/* Right pan string */}
+          <line x1="27" y1="16" x2="25" y2="22" stroke="#e6ad36" strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="27" y1="16" x2="29" y2="22" stroke="#e6ad36" strokeWidth="1.4" strokeLinecap="round"/>
+          {/* Left pan */}
+          <path d="M10 22 Q13 25 16 22" stroke="#e6ad36" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+          {/* Right pan */}
+          <path d="M24 22 Q27 25 30 22" stroke="#e6ad36" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+          {/* Base */}
+          <line x1="17" y1="28" x2="23" y2="28" stroke="#e6ad36" strokeWidth="1.6" strokeLinecap="round"/>
+          {/* Person head atop pole */}
+          <circle cx="20" cy="10" r="2" fill="#b8cfaf"/>
+        </svg>
         <div>
-          <div style={{ fontFamily: 'DM Sans', fontWeight: 700, fontSize: 17, color: '#f6f1e6', letterSpacing: '-0.03em', lineHeight: 1.2 }}>CivicAid</div>
+          <div style={{ fontFamily: 'DM Sans', fontWeight: 700, fontSize: 17, letterSpacing: '-0.03em', lineHeight: 1.2 }}>
+            <span style={{ color: '#f6f1e6' }}>Civic</span><span style={{ color: '#4caf82' }}>Aid</span>
+          </div>
           <div style={{ fontFamily: 'DM Mono', fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#b8cfaf', lineHeight: 1.4 }}>Free Legal Help</div>
         </div>
       </div>

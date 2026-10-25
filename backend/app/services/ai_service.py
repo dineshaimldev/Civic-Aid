@@ -34,14 +34,19 @@ Use this context to answer the user's question accurately.
 
 STRICT RULES:
 1. Base your answer PRIMARILY on the retrieved context provided
-2. Give numbered step-by-step practical advice in plain, simple language
+2. Always structure your response in TWO parts:
+   PART A — Direct answer: 2-3 sentences explaining the legal position or right clearly
+   PART B — Steps to resolve this: numbered step-by-step procedure (minimum 3 steps) with office names, fees (₹), and timelines from the context
 3. Cite specific laws/orders from the context (e.g. "TN Revenue Standing Orders §4.2")
 4. Include: office names, timelines, fees (₹), helpline numbers from context
 5. For land disputes, FIR, court notices: ALWAYS include "Call 1516 (Tamil Nadu Legal Aid, toll-free, 24/7)"
-6. Maximum 300 words — concise but complete
+6. Maximum 350 words — concise but complete
 7. End your response with this EXACT format on its own line:
    SOURCES:["source1","source2"]
-8. If the context only partly answers the question, answer the part it supports, then say clearly what is not covered and advise confirming with a lawyer or calling 1516"""
+8. If the context only partly answers the question, answer the part it supports, then say clearly what is not covered and advise confirming with a lawyer or calling 1516
+9. If the user is asking about a document they shared, refer to the specific values in that document (names, dates, amounts) in your answer
+10. Treat every context item marked "not independently verified" as a lead, not as authoritative proof. Do not claim that an unverified fee, deadline, section, or procedure is confirmed. Tell the user to verify important details with the concerned office or a lawyer.
+11. CivicAid specialises in Tamil Nadu land, revenue and government procedures. For questions outside this area (e.g. other states, complex criminal or corporate law), still give the best general guidance you can, but briefly say CivicAid's verified coverage is strongest for Tamil Nadu land and revenue matters and advise confirming with a lawyer or calling 1516"""
 
 FALLBACK_SYSTEM = """You are CivicAid, a free legal information assistant for people in Tamil Nadu, India.
 No verified source in our knowledge base matched this question, so answer from your general knowledge of Indian law and Tamil Nadu procedures.
@@ -52,39 +57,28 @@ RULES:
 3. Name a law only when you are confident it applies. For offences committed on or after 1 July 2024, the BNS/BNSS apply in place of the IPC/CrPC.
 4. For urgent or serious matters (arrest, FIR, court notice, land fraud) include: Call 1516 (Tamil Nadu Legal Aid, toll-free, 24/7).
 5. Maximum 250 words.
-6. End your response with SOURCES:[] on its own line."""
+6. End your response with SOURCES:[] on its own line.
+7. CivicAid specialises in Tamil Nadu land, revenue and government procedures. Add one short sentence saying this answer is general guidance outside our verified knowledge base and should be confirmed with a lawyer or the concerned office."""
 
 DOC_ANALYSIS_SYSTEM = """You are a document analysis AI for CivicAid specialising in Tamil Nadu government documents.
 Analyse the provided document text and respond with ONLY a valid JSON object — no extra text, no markdown:
 {
-  "doc_type": "patta|sale_deed|fir|court|certificate|land_record|ec|legal_heir|other",
+  "doc_type": "patta|chitta|adangal|fmb|sale_deed|fir|court|certificate|land_record|ec|legal_heir|a_register|udr|rsr|other",
   "type_label": "Human readable document type",
   "title": "Full document title or best description",
   "confidence": 85,
   "key_info": ["Field: Value", "Field: Value"],
   "dates": [{"date": "DD Mon YYYY", "desc": "What this date means"}],
   "warnings": ["Warning if urgent action needed — leave empty array if none"],
+  "issues_found": true,
   "next_steps": ["Step 1 — what the person should do next", "Step 2"]
 }
 Rules:
 - Extract ACTUAL values from the document text. Never invent data.
 - confidence is 0-100 based on how clearly you can read the document
-- warnings: only add if genuinely urgent (court deadline, rejection notice, fraud indicator)
-- next_steps: always give at least 2 practical steps"""
-
-STATUS_SYSTEM = """Generate a realistic Tamil Nadu government land application status.
-Respond with ONLY valid JSON — no extra text, no markdown:
-{
-  "status": "completed|pending|rejected",
-  "heading": "Short 5-7 word status heading",
-  "explanation": "2-3 sentences explaining the current status in plain language a villager can understand",
-  "next_step": "One specific actionable next step with office name and timing",
-  "last_updated": "DD Mon YYYY",
-  "office": "Specific Tamil Nadu office name (e.g. Thiruvallur Taluk Office)"
-}
-Distribution: 60% pending, 30% completed, 10% rejected.
-Make the explanation specific to the service type (patta/esevai/general)."""
-
+- warnings: only add if genuinely urgent (court deadline, rejection notice, fraud indicator, missing required field, inconsistency between owner names)
+- issues_found: set to false ONLY when the document appears complete, valid, and has no warnings or red flags. Set to true if there are any warnings, missing fields, or items requiring action.
+- next_steps: always give at least 2 practical steps even for clean documents (e.g. keep a copy, verify with the issuing office)"""
 
 # ── Response Parser ───────────────────────────────────────────────────────
 
@@ -328,33 +322,31 @@ class AIService:
                 "next_steps": ["Try again in a moment", "Call 1516 for help"],
             }
 
-    def generate_status(self, ref: str, service: str) -> dict:
-        """Generate realistic AI status for unknown reference numbers."""
-        prompt = (
-            f"Reference number: {ref}\n"
-            f"Service type: {service}\n"
-            "Generate a realistic Tamil Nadu government application status."
+    def extract_land_fields(self, text: str, filename: str) -> dict:
+        """OCR text -> the key identity fields used to cross-check land documents."""
+        empty = {"doc_type": "other", "owner_name": "", "survey_number": "", "extent": "", "village": "", "taluk": ""}
+        if len(text.strip()) < 20:
+            return empty
+        system = (
+            "You extract identity fields from Tamil Nadu land documents. Respond with ONLY a JSON object: "
+            '{"doc_type":"patta|chitta|adangal|fmb|sale_deed|ec|a_register|legal_heir|other",'
+            '"owner_name":"","survey_number":"","extent":"","village":"","taluk":""}. '
+            "Copy values exactly as written in the document (Tamil or English). "
+            "Use an empty string when a field is not present. Never guess or invent."
         )
         try:
             raw = self._call_llm(
-                STATUS_SYSTEM,
-                [{"role": "user", "content": prompt}],
-                max_tokens  = 400,
-                temperature = 0.5,
+                system,
+                [{"role": "user", "content": f"Filename: {filename}\n\n{text[:3000]}"}],
+                max_tokens=300,
+                temperature=0.0,
             )
             raw = re.sub(r"```json\s*|\s*```", "", raw).strip()
-            return json.loads(raw)
+            data = json.loads(raw)
+            return {k: str(data.get(k, "") or "").strip() for k in empty}
         except Exception as e:
-            logger.error(f"[AI] generate_status error: {e}")
-            return {
-                "status":      "pending",
-                "heading":     "Application Under Review",
-                "explanation": "Your application is being processed by the concerned officer at the Taluk office.",
-                "next_step":   "Visit your Taluk office with your acknowledgement receipt after 5 working days.",
-                "last_updated":"Today",
-                "office":      "Taluk Office",
-            }
-
+            logger.warning(f"[AI] extract_land_fields failed for {filename}: {e}")
+            return empty
 
 # ── Singleton ─────────────────────────────────────────────────────────────
 

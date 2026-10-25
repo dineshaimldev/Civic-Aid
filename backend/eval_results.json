@@ -1,0 +1,3389 @@
+{
+  "retrieval_eval": {
+    "benchmark": "150-question land-issues benchmark",
+    "total_questions": 150,
+    "metrics": {
+      "accuracy_at_1": 0.8467,
+      "accuracy_at_3": 0.9733,
+      "accuracy_at_5": 0.9933,
+      "mean_mrr": 0.7984,
+      "mean_ndcg_at_5": 0.8689,
+      "confidence_rate": 0.98,
+      "avg_latency_ms": 17.7
+    },
+    "by_category": {
+      "patta": {
+        "questions": 25,
+        "accuracy_at_1": 0.84,
+        "accuracy_at_5": 1.0,
+        "mean_mrr": 0.769,
+        "mean_ndcg_at_5": 0.861
+      },
+      "land_records": {
+        "questions": 21,
+        "accuracy_at_1": 0.905,
+        "accuracy_at_5": 1.0,
+        "mean_mrr": 0.694,
+        "mean_ndcg_at_5": 0.856
+      },
+      "land_disputes": {
+        "questions": 23,
+        "accuracy_at_1": 0.826,
+        "accuracy_at_5": 0.957,
+        "mean_mrr": 0.786,
+        "mean_ndcg_at_5": 0.847
+      },
+      "land_classification": {
+        "questions": 17,
+        "accuracy_at_1": 0.824,
+        "accuracy_at_5": 1.0,
+        "mean_mrr": 0.887,
+        "mean_ndcg_at_5": 0.898
+      },
+      "inheritance": {
+        "questions": 20,
+        "accuracy_at_1": 0.85,
+        "accuracy_at_5": 1.0,
+        "mean_mrr": 0.71,
+        "mean_ndcg_at_5": 0.86
+      },
+      "land_acquisition": {
+        "questions": 14,
+        "accuracy_at_1": 0.857,
+        "accuracy_at_5": 1.0,
+        "mean_mrr": 0.964,
+        "mean_ndcg_at_5": 0.921
+      },
+      "land_tax": {
+        "questions": 13,
+        "accuracy_at_1": 0.846,
+        "accuracy_at_5": 1.0,
+        "mean_mrr": 0.769,
+        "mean_ndcg_at_5": 0.874
+      },
+      "registration": {
+        "questions": 17,
+        "accuracy_at_1": 0.824,
+        "accuracy_at_5": 1.0,
+        "mean_mrr": 0.887,
+        "mean_ndcg_at_5": 0.86
+      }
+    },
+    "by_difficulty": {
+      "medium": {
+        "questions": 69,
+        "accuracy_at_1": 0.855,
+        "accuracy_at_5": 1.0
+      },
+      "easy": {
+        "questions": 33,
+        "accuracy_at_1": 0.879,
+        "accuracy_at_5": 1.0
+      },
+      "hard": {
+        "questions": 48,
+        "accuracy_at_1": 0.812,
+        "accuracy_at_5": 0.979
+      }
+    },
+    "detailed_results": [
+      {
+        "id": "eval_001",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.7207,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.8756,
+        "latency_ms": 300.3,
+        "top_chunk_id": "patta_004"
+      },
+      {
+        "id": "eval_002",
+        "category": "patta",
+        "difficulty": "easy",
+        "confidence": 0.6875,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.3333,
+        "ndcg_at_5": 0.7706,
+        "latency_ms": 16.0,
+        "top_chunk_id": "patta_001"
+      },
+      {
+        "id": "eval_003",
+        "category": "patta",
+        "difficulty": "easy",
+        "confidence": 0.716,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.0,
+        "ndcg_at_5": 0.6816,
+        "latency_ms": 12.0,
+        "top_chunk_id": "patta_001"
+      },
+      {
+        "id": "eval_004",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.6445,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9047,
+        "latency_ms": 17.0,
+        "top_chunk_id": "patta_005"
+      },
+      {
+        "id": "eval_005",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.6095,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.886,
+        "latency_ms": 13.0,
+        "top_chunk_id": "patta_004"
+      },
+      {
+        "id": "eval_006",
+        "category": "patta",
+        "difficulty": "easy",
+        "confidence": 0.6889,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.9737,
+        "latency_ms": 12.0,
+        "top_chunk_id": "patta_003"
+      },
+      {
+        "id": "eval_007",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.5678,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 15.0,
+        "top_chunk_id": "patta_006"
+      },
+      {
+        "id": "eval_008",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.6201,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9648,
+        "latency_ms": 15.0,
+        "top_chunk_id": "patta_007"
+      },
+      {
+        "id": "eval_009",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.5397,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 14.0,
+        "top_chunk_id": "patta_008"
+      },
+      {
+        "id": "eval_010",
+        "category": "patta",
+        "difficulty": "hard",
+        "confidence": 0.6415,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 19.0,
+        "top_chunk_id": "patta_009"
+      },
+      {
+        "id": "eval_011",
+        "category": "patta",
+        "difficulty": "hard",
+        "confidence": 0.6438,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.9246,
+        "latency_ms": 17.0,
+        "top_chunk_id": "classify_003"
+      },
+      {
+        "id": "eval_012",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.3672,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.2,
+        "ndcg_at_5": 0.5438,
+        "latency_ms": 17.0,
+        "top_chunk_id": "poromboke_001"
+      },
+      {
+        "id": "eval_013",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.7155,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "patta_chitta_diff_001"
+      },
+      {
+        "id": "eval_014",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.6573,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9563,
+        "latency_ms": 18.0,
+        "top_chunk_id": "fmb_001"
+      },
+      {
+        "id": "eval_015",
+        "category": "land_records",
+        "difficulty": "medium",
+        "confidence": 0.4279,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9293,
+        "latency_ms": 14.0,
+        "top_chunk_id": "tax_002"
+      },
+      {
+        "id": "eval_016",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.7304,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9885,
+        "latency_ms": 19.0,
+        "top_chunk_id": "ec_001"
+      },
+      {
+        "id": "eval_017",
+        "category": "land_records",
+        "difficulty": "hard",
+        "confidence": 0.4099,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.3333,
+        "ndcg_at_5": 0.7042,
+        "latency_ms": 16.0,
+        "top_chunk_id": "ec_001"
+      },
+      {
+        "id": "eval_018",
+        "category": "land_records",
+        "difficulty": "medium",
+        "confidence": 0.5663,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.8094,
+        "latency_ms": 18.0,
+        "top_chunk_id": "patta_chitta_diff_001"
+      },
+      {
+        "id": "eval_019",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.7196,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9558,
+        "latency_ms": 14.0,
+        "top_chunk_id": "land_rec_004"
+      },
+      {
+        "id": "eval_020",
+        "category": "land_records",
+        "difficulty": "hard",
+        "confidence": 0.6845,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 18.0,
+        "top_chunk_id": "tax_003"
+      },
+      {
+        "id": "eval_021",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "confidence": 0.5283,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 17.0,
+        "top_chunk_id": "dispute_003"
+      },
+      {
+        "id": "eval_022",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.5583,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9793,
+        "latency_ms": 18.0,
+        "top_chunk_id": "dispute_002"
+      },
+      {
+        "id": "eval_023",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.5856,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 18.0,
+        "top_chunk_id": "dispute_004"
+      },
+      {
+        "id": "eval_024",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.665,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9374,
+        "latency_ms": 16.0,
+        "top_chunk_id": "patta_010"
+      },
+      {
+        "id": "eval_025",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.5624,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9386,
+        "latency_ms": 17.0,
+        "top_chunk_id": "dispute_007"
+      },
+      {
+        "id": "eval_026",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.633,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.8461,
+        "latency_ms": 16.0,
+        "top_chunk_id": "poromboke_001"
+      },
+      {
+        "id": "eval_027",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "confidence": 0.5172,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9917,
+        "latency_ms": 19.0,
+        "top_chunk_id": "dispute_008"
+      },
+      {
+        "id": "eval_028",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.5242,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": false,
+        "mrr": 0.0,
+        "ndcg_at_5": 0.0,
+        "latency_ms": 20.0,
+        "top_chunk_id": "dispute_006"
+      },
+      {
+        "id": "eval_029",
+        "category": "land_classification",
+        "difficulty": "easy",
+        "confidence": 0.6822,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 18.0,
+        "top_chunk_id": "classify_001"
+      },
+      {
+        "id": "eval_030",
+        "category": "land_classification",
+        "difficulty": "easy",
+        "confidence": 0.68,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9134,
+        "latency_ms": 15.0,
+        "top_chunk_id": "poromboke_001"
+      },
+      {
+        "id": "eval_031",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.6191,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.994,
+        "latency_ms": 20.0,
+        "top_chunk_id": "classify_005"
+      },
+      {
+        "id": "eval_032",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.5081,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 21.0,
+        "top_chunk_id": "classify_004"
+      },
+      {
+        "id": "eval_033",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.7027,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9943,
+        "latency_ms": 16.0,
+        "top_chunk_id": "classify_003"
+      },
+      {
+        "id": "eval_034",
+        "category": "inheritance",
+        "difficulty": "easy",
+        "confidence": 0.79,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9584,
+        "latency_ms": 14.0,
+        "top_chunk_id": "inherit_001"
+      },
+      {
+        "id": "eval_035",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "confidence": 0.4249,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.4744,
+        "latency_ms": 16.0,
+        "top_chunk_id": "dispute_006"
+      },
+      {
+        "id": "eval_036",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.4286,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.2,
+        "ndcg_at_5": 0.7302,
+        "latency_ms": 18.0,
+        "top_chunk_id": "inherit_006"
+      },
+      {
+        "id": "eval_037",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.4365,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9767,
+        "latency_ms": 18.0,
+        "top_chunk_id": "inherit_004"
+      },
+      {
+        "id": "eval_038",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "confidence": 0.5107,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.8172,
+        "latency_ms": 18.0,
+        "top_chunk_id": "inherit_001"
+      },
+      {
+        "id": "eval_039",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.5652,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9717,
+        "latency_ms": 18.0,
+        "top_chunk_id": "inherit_006"
+      },
+      {
+        "id": "eval_040",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "confidence": 0.5974,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 21.0,
+        "top_chunk_id": "acquire_001"
+      },
+      {
+        "id": "eval_041",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "confidence": 0.6268,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 18.0,
+        "top_chunk_id": "acquire_002"
+      },
+      {
+        "id": "eval_042",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "confidence": 0.6143,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 18.0,
+        "top_chunk_id": "acquire_003"
+      },
+      {
+        "id": "eval_043",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "confidence": 0.885,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 16.0,
+        "top_chunk_id": "tax_001"
+      },
+      {
+        "id": "eval_044",
+        "category": "land_tax",
+        "difficulty": "medium",
+        "confidence": 0.5506,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 18.0,
+        "top_chunk_id": "tax_002"
+      },
+      {
+        "id": "eval_045",
+        "category": "land_tax",
+        "difficulty": "hard",
+        "confidence": 0.5559,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 16.0,
+        "top_chunk_id": "tax_003"
+      },
+      {
+        "id": "eval_046",
+        "category": "registration",
+        "difficulty": "easy",
+        "confidence": 0.8352,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9513,
+        "latency_ms": 19.0,
+        "top_chunk_id": "patta_007"
+      },
+      {
+        "id": "eval_047",
+        "category": "registration",
+        "difficulty": "medium",
+        "confidence": 0.5253,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9399,
+        "latency_ms": 18.0,
+        "top_chunk_id": "reg_003"
+      },
+      {
+        "id": "eval_048",
+        "category": "registration",
+        "difficulty": "hard",
+        "confidence": 0.5858,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9473,
+        "latency_ms": 16.0,
+        "top_chunk_id": "reg_006"
+      },
+      {
+        "id": "eval_049",
+        "category": "registration",
+        "difficulty": "medium",
+        "confidence": 0.4988,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.7123,
+        "latency_ms": 17.0,
+        "top_chunk_id": "dispute_004"
+      },
+      {
+        "id": "eval_050",
+        "category": "registration",
+        "difficulty": "medium",
+        "confidence": 0.4885,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9567,
+        "latency_ms": 21.0,
+        "top_chunk_id": "reg_004"
+      },
+      {
+        "id": "eval_051",
+        "category": "patta",
+        "difficulty": "easy",
+        "confidence": 0.6268,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9676,
+        "latency_ms": 25.0,
+        "top_chunk_id": "land_rec_003"
+      },
+      {
+        "id": "eval_052",
+        "category": "patta",
+        "difficulty": "hard",
+        "confidence": 0.6671,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.2,
+        "ndcg_at_5": 0.4323,
+        "latency_ms": 15.0,
+        "top_chunk_id": "patta_003"
+      },
+      {
+        "id": "eval_053",
+        "category": "land_records",
+        "difficulty": "medium",
+        "confidence": 0.6682,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.9528,
+        "latency_ms": 19.0,
+        "top_chunk_id": "a_register_001"
+      },
+      {
+        "id": "eval_054",
+        "category": "land_records",
+        "difficulty": "medium",
+        "confidence": 0.5248,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.7941,
+        "latency_ms": 36.0,
+        "top_chunk_id": "patta_chitta_diff_001"
+      },
+      {
+        "id": "eval_055",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "confidence": 0.5978,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9696,
+        "latency_ms": 32.0,
+        "top_chunk_id": "dispute_003"
+      },
+      {
+        "id": "eval_056",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.4264,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9072,
+        "latency_ms": 36.0,
+        "top_chunk_id": "dispute_002"
+      },
+      {
+        "id": "eval_057",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.564,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 26.0,
+        "top_chunk_id": "classify_004"
+      },
+      {
+        "id": "eval_058",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.576,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9535,
+        "latency_ms": 21.0,
+        "top_chunk_id": "classify_003"
+      },
+      {
+        "id": "eval_059",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.607,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.7159,
+        "latency_ms": 13.0,
+        "top_chunk_id": "inherit_005"
+      },
+      {
+        "id": "eval_060",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.5795,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.0,
+        "ndcg_at_5": 0.8558,
+        "latency_ms": 16.0,
+        "top_chunk_id": "reg_006"
+      },
+      {
+        "id": "eval_061",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "confidence": 0.4506,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9389,
+        "latency_ms": 16.0,
+        "top_chunk_id": "acquire_001"
+      },
+      {
+        "id": "eval_062",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "confidence": 0.4219,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.6697,
+        "latency_ms": 13.0,
+        "top_chunk_id": "acquire_003"
+      },
+      {
+        "id": "eval_063",
+        "category": "land_tax",
+        "difficulty": "medium",
+        "confidence": 0.3329,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9265,
+        "latency_ms": 13.0,
+        "top_chunk_id": "tax_001"
+      },
+      {
+        "id": "eval_064",
+        "category": "land_tax",
+        "difficulty": "medium",
+        "confidence": 0.643,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.8065,
+        "latency_ms": 19.0,
+        "top_chunk_id": "tax_002"
+      },
+      {
+        "id": "eval_065",
+        "category": "registration",
+        "difficulty": "medium",
+        "confidence": 0.4419,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.6625,
+        "latency_ms": 14.0,
+        "top_chunk_id": "inherit_006"
+      },
+      {
+        "id": "eval_066",
+        "category": "registration",
+        "difficulty": "medium",
+        "confidence": 0.5397,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.8001,
+        "latency_ms": 13.0,
+        "top_chunk_id": "ec_001"
+      },
+      {
+        "id": "eval_067",
+        "category": "patta",
+        "difficulty": "easy",
+        "confidence": 0.6582,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.8536,
+        "latency_ms": 14.0,
+        "top_chunk_id": "patta_007"
+      },
+      {
+        "id": "eval_068",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.6516,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.6988,
+        "latency_ms": 16.0,
+        "top_chunk_id": "patta_005"
+      },
+      {
+        "id": "eval_069",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.5087,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 14.0,
+        "top_chunk_id": "land_rec_002"
+      },
+      {
+        "id": "eval_070",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.4713,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.6309,
+        "latency_ms": 14.0,
+        "top_chunk_id": "ec_001"
+      },
+      {
+        "id": "eval_071",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "confidence": 0.3942,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.6313,
+        "latency_ms": 15.0,
+        "top_chunk_id": "poromboke_001"
+      },
+      {
+        "id": "eval_072",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "confidence": 0.5887,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9502,
+        "latency_ms": 14.0,
+        "top_chunk_id": "dispute_008"
+      },
+      {
+        "id": "eval_073",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.607,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.3333,
+        "ndcg_at_5": 0.5706,
+        "latency_ms": 14.0,
+        "top_chunk_id": "acquire_002"
+      },
+      {
+        "id": "eval_074",
+        "category": "land_classification",
+        "difficulty": "easy",
+        "confidence": 0.7976,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9901,
+        "latency_ms": 12.0,
+        "top_chunk_id": "poromboke_001"
+      },
+      {
+        "id": "eval_075",
+        "category": "inheritance",
+        "difficulty": "easy",
+        "confidence": 0.4666,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "inherit_003"
+      },
+      {
+        "id": "eval_076",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "confidence": 0.5935,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.8817,
+        "latency_ms": 13.0,
+        "top_chunk_id": "inherit_002"
+      },
+      {
+        "id": "eval_077",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.4578,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9767,
+        "latency_ms": 14.0,
+        "top_chunk_id": "inherit_004"
+      },
+      {
+        "id": "eval_078",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "confidence": 0.4783,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.936,
+        "latency_ms": 15.0,
+        "top_chunk_id": "acquire_002"
+      },
+      {
+        "id": "eval_079",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "confidence": 0.6126,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.943,
+        "latency_ms": 15.0,
+        "top_chunk_id": "acquire_001"
+      },
+      {
+        "id": "eval_080",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "confidence": 0.7736,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9789,
+        "latency_ms": 12.0,
+        "top_chunk_id": "tax_001"
+      },
+      {
+        "id": "eval_081",
+        "category": "registration",
+        "difficulty": "easy",
+        "confidence": 0.4808,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.3333,
+        "ndcg_at_5": 0.6138,
+        "latency_ms": 13.0,
+        "top_chunk_id": "tax_001"
+      },
+      {
+        "id": "eval_082",
+        "category": "registration",
+        "difficulty": "hard",
+        "confidence": 0.5189,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.7602,
+        "latency_ms": 18.0,
+        "top_chunk_id": "reg_006"
+      },
+      {
+        "id": "eval_083",
+        "category": "patta",
+        "difficulty": "easy",
+        "confidence": 0.7194,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "patta_008"
+      },
+      {
+        "id": "eval_084",
+        "category": "land_records",
+        "difficulty": "medium",
+        "confidence": 0.5278,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.3333,
+        "ndcg_at_5": 0.9189,
+        "latency_ms": 13.0,
+        "top_chunk_id": "adangal_001"
+      },
+      {
+        "id": "eval_085",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "confidence": 0.6374,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.5706,
+        "latency_ms": 18.0,
+        "top_chunk_id": "patta_001"
+      },
+      {
+        "id": "eval_086",
+        "category": "land_disputes",
+        "difficulty": "easy",
+        "confidence": 0.4916,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "classify_003"
+      },
+      {
+        "id": "eval_087",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.5094,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.6893,
+        "latency_ms": 14.0,
+        "top_chunk_id": "tax_001"
+      },
+      {
+        "id": "eval_088",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.4683,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.6885,
+        "latency_ms": 13.0,
+        "top_chunk_id": "land_rec_006"
+      },
+      {
+        "id": "eval_089",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "confidence": 0.5111,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9865,
+        "latency_ms": 14.0,
+        "top_chunk_id": "acquire_001"
+      },
+      {
+        "id": "eval_090",
+        "category": "land_tax",
+        "difficulty": "hard",
+        "confidence": 0.5113,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.77,
+        "latency_ms": 14.0,
+        "top_chunk_id": "natham_purchase_001"
+      },
+      {
+        "id": "eval_091",
+        "category": "registration",
+        "difficulty": "easy",
+        "confidence": 0.5419,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9558,
+        "latency_ms": 14.0,
+        "top_chunk_id": "dispute_004"
+      },
+      {
+        "id": "eval_092",
+        "category": "patta",
+        "difficulty": "easy",
+        "confidence": 0.6633,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.4307,
+        "latency_ms": 12.0,
+        "top_chunk_id": "patta_010"
+      },
+      {
+        "id": "eval_093",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.5786,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.7181,
+        "latency_ms": 14.0,
+        "top_chunk_id": "legal_heir_001"
+      },
+      {
+        "id": "eval_094",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "confidence": 0.6538,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 16.0,
+        "top_chunk_id": "dispute_008"
+      },
+      {
+        "id": "eval_095",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.4257,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.4307,
+        "latency_ms": 13.0,
+        "top_chunk_id": "dispute_006"
+      },
+      {
+        "id": "eval_096",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "confidence": 0.5668,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "inherit_005"
+      },
+      {
+        "id": "eval_097",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "confidence": 0.5489,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.6309,
+        "latency_ms": 16.0,
+        "top_chunk_id": "reg_006"
+      },
+      {
+        "id": "eval_098",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "confidence": 0.4185,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "tax_001"
+      },
+      {
+        "id": "eval_099",
+        "category": "registration",
+        "difficulty": "hard",
+        "confidence": 0.4454,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9382,
+        "latency_ms": 14.0,
+        "top_chunk_id": "reg_004"
+      },
+      {
+        "id": "eval_100",
+        "category": "patta",
+        "difficulty": "hard",
+        "confidence": 0.599,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9779,
+        "latency_ms": 13.0,
+        "top_chunk_id": "tax_003"
+      },
+      {
+        "id": "eval_101",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "confidence": 0.4787,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9305,
+        "latency_ms": 17.0,
+        "top_chunk_id": "dispute_002"
+      },
+      {
+        "id": "eval_102",
+        "category": "land_records",
+        "difficulty": "medium",
+        "confidence": 0.6823,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9911,
+        "latency_ms": 13.0,
+        "top_chunk_id": "land_rec_005"
+      },
+      {
+        "id": "eval_103",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.6745,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9895,
+        "latency_ms": 14.0,
+        "top_chunk_id": "poromboke_001"
+      },
+      {
+        "id": "eval_104",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.4795,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 14.0,
+        "top_chunk_id": "inherit_004"
+      },
+      {
+        "id": "eval_105",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "confidence": 0.561,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9448,
+        "latency_ms": 15.0,
+        "top_chunk_id": "acquire_001"
+      },
+      {
+        "id": "eval_106",
+        "category": "land_tax",
+        "difficulty": "medium",
+        "confidence": 0.3842,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9865,
+        "latency_ms": 14.0,
+        "top_chunk_id": "tax_001"
+      },
+      {
+        "id": "eval_107",
+        "category": "registration",
+        "difficulty": "hard",
+        "confidence": 0.5494,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9469,
+        "latency_ms": 17.0,
+        "top_chunk_id": "reg_005"
+      },
+      {
+        "id": "eval_108",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.653,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.9726,
+        "latency_ms": 16.0,
+        "top_chunk_id": "patta_001"
+      },
+      {
+        "id": "eval_109",
+        "category": "land_records",
+        "difficulty": "hard",
+        "confidence": 0.4567,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.6726,
+        "latency_ms": 17.0,
+        "top_chunk_id": "patta_chitta_diff_001"
+      },
+      {
+        "id": "eval_110",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.457,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9473,
+        "latency_ms": 16.0,
+        "top_chunk_id": "dispute_004"
+      },
+      {
+        "id": "eval_111",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.5513,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "classify_001"
+      },
+      {
+        "id": "eval_112",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "confidence": 0.4556,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 17.0,
+        "top_chunk_id": "inherit_005"
+      },
+      {
+        "id": "eval_113",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "confidence": 0.5793,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9305,
+        "latency_ms": 13.0,
+        "top_chunk_id": "acquire_001"
+      },
+      {
+        "id": "eval_114",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "confidence": 0.2973,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.0,
+        "ndcg_at_5": 0.8548,
+        "latency_ms": 17.0,
+        "top_chunk_id": "tax_003"
+      },
+      {
+        "id": "eval_115",
+        "category": "registration",
+        "difficulty": "easy",
+        "confidence": 0.5267,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.8857,
+        "latency_ms": 14.0,
+        "top_chunk_id": "patta_007"
+      },
+      {
+        "id": "eval_116",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.6686,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9197,
+        "latency_ms": 14.0,
+        "top_chunk_id": "patta_005"
+      },
+      {
+        "id": "eval_117",
+        "category": "land_records",
+        "difficulty": "hard",
+        "confidence": 0.6326,
+        "hit_at_1": false,
+        "hit_at_3": false,
+        "hit_at_5": true,
+        "mrr": 0.3333,
+        "ndcg_at_5": 0.4307,
+        "latency_ms": 15.0,
+        "top_chunk_id": "land_rec_002"
+      },
+      {
+        "id": "eval_118",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.5553,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.7579,
+        "latency_ms": 17.0,
+        "top_chunk_id": "dispute_007"
+      },
+      {
+        "id": "eval_119",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.5975,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 14.0,
+        "top_chunk_id": "classify_004"
+      },
+      {
+        "id": "eval_120",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "confidence": 0.4835,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.5174,
+        "latency_ms": 13.0,
+        "top_chunk_id": "reg_003"
+      },
+      {
+        "id": "eval_121",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.6018,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9833,
+        "latency_ms": 12.0,
+        "top_chunk_id": "patta_009"
+      },
+      {
+        "id": "eval_122",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.659,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9567,
+        "latency_ms": 13.0,
+        "top_chunk_id": "fmb_001"
+      },
+      {
+        "id": "eval_123",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.4741,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 14.0,
+        "top_chunk_id": "dispute_006"
+      },
+      {
+        "id": "eval_124",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.313,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9148,
+        "latency_ms": 15.0,
+        "top_chunk_id": "tax_003"
+      },
+      {
+        "id": "eval_125",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.6042,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 15.0,
+        "top_chunk_id": "patta_008"
+      },
+      {
+        "id": "eval_126",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "confidence": 0.531,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 11.0,
+        "top_chunk_id": "acquire_001"
+      },
+      {
+        "id": "eval_127",
+        "category": "land_tax",
+        "difficulty": "hard",
+        "confidence": 0.4694,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.0,
+        "ndcg_at_5": 0.616,
+        "latency_ms": 15.0,
+        "top_chunk_id": "patta_chitta_diff_001"
+      },
+      {
+        "id": "eval_128",
+        "category": "registration",
+        "difficulty": "medium",
+        "confidence": 0.7248,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9428,
+        "latency_ms": 16.0,
+        "top_chunk_id": "patta_008"
+      },
+      {
+        "id": "eval_129",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.7624,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "patta_004"
+      },
+      {
+        "id": "eval_130",
+        "category": "land_records",
+        "difficulty": "medium",
+        "confidence": 0.5023,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.8447,
+        "latency_ms": 13.0,
+        "top_chunk_id": "reg_004"
+      },
+      {
+        "id": "eval_131",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.4986,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.936,
+        "latency_ms": 15.0,
+        "top_chunk_id": "land_rec_004"
+      },
+      {
+        "id": "eval_132",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.4596,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9209,
+        "latency_ms": 14.0,
+        "top_chunk_id": "classify_002"
+      },
+      {
+        "id": "eval_133",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "confidence": 0.4291,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.0,
+        "ndcg_at_5": 0.9829,
+        "latency_ms": 14.0,
+        "top_chunk_id": "dispute_006"
+      },
+      {
+        "id": "eval_134",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "confidence": 0.4693,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9072,
+        "latency_ms": 16.0,
+        "top_chunk_id": "acquire_002"
+      },
+      {
+        "id": "eval_135",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "confidence": 0.4385,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.7967,
+        "latency_ms": 14.0,
+        "top_chunk_id": "patta_009"
+      },
+      {
+        "id": "eval_136",
+        "category": "registration",
+        "difficulty": "medium",
+        "confidence": 0.4996,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.6995,
+        "latency_ms": 14.0,
+        "top_chunk_id": "patta_001"
+      },
+      {
+        "id": "eval_137",
+        "category": "patta",
+        "difficulty": "medium",
+        "confidence": 0.6339,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.846,
+        "latency_ms": 13.0,
+        "top_chunk_id": "patta_005"
+      },
+      {
+        "id": "eval_138",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.5813,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.3333,
+        "ndcg_at_5": 0.8642,
+        "latency_ms": 16.0,
+        "top_chunk_id": "tax_003"
+      },
+      {
+        "id": "eval_139",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.4664,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.5,
+        "ndcg_at_5": 0.6201,
+        "latency_ms": 15.0,
+        "top_chunk_id": "reg_003"
+      },
+      {
+        "id": "eval_140",
+        "category": "land_classification",
+        "difficulty": "hard",
+        "confidence": 0.5489,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.3333,
+        "ndcg_at_5": 0.5,
+        "latency_ms": 13.0,
+        "top_chunk_id": "classify_005"
+      },
+      {
+        "id": "eval_141",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "confidence": 0.4113,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 13.0,
+        "top_chunk_id": "inherit_003"
+      },
+      {
+        "id": "eval_142",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "confidence": 0.5611,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 14.0,
+        "top_chunk_id": "acquire_001"
+      },
+      {
+        "id": "eval_143",
+        "category": "land_tax",
+        "difficulty": "hard",
+        "confidence": 0.5098,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.6309,
+        "latency_ms": 19.0,
+        "top_chunk_id": "tax_001"
+      },
+      {
+        "id": "eval_144",
+        "category": "registration",
+        "difficulty": "easy",
+        "confidence": 0.786,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9944,
+        "latency_ms": 14.0,
+        "top_chunk_id": "reg_001"
+      },
+      {
+        "id": "eval_145",
+        "category": "patta",
+        "difficulty": "hard",
+        "confidence": 0.6622,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9207,
+        "latency_ms": 15.0,
+        "top_chunk_id": "patta_010"
+      },
+      {
+        "id": "eval_146",
+        "category": "land_records",
+        "difficulty": "easy",
+        "confidence": 0.4943,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 0.25,
+        "ndcg_at_5": 0.8655,
+        "latency_ms": 14.0,
+        "top_chunk_id": "adangal_001"
+      },
+      {
+        "id": "eval_147",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "confidence": 0.5419,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "latency_ms": 15.0,
+        "top_chunk_id": "dispute_006"
+      },
+      {
+        "id": "eval_148",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "confidence": 0.5885,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.9826,
+        "latency_ms": 14.0,
+        "top_chunk_id": "classify_002"
+      },
+      {
+        "id": "eval_149",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "confidence": 0.489,
+        "hit_at_1": false,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.648,
+        "latency_ms": 14.0,
+        "top_chunk_id": "patta_006"
+      },
+      {
+        "id": "eval_150",
+        "category": "registration",
+        "difficulty": "medium",
+        "confidence": 0.6231,
+        "hit_at_1": true,
+        "hit_at_3": true,
+        "hit_at_5": true,
+        "mrr": 1.0,
+        "ndcg_at_5": 0.907,
+        "latency_ms": 13.0,
+        "top_chunk_id": "reg_004"
+      }
+    ]
+  },
+  "ablation_study": {
+    "questions_evaluated": 150,
+    "systems": {
+      "hybrid_rag (Dense+BM25+RRF)": {
+        "accuracy_at_5": 0.9933,
+        "mean_mrr": 0.7984,
+        "mean_ndcg_at_5": 0.8689
+      },
+      "bm25_only": {
+        "accuracy_at_5": 0.9667,
+        "mean_mrr": 0.7174,
+        "mean_ndcg_at_5": 0.8277
+      },
+      "dense_only": {
+        "accuracy_at_5": 0.9867,
+        "mean_mrr": 0.7396,
+        "mean_ndcg_at_5": 0.853
+      }
+    },
+    "delta_hybrid_vs_bm25": {
+      "accuracy_at_5": 0.0266,
+      "mean_mrr": 0.081,
+      "mean_ndcg_at_5": 0.0412
+    },
+    "delta_hybrid_vs_dense": {
+      "accuracy_at_5": 0.0066,
+      "mean_mrr": 0.0588,
+      "mean_ndcg_at_5": 0.0159
+    },
+    "note": "Baseline = top-5 retrieval only (not full corpus). Fixes prior corpus-wide keyword baseline bug.",
+    "per_question": [
+      {
+        "id": "eval_001",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_002",
+        "category": "patta",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_003",
+        "category": "patta",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_004",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_005",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_006",
+        "category": "patta",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_007",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_008",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_009",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_010",
+        "category": "patta",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": false,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_011",
+        "category": "patta",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_012",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_013",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_014",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_015",
+        "category": "land_records",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_016",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_017",
+        "category": "land_records",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_018",
+        "category": "land_records",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_019",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_020",
+        "category": "land_records",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_021",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_022",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_023",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_024",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_025",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_026",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_027",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_028",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": false,
+        "bm25_hit": true,
+        "dense_hit": false
+      },
+      {
+        "id": "eval_029",
+        "category": "land_classification",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_030",
+        "category": "land_classification",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_031",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_032",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_033",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_034",
+        "category": "inheritance",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_035",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_036",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_037",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_038",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_039",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_040",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": false,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_041",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_042",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_043",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_044",
+        "category": "land_tax",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_045",
+        "category": "land_tax",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_046",
+        "category": "registration",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_047",
+        "category": "registration",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_048",
+        "category": "registration",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_049",
+        "category": "registration",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_050",
+        "category": "registration",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": false,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_051",
+        "category": "patta",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_052",
+        "category": "patta",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_053",
+        "category": "land_records",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_054",
+        "category": "land_records",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_055",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_056",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_057",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_058",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_059",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_060",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_061",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_062",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_063",
+        "category": "land_tax",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_064",
+        "category": "land_tax",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_065",
+        "category": "registration",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_066",
+        "category": "registration",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_067",
+        "category": "patta",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_068",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_069",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_070",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_071",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": false,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_072",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_073",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_074",
+        "category": "land_classification",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_075",
+        "category": "inheritance",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_076",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_077",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_078",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_079",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_080",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_081",
+        "category": "registration",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_082",
+        "category": "registration",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_083",
+        "category": "patta",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_084",
+        "category": "land_records",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_085",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": false,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_086",
+        "category": "land_disputes",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_087",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_088",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_089",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_090",
+        "category": "land_tax",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_091",
+        "category": "registration",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_092",
+        "category": "patta",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_093",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_094",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_095",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_096",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_097",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_098",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_099",
+        "category": "registration",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_100",
+        "category": "patta",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_101",
+        "category": "land_disputes",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": false
+      },
+      {
+        "id": "eval_102",
+        "category": "land_records",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_103",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_104",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_105",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_106",
+        "category": "land_tax",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_107",
+        "category": "registration",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_108",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_109",
+        "category": "land_records",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_110",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_111",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_112",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_113",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_114",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_115",
+        "category": "registration",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_116",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_117",
+        "category": "land_records",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_118",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_119",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_120",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_121",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_122",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_123",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_124",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_125",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_126",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_127",
+        "category": "land_tax",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_128",
+        "category": "registration",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_129",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_130",
+        "category": "land_records",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_131",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_132",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_133",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_134",
+        "category": "land_acquisition",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_135",
+        "category": "land_tax",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_136",
+        "category": "registration",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_137",
+        "category": "patta",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_138",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_139",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_140",
+        "category": "land_classification",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_141",
+        "category": "inheritance",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_142",
+        "category": "land_acquisition",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_143",
+        "category": "land_tax",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_144",
+        "category": "registration",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_145",
+        "category": "patta",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_146",
+        "category": "land_records",
+        "difficulty": "easy",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_147",
+        "category": "land_disputes",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_148",
+        "category": "land_classification",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_149",
+        "category": "inheritance",
+        "difficulty": "hard",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      },
+      {
+        "id": "eval_150",
+        "category": "registration",
+        "difficulty": "medium",
+        "hybrid_hit": true,
+        "bm25_hit": true,
+        "dense_hit": true
+      }
+    ]
+  },
+  "coverage": {
+    "total_kb_chunks": 72,
+    "total_eval_questions": 150,
+    "by_category": [
+      {
+        "category": "community_certificate",
+        "kb_chunks": 2,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "court_notice",
+        "kb_chunks": 1,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "fir_police",
+        "kb_chunks": 2,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "income_certificate",
+        "kb_chunks": 1,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "inheritance",
+        "kb_chunks": 7,
+        "eval_questions": 20,
+        "ratio": 2.86
+      },
+      {
+        "category": "land_acquisition",
+        "kb_chunks": 3,
+        "eval_questions": 14,
+        "ratio": 4.67
+      },
+      {
+        "category": "land_classification",
+        "kb_chunks": 6,
+        "eval_questions": 17,
+        "ratio": 2.83
+      },
+      {
+        "category": "land_disputes",
+        "kb_chunks": 8,
+        "eval_questions": 23,
+        "ratio": 2.88
+      },
+      {
+        "category": "land_records",
+        "kb_chunks": 16,
+        "eval_questions": 21,
+        "ratio": 1.31
+      },
+      {
+        "category": "land_tax",
+        "kb_chunks": 3,
+        "eval_questions": 13,
+        "ratio": 4.33
+      },
+      {
+        "category": "legal_aid",
+        "kb_chunks": 1,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "mnrega",
+        "kb_chunks": 2,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "patta",
+        "kb_chunks": 0,
+        "eval_questions": 25,
+        "ratio": null
+      },
+      {
+        "category": "patta_transfer",
+        "kb_chunks": 10,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "pension",
+        "kb_chunks": 1,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "ration_card",
+        "kb_chunks": 1,
+        "eval_questions": 0,
+        "ratio": 0.0
+      },
+      {
+        "category": "registration",
+        "kb_chunks": 7,
+        "eval_questions": 17,
+        "ratio": 2.43
+      },
+      {
+        "category": "womens_rights",
+        "kb_chunks": 1,
+        "eval_questions": 0,
+        "ratio": 0.0
+      }
+    ]
+  }
+}

@@ -4,17 +4,7 @@ export default function LoadingSplash() {
       className="fixed inset-0 flex flex-col items-center justify-center"
       style={{ background: '#F5F0E8', zIndex: 9999 }}
     >
-      <div
-        className="flex items-center justify-center rounded-2xl mb-6"
-        style={{ width: 72, height: 72, background: '#6B9E6B', boxShadow: '0 8px 24px rgba(107,158,107,0.35)' }}
-      >
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        </svg>
-      </div>
-      <h1 style={{ fontFamily: "Inter", fontSize: 28, fontWeight: 700, color: '#1C1C1C', marginBottom: 4 }}>
-        CivicAid
-      </h1>
+      <img src="/civicaid-logo.png" alt="CivicAid" style={{ width: 280, maxWidth: '80vw', height: 'auto', marginBottom: 24 }} />
       <p style={{ fontFamily: 'Inter', fontSize: 14, color: '#8A8A8A', marginBottom: 32 }}>
         Free Legal Help · Tamil Nadu
       </p>

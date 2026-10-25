@@ -23,9 +23,11 @@ jobs:
         run: sudo apt-get install -y tesseract-ocr tesseract-ocr-tam
       - name: Check imports
         run: python -c "from app.main import app; print('Backend imports OK')"
+      - name: Run backend tests
+        run: pytest -q
       - name: Run eval (RAG pipeline)
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python scripts/run_eval.py || echo "Eval skipped (no API key in CI)"
 
   frontend:

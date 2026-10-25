@@ -21,9 +21,9 @@ async def run_retrieval_eval(request: Request):
     try:
         ev = get_eval_service()
         return ev.evaluate_retrieval()
-    except Exception as e:
-        logger.error(f"Eval error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    except Exception:
+        logger.exception("Eval error")
+        raise HTTPException(status_code=500, detail="Evaluation failed. Please try again later.")
 
 
 @router.get("/rag-vs-baseline")
@@ -40,9 +40,9 @@ async def rag_vs_baseline(request: Request):
     try:
         ev = get_eval_service()
         return ev.evaluate_rag_vs_baseline()
-    except Exception as e:
-        logger.error(f"Ablation error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    except Exception:
+        logger.exception("Ablation error")
+        raise HTTPException(status_code=500, detail="Ablation evaluation failed. Please try again later.")
 
 
 @router.get("/coverage")
@@ -55,6 +55,6 @@ async def coverage_report(request: Request):
     try:
         ev = get_eval_service()
         return ev.coverage_report()
-    except Exception as e:
-        logger.error(f"Coverage error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    except Exception:
+        logger.exception("Coverage error")
+        raise HTTPException(status_code=500, detail="Coverage report failed. Please try again later.")

@@ -6,12 +6,13 @@ multilingual embeddings, stale-index detection, and per-category stats.
 import json
 import hashlib
 import logging
-import numpy as np
-import faiss
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
+
+import faiss
+import numpy as np
 from rank_bm25 import BM25Okapi
-from sentence_transformers import SentenceTransformer
+
 from app.core.config import get_settings
 
 settings = get_settings()
@@ -80,12 +81,12 @@ class RAGPipeline:
     """
 
     def __init__(self):
-        self.model:      Optional[SentenceTransformer] = None
-        self.index:      Optional[faiss.IndexFlatIP]   = None
-        self.bm25:       Optional[BM25Okapi]           = None
-        self.chunks:     list[dict]                    = []
-        self.embeddings: Optional[np.ndarray]          = None
-        self._loaded:    bool                          = False
+        self.model:      Optional[Any] = None
+        self.index:      Optional[faiss.IndexFlatIP] = None
+        self.bm25:       Optional[BM25Okapi] = None
+        self.chunks:     list[dict] = []
+        self.embeddings: Optional[np.ndarray] = None
+        self._loaded:    bool = False
 
     # ── public ────────────────────────────────────────────────
     def load(self):
@@ -94,6 +95,12 @@ class RAGPipeline:
             return
 
         logger.info("[RAG] Starting pipeline load...")
+
+        try:
+            from sentence_transformers import SentenceTransformer
+        except Exception as exc:
+            logger.warning("[RAG] sentence-transformers import failed: %s", exc)
+            return
 
         # 1 — Knowledge base
         kb_path = Path(settings.knowledge_base_path)
@@ -107,7 +114,11 @@ class RAGPipeline:
 
         # 2 — Embedding model
         logger.info(f"[RAG] Loading model: {settings.embedding_model}")
-        self.model = SentenceTransformer(settings.embedding_model)
+        try:
+            self.model = SentenceTransformer(settings.embedding_model)
+        except Exception as exc:
+            logger.warning("[RAG] embedding model failed to initialize: %s", exc)
+            return
 
         # 3 — FAISS index (rebuild if KB changed or index missing)
         index_path      = Path(settings.faiss_index_path + ".index")
@@ -206,6 +217,75 @@ class RAGPipeline:
         max_dense = dense_ranks[0][1] if dense_ranks else 0.0
         return results, float(max_dense)
 
+    def retrieve_with_scores(
+        self,
+        query:  str,
+        top_k:  int | None = None,
+    ) -> tuple[list[dict], float]:
+        """
+        Same hybrid retrieval as retrieve(), but returns the per-chunk
+        score breakdown instead of the raw chunk dicts — powers the
+        "Why this answer?" explainability panel.
+
+        Returns:
+            chunks     — list of {title, source, verified, bm25_score,
+                         dense_score, rrf_score, rank} for the fused top-k
+            confidence — max dense cosine score (same definition as retrieve())
+        """
+        if not self._loaded:
+            self.load()
+        if not self._loaded:
+            return [], 0.0
+
+        top_k       = top_k or settings.rag_top_k
+        fetch_k     = min(top_k * 3, len(self.chunks))
+        query_lower = query.lower()
+
+        # ── Dense (FAISS cosine) ──────────────────────────────
+        query_vec = self.model.encode(
+            [query], normalize_embeddings=True
+        ).astype(np.float32)
+        raw_scores, raw_indices = self.index.search(query_vec, fetch_k)
+        dense_ranks = [
+            (int(raw_indices[0][i]), float(raw_scores[0][i]))
+            for i in range(len(raw_indices[0]))
+            if raw_indices[0][i] >= 0
+        ]
+        dense_score_map = {doc_id: s for doc_id, s in dense_ranks}
+
+        # ── Sparse (BM25) ─────────────────────────────────────
+        tokens          = query_lower.split()
+        bm25_scores     = self.bm25.get_scores(tokens)
+        bm25_score_map  = {i: float(s) for i, s in enumerate(bm25_scores)}
+        bm25_ranks      = sorted(
+            enumerate(bm25_scores), key=lambda x: x[1], reverse=True
+        )[:fetch_k]
+        bm25_ranks      = [(idx, s) for idx, s in bm25_ranks if s > 0]
+
+        # ── RRF Fusion ────────────────────────────────────────
+        fused = reciprocal_rank_fusion(
+            dense_ranks, bm25_ranks,
+            dense_weight=settings.dense_weight,
+            bm25_weight=settings.bm25_weight,
+        )
+
+        results: list[dict] = []
+        for rank, (doc_id, rrf_score) in enumerate(fused[:top_k], 1):
+            if 0 <= doc_id < len(self.chunks):
+                chunk = self.chunks[doc_id]
+                results.append({
+                    "title":       chunk.get("title", ""),
+                    "source":      chunk.get("source", ""),
+                    "verified":    bool(chunk.get("verified", False)),
+                    "bm25_score":  round(bm25_score_map.get(doc_id, 0.0), 4),
+                    "dense_score": round(dense_score_map.get(doc_id, 0.0), 4),
+                    "rrf_score":   round(rrf_score, 6),
+                    "rank":        rank,
+                })
+
+        max_dense = dense_ranks[0][1] if dense_ranks else 0.0
+        return results, float(max_dense)
+
     def format_context(self, chunks: list[dict]) -> tuple[str, list[str], list[dict]]:
         """
         Format retrieved chunks as a numbered LLM context block.
@@ -226,7 +306,8 @@ class RAGPipeline:
             parts.append(
                 f"[Source {i}] {chunk['title']}\n"
                 f"{chunk['content']}\n"
-                f"Legal reference: {chunk['source']}"
+                f"Legal reference: {chunk['source']}\n"
+                f"Verification status: {'verified against a primary source' if chunk.get('verified') else 'not independently verified'}"
             )
             sources.append(chunk["source"])
             details.append({

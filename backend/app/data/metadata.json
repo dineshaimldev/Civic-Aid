@@ -4,17 +4,17 @@
   "stage": "Stage 1 — Complete Land Issues (8 Categories)",
   "last_updated": "2026-09-30",
   "knowledge_base": {
-    "total_chunks": 59,
+    "total_chunks": 72,
     "categories": 8,
     "category_breakdown": {
       "patta_transfer": 10,
-      "land_records": 6,
+      "land_records": 16,
       "land_disputes": 8,
-      "land_classification": 5,
-      "inheritance": 6,
+      "land_classification": 6,
+      "inheritance": 7,
       "land_acquisition": 3,
       "land_tax": 3,
-      "registration": 6,
+      "registration": 7,
       "community_certificate": 2,
       "income_certificate": 1,
       "fir_police": 2,
@@ -25,7 +25,7 @@
       "womens_rights": 1,
       "pension": 1
     },
-    "verification_status": "All 59 chunks default to verified=false as of 2026-09-30. None have yet been checked against primary sources (Acts, TN Revenue Standing Orders, Government Orders). See scripts/add_verification_fields.py.",
+    "verification_status": "All 72 chunks default to verified=false as of 2026-09-30. None have yet been checked against primary sources (Acts, TN Revenue Standing Orders, Government Orders). See scripts/add_verification_fields.py.",
     "note": "Run GET /api/eval/coverage for live accurate counts"
   },
   "evaluation": {

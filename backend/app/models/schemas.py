@@ -40,6 +40,7 @@ class DocAnalysis(BaseModel):
     key_info: List[str]
     dates: List[DateItem]
     warnings: List[str] = []
+    issues_found: bool = True   # False when document appears clean with no urgent issues
     next_steps: List[str]
     disclaimer: str = "AI-assisted analysis only. Call 1516 (Tamil Nadu Legal Aid, toll-free) for advice."
 
@@ -48,31 +49,6 @@ class DocumentAnalysisResponse(BaseModel):
     extracted_text: str = ""
     raw_text_length: int
     processing_time_ms: int
-
-class ServiceType(str, Enum):
-    patta = "patta"
-    esevai = "esevai"
-    general = "general"
-
-class StatusType(str, Enum):
-    completed = "completed"
-    pending = "pending"
-    rejected = "rejected"
-    not_found = "not_found"
-
-class StatusRequest(BaseModel):
-    reference_number: str = Field(..., min_length=3, max_length=50)
-    service: ServiceType
-
-class StatusResponse(BaseModel):
-    status: StatusType
-    heading: str
-    explanation: str
-    next_step: str
-    last_updated: str
-    reference_number: str
-    office: Optional[str] = None
-    helpline: str = "1516"
 
 class HealthResponse(BaseModel):
     status: str
@@ -107,6 +83,7 @@ class Reminder(BaseModel):
     source: str = "manual"
     created_at: str
     notified: bool = False
+    access_token: Optional[str] = None
 
 class ReminderListResponse(BaseModel):
     reminders: List[Reminder]
@@ -124,6 +101,7 @@ class VaultDocumentMeta(BaseModel):
 
 class VaultUploadResponse(BaseModel):
     document: VaultDocumentMeta
+    access_token: str
     message: str = "Document securely stored."
 
 class VaultListResponse(BaseModel):
@@ -164,3 +142,46 @@ class LetterGenerateRequest(BaseModel):
 class LetterGenerateResponse(BaseModel):
     letter_text: str
     generated_at: str
+
+
+# ── Feature #6: Human Escalation ──────────────────────────────────────
+class DistrictContact(BaseModel):
+    district: str
+    office: str
+    phone: str
+
+class EscalationRequest(BaseModel):
+    question: str = Field(..., min_length=3, max_length=2000)
+    ai_answer: Optional[str] = Field(default=None, max_length=4000)
+    confidence: float = 0.0
+    phone: Optional[str] = Field(default=None, max_length=20)
+    district: Optional[str] = Field(default=None, max_length=100)
+    reason: Optional[str] = Field(default=None, max_length=200)
+
+class EscalationResponse(BaseModel):
+    escalation_id: str
+    logged_at: str
+    dlsa_helpline: str = "1516"
+    district_contacts: List[DistrictContact]
+    message: str
+
+
+# ── Feature #7: Explainable Retrieval ─────────────────────────────────
+class RetrievedChunkExplain(BaseModel):
+    title: str
+    source: str
+    verified: bool = False
+    bm25_score: float
+    dense_score: float
+    rrf_score: float
+    rank: int
+
+class ExplainRequest(BaseModel):
+    question: str = Field(..., min_length=1, max_length=2000)
+    lang: str = "english"
+
+class ExplainResponse(BaseModel):
+    question: str
+    chunks: List[RetrievedChunkExplain]
+    confidence: float
+    is_confident: bool

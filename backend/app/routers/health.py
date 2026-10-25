@@ -1,5 +1,5 @@
 import logging
-from fastapi import APIRouter
+from fastapi import APIRouter, Request
 from app.models.schemas import HealthResponse
 from app.services.cache_service import get_cache
 from app.core.config import get_settings
@@ -10,7 +10,7 @@ logger   = logging.getLogger(__name__)
 
 
 @router.get("/health", response_model=HealthResponse)
-async def health():
+async def health(request: Request):
     """Basic health check — returns status of API, cache, and AI keys."""
     cache = get_cache()
 
@@ -22,17 +22,25 @@ async def health():
     except Exception as e:
         rag_status = f"error: {e}"
 
+    status = "ok" if rag_status.startswith("ok (") else "degraded"
     return HealthResponse(
-        status   = "ok",
+        status   = status,
         version  = settings.app_version,
         env      = settings.app_env,
         services = {
             "api":   "ok",
             "cache": "ok" if not cache._use_memory else "memory_fallback",
-            "ai":    "ok" if (settings.anthropic_api_key or settings.groq_api_key) else "no_key",
+            "ai":    "ok" if settings.groq_api_key else "no_key",
             "rag":   rag_status,
         },
     )
+
+
+@router.get("/ready")
+async def readiness(request: Request):
+    """Readiness probe for deployment platforms and load balancers."""
+    ready = bool(getattr(request.app.state, "rag_ready", False))
+    return {"ready": ready, "version": settings.app_version}
 
 
 @router.get("/metadata")
@@ -53,9 +61,8 @@ async def stats():
 
     # Usage counters
     usage = {
-        "chat_requests":      cache.get("stats:chat_count")     or 0,
-        "document_analyses":  cache.get("stats:document_count") or 0,
-        "status_checks":      cache.get("stats:status_count")   or 0,
+        "chat_requests":     cache.get("stats:chat_count")     or 0,
+        "document_analyses": cache.get("stats:document_count") or 0,
     }
 
     # RAG pipeline stats

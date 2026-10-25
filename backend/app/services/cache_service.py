@@ -22,9 +22,15 @@ class CacheService:
             self._redis = redis.from_url(settings.redis_url, decode_responses=True, socket_timeout=2)
             self._redis.ping()
             logger.info("Redis connected")
-        except Exception:
+        except Exception as exc:
+            if settings.is_production:
+                raise RuntimeError("Redis is required in production but is unavailable.") from exc
             logger.warning("Redis unavailable — using in-memory cache")
             self._use_memory = True
+
+    def _raise_if_production_failure(self, operation: str, exc: Exception) -> None:
+        if settings.is_production:
+            raise RuntimeError(f"Redis {operation} failed in production.") from exc
 
     def get(self, key: str) -> Optional[Any]:
         if self._use_memory:
@@ -37,7 +43,8 @@ class CacheService:
         try:
             val = self._redis.get(key)
             return json.loads(val) if val else None
-        except Exception:
+        except Exception as exc:
+            self._raise_if_production_failure("read", exc)
             return None
 
     def set(self, key: str, value: Any, ttl: int = 300):
@@ -46,8 +53,8 @@ class CacheService:
             return
         try:
             self._redis.setex(key, ttl, json.dumps(value))
-        except Exception:
-            pass
+        except Exception as exc:
+            self._raise_if_production_failure("write", exc)
 
     def increment(self, key: str, ttl: int = 86400) -> int:
         if self._use_memory:
@@ -60,7 +67,8 @@ class CacheService:
             pipe.incr(key)
             pipe.expire(key, ttl)
             return pipe.execute()[0]
-        except Exception:
+        except Exception as exc:
+            self._raise_if_production_failure("increment", exc)
             return 0
 
     def delete(self, key: str) -> bool:
@@ -71,7 +79,8 @@ class CacheService:
             return False
         try:
             return bool(self._redis.delete(key))
-        except Exception:
+        except Exception as exc:
+            self._raise_if_production_failure("delete", exc)
             return False
 
 

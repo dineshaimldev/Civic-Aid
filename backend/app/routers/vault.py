@@ -1,4 +1,3 @@
-import base64
 import logging
 from fastapi import APIRouter, HTTPException, Request, UploadFile, File, Form
 from fastapi.responses import Response
@@ -28,11 +27,18 @@ async def upload_to_vault(
     tied to the user's phone number. Solves the #1 reason rural land
     cases are lost — missing or damaged paperwork.
 
-    Note: uses obfuscated storage keyed to phone number, not full AES
-    encryption. Documented honestly — see vault_service.py docstring.
+    Access requires the bearer token returned after upload. Stored bytes
+    are encrypted with the server's application secret.
     """
-    data = await file.read()
     try:
+        data = bytearray()
+        while chunk := await file.read(1024 * 1024):
+            data.extend(chunk)
+            if len(data) > settings.max_upload_mb * 1024 * 1024:
+                raise HTTPException(
+                    status_code=413,
+                    detail=f"File too large. Max {settings.max_upload_mb}MB.",
+                )
         service = get_vault_service()
         meta = service.upload_document(
             phone=phone,
@@ -41,7 +47,10 @@ async def upload_to_vault(
             file_bytes=data,
             content_type=file.content_type or "application/octet-stream",
         )
-        return VaultUploadResponse(document=VaultDocumentMeta(**meta))
+        return VaultUploadResponse(
+            document=VaultDocumentMeta(**meta),
+            access_token=service.issue_access_token(phone),
+        )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
@@ -54,6 +63,8 @@ async def upload_to_vault(
 async def list_vault_documents(request: Request, phone: str):
     """List all documents stored in a phone number's vault."""
     service = get_vault_service()
+    if not service.verify_access_token(phone, request.headers.get("X-Vault-Token", "")):
+        raise HTTPException(status_code=401, detail="Vault access token required.")
     docs = service.list_documents(phone)
     return VaultListResponse(
         documents=[VaultDocumentMeta(**d) for d in docs],
@@ -66,6 +77,8 @@ async def list_vault_documents(request: Request, phone: str):
 async def download_vault_document(request: Request, phone: str, doc_id: str):
     """Download a specific document from the vault. Owner-only access."""
     service = get_vault_service()
+    if not service.verify_access_token(phone, request.headers.get("X-Vault-Token", "")):
+        raise HTTPException(status_code=401, detail="Vault access token required.")
     result = service.get_document(phone, doc_id)
     if not result:
         raise HTTPException(status_code=404, detail="Document not found.")
@@ -83,6 +96,8 @@ async def download_vault_document(request: Request, phone: str, doc_id: str):
 async def delete_vault_document(request: Request, phone: str, doc_id: str):
     """Delete a document from the vault. Owner-only."""
     service = get_vault_service()
+    if not service.verify_access_token(phone, request.headers.get("X-Vault-Token", "")):
+        raise HTTPException(status_code=401, detail="Vault access token required.")
     success = service.delete_document(phone, doc_id)
     if not success:
         raise HTTPException(status_code=404, detail="Document not found or not owned by this phone.")

@@ -1083,6 +1083,136 @@
     "last_checked": null
   },
   {
+    "id": "chitta_001",
+    "category": "land_records",
+    "title": "Chitta (சிட்டா) — What It Is and How to Get It",
+    "content": "Chitta (சிட்டா) is the primary record of agricultural land ownership in Tamil Nadu, maintained by the Village Administrative Officer (VAO). It records patta number, owner name, survey number, land extent, land classification (wet/dry/garden), and tax demand. Chitta is different from patta: patta is the title document, chitta is the possession and classification record. To obtain a chitta copy: visit the VAO office of the village or the Taluk office, submit written application with patta number and survey number, pay ₹20 fee, receive copy within 7 working days. Since 2015, chitta is available online at eservices.tn.gov.in under 'View Patta & FMB / Chitta / Adangal'. Required for: agricultural loans (bank requires chitta + adangal), patta transfer, land subdivision, natham land purchase verification.",
+    "source": "Tamil Nadu Land Records Manual; TN e-Services portal eservices.tn.gov.in",
+    "keywords": ["chitta", "சிட்டா", "land records", "VAO", "agricultural land", "ownership", "eservices", "patta"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "adangal_001",
+    "category": "land_records",
+    "title": "Adangal (அடங்கல்) — Village Register of Possession",
+    "content": "Adangal (அடங்கல்), also called Pahani, is the annual village register maintained by the VAO recording actual possession of each survey number, the name of the cultivator (possessor, not always the owner), crop grown, source of irrigation, and land revenue. Adangal is updated each agricultural year (fasli year). It proves actual possession and cultivation, which is required for crop loans, PM-Kisan registration, and as evidence in land disputes. To obtain: visit VAO office or Taluk office with survey number and patta number, pay ₹20 fee. Available online at eservices.tn.gov.in. Common issue: adangal may show a different name than patta if tenant farmers are cultivating — this is normal and does not indicate ownership dispute. Required documents for adangal application: copy of patta, survey number, applicant ID proof.",
+    "source": "Tamil Nadu Revenue Records Manual; TN e-Services portal",
+    "keywords": ["adangal", "அடங்கல்", "pahani", "possession", "cultivation", "VAO", "crop records", "PM-Kisan"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "fmb_001",
+    "category": "land_records",
+    "title": "FMB (Field Measurement Book) — Survey Sketch",
+    "content": "FMB (Field Measurement Book) is the official survey sketch of a land parcel drawn by the Survey Department, showing exact field boundaries, dimensions, area in hectares/acres, neighbouring survey numbers, and access paths. FMB is required for: subdivision of land (physical split between heirs), resolving boundary disputes, construction on agricultural land, and land conversion applications. To obtain FMB: apply at the District Survey Office (DSO) or online at eservices.tn.gov.in, provide survey number and village name, pay ₹100 fee. Processing: 30 days. If FMB sketch is old (pre-1990), a re-survey may be needed — apply to Collector's office. Note: FMB shows physical boundaries; patta shows legal ownership — you need both for land transactions. For natham land (village residential plots), FMB may be unavailable if the plot was never formally surveyed — in this case apply for a new survey through the VAO.",
+    "source": "Tamil Nadu Survey and Land Records Department; Survey Act 1923",
+    "keywords": ["FMB", "field measurement book", "survey sketch", "boundary", "DSO", "subdivision", "survey number"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "a_register_001",
+    "category": "land_records",
+    "title": "A-Register — Natham Village Land Register",
+    "content": "A-Register is the primary land register for natham (village residential) lands in Tamil Nadu. It is maintained at the Taluk office and records owner name, survey number, extent of plot, assessment tax, and occupancy details. A-Register is the key document for natham land — unlike agricultural land (covered by chitta/adangal), natham land has no separate patta title document; the A-Register entry IS the title. To obtain a certified copy of A-Register extract: apply at the Taluk office, pay ₹20 fee, receive within 7 working days. For natham land purchase: buyer must verify A-Register shows seller's name correctly, check for any encumbrances or court attachments. After purchase: get the A-Register updated by applying to the Tahsildar with registered sale deed within 90 days. Failure to update A-Register after purchase is a common cause of future disputes.",
+    "source": "Tamil Nadu Revenue Dept; TN Land Revenue Act 1767; Natham Land Guidelines",
+    "keywords": ["A-Register", "natham", "village land", "residential land", "Taluk office", "Tahsildar", "land register"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "ec_001",
+    "category": "registration",
+    "title": "Encumbrance Certificate (EC) — How to Get It and What It Shows",
+    "content": "Encumbrance Certificate (EC) is a document issued by the Sub-Registrar Office showing all registered transactions (sales, mortgages, gifts, court attachments) on a property for a specified period. EC is mandatory for: property purchase (buyer must verify EC for last 30 years), bank loan on property, patta transfer, and legal heir certificate applications. Two types: Form 15 (when transactions exist), Form 16 (nil encumbrance). To obtain EC: visit Sub-Registrar Office with survey number/door number, fill application form, pay ₹200 for 30-year EC (₹15 per year), processing: 2-3 working days. Available online at tnreginet.gov.in. Important: EC only covers REGISTERED transactions. Unregistered agreements, family disputes, or revenue attachments do not appear in EC — always check A-Register and chitta as well for a complete picture. If EC shows a mortgage (charge), insist seller provides bank clearance letter before purchase.",
+    "source": "Registration Act 1908 Section 57; TN Sub-Registrar Office; tnreginet.gov.in",
+    "keywords": ["encumbrance certificate", "EC", "Form 15", "Form 16", "Sub-Registrar", "tnreginet", "mortgage", "property check"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "udr_001",
+    "category": "land_records",
+    "title": "UDR (Urban and Rural House Site Register) — Village Ur Nattam Land",
+    "content": "UDR (Ur Nattam Detailed Register) is the register maintained by Village Administrative Officer (VAO) for village residential plots (house sites) in ur nattam (village habitation area). It is separate from A-Register and records house site number, owner name, extent, and whether the site is patta or government land. UDR is important because many village house sites are on government-assigned land — residents may have occupancy rights without full ownership. To verify your house site status: ask VAO to show UDR entry for your survey/site number. If your name is not in UDR: apply for regularisation under Tamil Nadu government's Slum Clearance Board or revenue department regularisation schemes. Required for building permit applications in village panchayat limits.",
+    "source": "Tamil Nadu Land Records Manual; VAO Office Records",
+    "keywords": ["UDR", "ur nattam", "house site", "village residential", "VAO", "panchayat", "occupancy"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "rsr_001",
+    "category": "land_records",
+    "title": "RSR 1912 (Revenue Settlement Register) — Historic Title Chain Document",
+    "content": "RSR 1912 (Revenue Settlement Register 1912) is the original British-era survey and settlement record that forms the historic basis of land records in Tamil Nadu. It records the original survey numbers, ownership, extent, and classification of all lands as of 1912. RSR is used to: trace the original title chain for disputed lands, resolve boundary disputes where modern records conflict, identify original classification (agricultural/waste/forest/natham), and support claims to long-held land with no modern documents. To access RSR records: apply at District Collectorate Survey Office with village name and survey number. Certified copies: ₹200-500. Processing: 30-60 days. Importance: If someone claims your land was originally government waste land (poromboke), RSR is the primary document to prove otherwise. RSR records are not available online — physical application at DSO required.",
+    "source": "TN Survey Settlement 1912; Tamil Nadu Land Records Department; DSO Records",
+    "keywords": ["RSR 1912", "revenue settlement", "historic land records", "title chain", "survey settlement", "DSO", "poromboke"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "topo_sketch_001",
+    "category": "land_records",
+    "title": "Topo Sketch (Topographic Sketch) — Survey Department Boundary Map",
+    "content": "Topo Sketch (Topographic Sketch) is an official map drawn by the Survey Department showing the boundaries and relative positions of several survey numbers in a village, with roads, water bodies, and landmark features. Unlike FMB (which shows one field in detail), Topo Sketch shows how multiple plots relate to each other and to village landmarks. Topo Sketch is used for: large land disputes involving multiple survey numbers, checking whether a boundary wall or fence is on the correct survey boundary, understanding the overall layout of a village's land parcels. To obtain: apply at District Survey Office (DSO), provide village name and approximate survey numbers required. Fee: ₹300-600. Processing: 30-45 days. Court cases frequently require certified Topo Sketch copies.",
+    "source": "Tamil Nadu Survey and Land Records Department",
+    "keywords": ["topo sketch", "topographic sketch", "survey map", "DSO", "boundary map", "village map", "land dispute"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "natham_purchase_001",
+    "category": "land_records",
+    "title": "Village Natham Land Purchase — Complete Document Checklist (13 Documents)",
+    "content": "To purchase natham (village residential) land in Tamil Nadu, verify and collect all 13 of these documents before executing the sale deed:\n1. Patta — current owner's patta from Taluk office (if agricultural land converted to residential)\n2. Chitta — land classification record from VAO\n3. Adangal — possession record from VAO\n4. A-Register extract — primary title document for natham land from Taluk office\n5. FMB (Field Measurement Book) — plot boundary sketch from DSO\n6. Topo Sketch — village boundary map from DSO\n7. EC (Encumbrance Certificate) — last 30 years from Sub-Registrar Office\n8. Sale deed (previous) — all past registered deeds in title chain\n9. Legal Heir Certificate — if seller inherited the land (from Tahsildar)\n10. Death Certificate — of deceased previous owner if applicable\n11. UDR extract — ur nattam register entry from VAO\n12. RSR 1912 entry — original settlement record (for very old disputed lands) from DSO\n13. Property tax receipt — latest from panchayat/municipality showing seller's name\n\nAfter purchase: Register sale deed at Sub-Registrar Office within 4 months (fee 7% stamp duty + 1% registration). Then update: A-Register (apply to Tahsildar within 90 days), Chitta/Adangal (apply to VAO), Property tax (apply to Panchayat). Failure to update all records within 90 days causes future disputes. Call 1516 for free legal guidance.",
+    "source": "TN Registration Act; TN Revenue Standing Orders; Tamil Nadu Land Records Manual",
+    "keywords": ["natham land purchase", "village land", "document checklist", "13 documents", "patta", "chitta", "adangal", "FMB", "EC", "A-Register", "sale deed"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "legal_heir_001",
+    "category": "inheritance",
+    "title": "Legal Heir Certificate — How to Get It in Tamil Nadu",
+    "content": "Legal Heir Certificate is issued by the Tahsildar to establish who the legal heirs of a deceased person are. It is required for: transferring property (patta transfer after parent's death), claiming bank deposits, pension, insurance, government dues of the deceased, and employment on compassionate grounds. Documents required: death certificate of deceased, proof of relationship (ration card or family aadhaar showing all family members), Aadhaar of applicant, affidavit stating all legal heirs (notarised). Process: 1. Submit application with documents at Taluk office. 2. VAO will conduct field inquiry within 15 days. 3. Tahsildar issues certificate within 30 days. Fee: ₹20. Certificate validity: no expiry. For court use, attach certified copy of death certificate. If there is a dispute among heirs, the Tahsildar cannot issue the certificate — the matter must go to civil court for a succession certificate (issued by District Court, fee: 3% of estate value).",
+    "source": "TN Revenue Dept GO Ms No 185/2019; Hindu Succession Act 1956; TN Intestate Succession",
+    "keywords": ["legal heir certificate", "Tahsildar", "inheritance", "death certificate", "succession", "patta transfer", "family members"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "patta_chitta_diff_001",
+    "category": "land_records",
+    "title": "Difference Between Patta, Chitta, Adangal and A-Register",
+    "content": "Villagers often confuse these four documents. Here is the clear difference:\n\nPATTA: The official title deed issued by the government. It proves you are the legal owner. Issued by Taluk office. Updated when land changes ownership (sale, inheritance). Contains: patta number, owner name, survey number, extent, land type.\n\nCHITTA: The annual classification and ownership record maintained by VAO. It mirrors the patta but also records land classification (wet/dry/garden) and annual tax demand. Updated yearly. Required for loans.\n\nADANGAL (Pahani): The annual cultivation record. Shows who is ACTUALLY POSSESSING and farming the land (may be different from owner if land is leased). Required for crop loans, PM-Kisan, MNREGA.\n\nA-REGISTER: For NATHAM (residential village) land only. This IS the title document — there is no separate patta for natham land. A-Register entry in Taluk office = proof of ownership for village house sites.\n\nAll four are available online at eservices.tn.gov.in. Offline: VAO office for chitta and adangal, Taluk office for patta and A-Register.",
+    "source": "Tamil Nadu Land Records Manual; TN Revenue Dept",
+    "keywords": ["patta", "chitta", "adangal", "A-Register", "difference", "land documents", "natham", "eservices"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "poromboke_001",
+    "category": "land_classification",
+    "title": "Poromboke Land — What It Is and What You Can and Cannot Do",
+    "content": "Poromboke is government land set aside for public use — roads, water bodies, burial grounds, grazing land, village threshing floors. It is recorded in the revenue records as 'government poromboke' and cannot be privately owned or sold. Common issue: villagers who have lived on or farmed poromboke land for generations may face eviction. Key legal points:\n1. Possession of poromboke land, even for 100 years, does not create ownership rights (unlike private land where 12-year adverse possession may apply).\n2. Encroachment on poromboke is punishable under TN Land Encroachment Act 1905 with fines and eviction.\n3. However, the government may regularise long-term possession of some poromboke types (especially house sites) under special schemes.\n4. To check if your land is poromboke: look at chitta/adangal — if 'pattadar' column is blank and shows 'sarkar' or 'government', it is poromboke.\n5. If you have been issued a patta for poromboke land: it may have been issued in error and can be cancelled by the Collector.\nCall 1516 for free legal help if facing eviction from poromboke land.",
+    "source": "TN Land Encroachment Act 1905; TN Revenue Standing Orders; Tamil Nadu Land Records Manual",
+    "keywords": ["poromboke", "government land", "encroachment", "eviction", "public land", "grazing land", "regularisation"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
+    "id": "eservices_howto_001",
+    "category": "land_records",
+    "title": "How to Get Land Records Online — Tamil Nadu eServices Portal",
+    "content": "All Tamil Nadu land records are available free online at eservices.tn.gov.in. Step-by-step guide:\n1. Go to eservices.tn.gov.in on any smartphone or computer.\n2. Click 'View Patta & FMB / Chitta / Adangal'.\n3. Select your District, Taluk, Village from the dropdown menus.\n4. Enter Survey Number (you can find this on old tax receipts or ask VAO).\n5. Click 'Submit' — you will see Patta, Chitta, Adangal, and FMB sketch instantly.\n6. To download: click 'Print' or save as PDF from your browser.\nNote: The online records show the current registered state. If you recently bought land but patta is not updated yet, the old owner's name will still show. Cost: Free. No login required. Available 24/7. For certificates (certified copies with official stamp): still need to visit the Taluk office and pay ₹20 fee. Online records are valid for most bank loan applications but banks may ask for certified physical copy for large loans.",
+    "source": "TN e-Services portal eservices.tn.gov.in; Tamil Nadu Revenue Dept",
+    "keywords": ["eservices", "online land records", "patta online", "chitta online", "adangal online", "FMB online", "how to check"],
+    "verified": false,
+    "last_checked": null
+  },
+  {
     "id": "pension_001",
     "category": "pension",
     "title": "Old Age Pension — Tamil Nadu IGNOAPS",

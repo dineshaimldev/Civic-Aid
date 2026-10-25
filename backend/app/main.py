@@ -2,6 +2,7 @@
 import logging
 import time
 import uuid
+import re
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -11,7 +12,7 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from app.core.config import get_settings
-from app.routers import chat, document, health, eval, whatsapp, reminders, vault, corruption, generation
+from app.routers import chat, document, health, eval, whatsapp, reminders, vault, corruption, generation, escalation, explain
 
 settings = get_settings()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s")
@@ -21,10 +22,12 @@ limiter = Limiter(key_func=get_remote_address)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info(f"CivicAid API v{settings.app_version} starting — env={settings.app_env}")
+    app.state.rag_ready = False
     # Warm up RAG pipeline on startup
     try:
         from app.services.rag_pipeline import get_rag_pipeline
         rag = get_rag_pipeline()
+        app.state.rag_ready = rag._loaded
         logger.info(f"RAG pipeline ready — {len(rag.chunks)} chunks indexed")
     except Exception as e:
         logger.warning(f"RAG pipeline startup warning: {e}")
@@ -42,12 +45,26 @@ app = FastAPI(
 
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
-app.add_middleware(CORSMiddleware, allow_origins=settings.origins_list, allow_credentials=False, allow_methods=["GET", "POST", "OPTIONS"], allow_headers=["Content-Type", "X-Request-ID"], max_age=86400)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.origins_list,
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=[
+        "Content-Type",
+        "X-Request-ID",
+        "X-Vault-Token",
+        "X-Reminder-Token",
+        "X-Admin-Token",
+    ],
+    max_age=86400,
+)
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 @app.middleware("http")
 async def request_middleware(request: Request, call_next):
-    req_id = request.headers.get("X-Request-ID", str(uuid.uuid4())[:8])
+    incoming_req_id = request.headers.get("X-Request-ID", "")
+    req_id = incoming_req_id if re.fullmatch(r"[A-Za-z0-9._-]{1,64}", incoming_req_id) else str(uuid.uuid4())
     start = time.time()
     response = await call_next(request)
     elapsed = round((time.time() - start) * 1000)
@@ -73,6 +90,8 @@ app.include_router(reminders.router)
 app.include_router(vault.router)
 app.include_router(corruption.router)
 app.include_router(generation.router)
+app.include_router(escalation.router)
+app.include_router(explain.router)
 
 @app.get("/")
 async def root():

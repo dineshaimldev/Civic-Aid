@@ -131,6 +131,42 @@ LETTER_PRESETS: dict[str, dict] = {
         "subject": "Urgent complaint regarding fraudulent transfer of my land without consent",
         "details_hint": "State when you discovered the fraudulent transfer and what documents you have to prove your original ownership.",
     },
+    "rti_application": {
+        "recipient_designation": "The Public Information Officer (PIO)",
+        "recipient_office": "",
+        "subject": "Application under Section 6(1) of the Right to Information Act, 2005",
+        "details_hint": "List the exact information or copies you want (for example: status of my patta application no. ___ dated ___, with the name of the officer holding the file and reasons for delay). Fee is ₹10 (BPL applicants are exempt).",
+    },
+    "fir_complaint": {
+        "recipient_designation": "The Station House Officer",
+        "recipient_office": "Police Station",
+        "subject": "Complaint requesting registration of FIR",
+        "details_hint": "Give date, time and place of the incident, who did it (if known), what happened in order, and any witnesses or evidence. If the police refuse, you can send this same complaint by post to the Superintendent of Police.",
+    },
+    "subdivision_correction": {
+        "recipient_designation": "The Tahsildar",
+        "recipient_office": "Taluk Office",
+        "subject": "Request for correction of errors in Patta / Chitta records",
+        "details_hint": "State what is wrong (name spelling, survey number, extent) versus what your registered document shows, and attach copies of both.",
+    },
+    "legal_heir_certificate": {
+        "recipient_designation": "The Tahsildar",
+        "recipient_office": "Taluk Office",
+        "subject": "Application for Legal Heir Certificate",
+        "details_hint": "Give the deceased person's name, date of death, relationship of each legal heir, and attach the death certificate and ID of all heirs.",
+    },
+    "patta_name_change": {
+        "recipient_designation": "The Tahsildar",
+        "recipient_office": "Taluk Office",
+        "subject": "Application for transfer of Patta to my name (mutation)",
+        "details_hint": "Mention how you acquired the land (sale deed no. and date / inheritance / partition) and attach the deed, EC and previous patta.",
+    },
+    "grievance_collector": {
+        "recipient_designation": "The District Collector",
+        "recipient_office": "Collectorate",
+        "subject": "Grievance petition — no action taken by lower revenue officials",
+        "details_hint": "List each earlier petition with its date and the office it went to, and say that no action was taken within the stipulated time.",
+    },
     "general": {
         "recipient_designation": "",
         "recipient_office": "",

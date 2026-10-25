@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { useApp } from '../App'
 import { analyzeDocument, ApiError, uploadToVault, createReminder } from '../lib/api'
+import type { ActiveDocument } from '../App'
 
 type UploadState = 'idle' | 'processing' | 'result'
 
@@ -14,6 +15,7 @@ interface DocAnalysis {
   dates: { date: string; desc: string }[]
   nextSteps: string[]
   warnings?: string[]
+  issuesFound?: boolean
 }
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -29,7 +31,7 @@ function Icon({ path, size = 20, color = 'currentColor' }: { path: string; size?
 }
 
 export default function DocumentUploadPage() {
-  const { addToast, lang } = useApp()
+  const { addToast, lang, navigate, setActiveDocument } = useApp()
   const [state, setState] = useState<UploadState>('idle')
   const [progress, setProgress] = useState(0)
   const [statusIdx, setStatusIdx] = useState(0)
@@ -67,7 +69,13 @@ export default function DocumentUploadPage() {
       setProgress(100)
       const a = result.analysis
       setExtractedText(result.extracted_text ?? '')
-      setAnalysis({ type: a.type_label, title: a.title, confidence: a.confidence, keyInfo: a.key_info, dates: a.dates, nextSteps: a.next_steps, warnings: a.warnings })
+      setAnalysis({ type: a.type_label, title: a.title, confidence: a.confidence, keyInfo: a.key_info, dates: a.dates, nextSteps: a.next_steps, warnings: a.warnings, issuesFound: a.issues_found ?? true })
+      // Store document in app context so Chat page can use it
+      setActiveDocument({
+        title: a.title,
+        extractedText: result.extracted_text ?? '',
+        docType: a.type_label,
+      } as ActiveDocument)
       setTimeout(() => setState('result'), 400)
     } catch (err) {
       clearInterval(interval)
@@ -79,14 +87,32 @@ export default function DocumentUploadPage() {
 
   const reset = () => { setState('idle'); setProgress(0); setStatusIdx(0); setFileName(''); setExtractedText(''); setAnalysis(null); setUploadedFile(null); setProtected(false); setPhone('') }
 
+  // Convert any date string the AI returns ("15 Oct 2026", "06th October 2026", "2026-10-15") → YYYY-MM-DD
+  const toIsoDate = (raw: string): string | null => {
+    if (!raw) return null
+    // Already ISO
+    if (/^\d{4}-\d{2}-\d{2}$/.test(raw.trim())) return raw.trim()
+    // Remove ordinal suffixes: 15th → 15, 06th → 06
+    const cleaned = raw.replace(/(\d+)(st|nd|rd|th)/gi, '$1').trim()
+    const parsed = new Date(cleaned)
+    if (isNaN(parsed.getTime())) return null
+    const yyyy = parsed.getFullYear()
+    const mm = String(parsed.getMonth() + 1).padStart(2, '0')
+    const dd = String(parsed.getDate()).padStart(2, '0')
+    return `${yyyy}-${mm}-${dd}`
+  }
+
   const protectDocument = async () => {
     if (!phone.trim() || phone.trim().length < 8) { addToast({ type: 'error', message: 'Enter a valid phone number to continue.' }); return }
     if (!uploadedFile || !analysis) return
     setProtecting(true)
     try {
-      await uploadToVault(uploadedFile, phone.trim(), analysis.title, analysis.type)
+      const vault = await uploadToVault(uploadedFile, phone.trim(), analysis.title, analysis.type)
+      localStorage.setItem(`civicaid:vault-token:${phone.trim()}`, vault.access_token)
       for (const d of analysis.dates) {
-        try { await createReminder(phone.trim(), `${analysis.title}: ${d.desc}`, d.date, `Extracted from your uploaded document: ${analysis.title}`) } catch { /* best-effort per date */ }
+        const iso = toIsoDate(d.date)
+        if (!iso) continue   // skip dates we can't parse — don't send a 422
+        try { await createReminder(phone.trim(), `${analysis.title}: ${d.desc}`, iso, `Extracted from your uploaded document: ${analysis.title}`) } catch { /* best-effort per date */ }
       }
       setProtected(true)
       addToast({ type: 'success', message: 'Document saved and deadline reminders set.' })
@@ -206,6 +232,22 @@ export default function DocumentUploadPage() {
               </div>
             </div>
 
+            {/* Clean state — no issues found */}
+            {safeAnalysis.issuesFound === false && (
+              <div className="mt-8 flex items-center gap-3 p-4 rounded-xl" style={{ background: '#dff0e6', border: '1px solid #b3d9c4' }}>
+                <span className="grid h-9 w-9 flex-shrink-0 place-items-center rounded-full text-white text-lg" style={{ background: '#4caf82' }}>✓</span>
+                <div>
+                  <p className="font-['DM_Sans'] text-[14px] font-semibold" style={{ color: '#1f5c2a' }}>
+                    {tamil ? 'ஆவணம் சரியாக உள்ளது — எந்த சிக்கலும் கண்டறியப்படவில்லை' : 'Document appears in order — no issues detected'}
+                  </p>
+                  <p className="font-['DM_Sans'] text-[12px] mt-0.5" style={{ color: '#2d7a52' }}>
+                    {tamil ? 'இந்த ஆவணத்தில் அவசர நடவடிக்கை தேவைப்படும் எந்த சிக்கலும் இல்லை.' : 'No urgent warnings or red flags found in this document.'}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Warnings — issues found */}
             {safeAnalysis.warnings && safeAnalysis.warnings.length > 0 && (
               <div className="mt-8">
                 <Eyebrow><span style={{ color: '#a04530' }}>Warnings</span></Eyebrow>
@@ -272,6 +314,13 @@ export default function DocumentUploadPage() {
 
             <div className="mt-8 flex gap-3 flex-wrap">
               <button onClick={reset} className="rounded-full border px-5 py-2.5 font-['DM_Sans'] text-sm font-medium transition" style={{ borderColor: '#193d2c', color: '#193d2c' }}>New Document</button>
+              <button
+                onClick={() => navigate('chat')}
+                className="rounded-full px-5 py-2.5 font-['DM_Sans'] text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                style={{ background: '#4caf82' }}
+              >
+                💬 {tamil ? 'இந்த ஆவணத்தைப் பற்றி கேளுங்கள் →' : 'Chat about this document →'}
+              </button>
               <button
                 onClick={() => {
                   const content = [`CivicAid Document Analysis`, `========================`, `Document: ${safeAnalysis.title}`, `Type: ${safeAnalysis.type}`, `Confidence: ${safeAnalysis.confidence}%`, ``, `KEY INFORMATION`, ...safeAnalysis.keyInfo.map(i => `• ${i}`), ``, `IMPORTANT DATES`, ...safeAnalysis.dates.map(d => `${d.date} — ${d.desc}`), ...(safeAnalysis.warnings?.length ? [``, `WARNINGS`, ...safeAnalysis.warnings.map(w => `⚠ ${w}`)] : []), ``, `NEXT STEPS`, ...safeAnalysis.nextSteps.map((s, i) => `${i + 1}. ${s}`), ``, `---`, `Tamil Nadu Legal Aid: 1516 (toll-free, 24/7)`, `Generated by CivicAid`].join('\n')

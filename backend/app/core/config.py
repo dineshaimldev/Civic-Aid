@@ -1,3 +1,4 @@
+from pydantic import ConfigDict, model_validator
 from pydantic_settings import BaseSettings
 from functools import lru_cache
 from typing import List
@@ -7,6 +8,7 @@ class Settings(BaseSettings):
     app_version: str = "2.0.0"
     app_env: str = "development"
     app_secret_key: str = "change-this-in-production"
+    reminder_sweep_token: str = ""
 
     # AI API — Groq (free, no payment needed)
     # Get your free key at console.groq.com
@@ -17,6 +19,7 @@ class Settings(BaseSettings):
 
     # Cache
     redis_url: str = "redis://localhost:6379"
+    database_url: str = "sqlite:///./data/civicaid.db"
 
     # CORS
     allowed_origins: str = "http://localhost:5173,http://localhost:3000"
@@ -34,7 +37,6 @@ class Settings(BaseSettings):
     # Rate limits
     rate_limit_chat: str = "20/minute"
     rate_limit_upload: str = "5/minute"
-    rate_limit_status: str = "30/minute"
 
     # OCR
     tesseract_path: str = "/usr/bin/tesseract"
@@ -55,9 +57,25 @@ class Settings(BaseSettings):
     def is_production(self) -> bool:
         return self.app_env == "production"
 
-    class Config:
-        env_file = ".env"
-        extra = "ignore"
+    model_config = ConfigDict(env_file=".env", extra="ignore")
+
+    @model_validator(mode="after")
+    def validate_production_settings(self):
+        if not self.is_production:
+            return self
+        if self.app_secret_key == "change-this-in-production" or len(self.app_secret_key) < 32:
+            raise ValueError("APP_SECRET_KEY must be a random value of at least 32 characters in production.")
+        if not self.groq_api_key:
+            raise ValueError("GROQ_API_KEY is required in production.")
+        if not self.reminder_sweep_token or len(self.reminder_sweep_token) < 32:
+            raise ValueError("REMINDER_SWEEP_TOKEN must be configured in production.")
+        if self.redis_url.startswith(("redis://localhost", "redis://127.0.0.1", "rediss://localhost", "rediss://127.0.0.1")):
+            raise ValueError("REDIS_URL must point to a managed Redis instance in production.")
+        if not self.database_url or self.database_url.startswith("sqlite:///./"):
+            raise ValueError("DATABASE_URL must point to managed durable storage in production.")
+        if any(origin == "*" for origin in self.origins_list):
+            raise ValueError("ALLOWED_ORIGINS must not contain '*' in production.")
+        return self
 
 @lru_cache
 def get_settings() -> Settings:

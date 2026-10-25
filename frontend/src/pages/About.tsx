@@ -91,7 +91,7 @@ export default function AboutPage() {
             <div className="py-10 text-center">
               <span className="text-4xl">✦</span>
               <h2 className="mt-5 font-['DM_Serif_Display'] text-4xl text-[#193d2c]">Thank you for helping.</h2>
-              <p className="mt-4 font-['DM_Sans'] text-[#617061]">Your feedback has been received.</p>
+              <p className="mt-4 font-['DM_Sans'] text-[#617061]">Your feedback has been noted.</p>
             </div>
           ) : (
             <>
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 placeholder="What should we improve?"
               />
               <button onClick={submitFeedback} className="mt-5 rounded-full bg-[#193d2c] px-6 py-4 font-['DM_Sans'] text-sm font-semibold text-white transition hover:-translate-y-0.5">
-                Send feedback →
+                Save feedback locally →
               </button>
             </>
           )}
@@ -153,7 +153,7 @@ export default function AboutPage() {
 
       <footer className="relative z-10 border-t border-[#d2d7cd] px-5 py-7 font-['DM_Sans'] text-xs text-[#667066] md:px-10 lg:px-14">
         <div className="mx-auto flex max-w-[1440px] flex-wrap justify-between gap-3">
-          <span>© 2025 CivicAid</span>
+          <span>© 2026 CivicAid</span>
           <span>Guidance, not legal representation. Call <b className="text-[#193d2c]">1516</b> for serious matters.</span>
         </div>
       </footer>

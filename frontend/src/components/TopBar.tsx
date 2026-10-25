@@ -29,9 +29,22 @@ export default function TopBar({ title, lang, setLang, onMenuClick }: Props) {
 
       {/* Title — center with logo */}
       <div className="flex items-center gap-2">
-        <span className="grid place-items-center rounded-full flex-shrink-0" style={{ width: 22, height: 22, background: '#193d2c', color: '#f6f1e6', fontSize: 11 }}>✦</span>
-        <span style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 700, color: '#193d2c', letterSpacing: '-0.02em', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 160 }}>
-          {title}
+        {/* C-arc + scales mark (small, light-bg variant) */}
+        <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+          <path d="M34 8.5A17 17 0 1 0 34 31.5" stroke="#193d2c" strokeWidth="3.2" strokeLinecap="round" fill="none"/>
+          <line x1="20" y1="12" x2="20" y2="28" stroke="#193d2c" strokeWidth="1.8" strokeLinecap="round"/>
+          <line x1="12" y1="16" x2="28" y2="16" stroke="#193d2c" strokeWidth="1.8" strokeLinecap="round"/>
+          <line x1="13" y1="16" x2="11" y2="22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="13" y1="16" x2="15" y2="22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="27" y1="16" x2="25" y2="22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="27" y1="16" x2="29" y2="22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round"/>
+          <path d="M10 22 Q13 25 16 22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+          <path d="M24 22 Q27 25 30 22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+          <line x1="17" y1="28" x2="23" y2="28" stroke="#193d2c" strokeWidth="1.6" strokeLinecap="round"/>
+          <circle cx="20" cy="10" r="2" fill="#193d2c"/>
+        </svg>
+        <span style={{ fontFamily: 'DM Sans', fontSize: 15, fontWeight: 700, letterSpacing: '-0.02em', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 160 }}>
+          <span style={{ color: '#193d2c' }}>Civic</span><span style={{ color: '#2d7a52' }}>Aid</span>
         </span>
       </div>
 

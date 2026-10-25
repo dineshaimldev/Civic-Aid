@@ -17,6 +17,7 @@ import logging
 from datetime import datetime
 from typing import Optional
 from app.services.cache_service import get_cache
+from app.services.persistence_service import get_persistence
 
 logger = logging.getLogger(__name__)
 
@@ -51,13 +52,12 @@ class CorruptionReportService:
             "is_anonymous": contact_phone is None,
         }
 
-        cache.set(f"corruption_report:{report_id}", report, ttl=REPORT_TTL)
-
-        # Add to global index (for aggregate reporting — Feature: village dashboard)
-        all_reports_key = "corruption_reports:all_ids"
-        all_ids = cache.get(all_reports_key) or []
-        all_ids.append(report_id)
-        cache.set(all_reports_key, all_ids, ttl=REPORT_TTL)
+        get_persistence().save_record(
+            "corruption_report",
+            report_id,
+            report,
+            report["submitted_at"],
+        )
 
         logger.info(
             f"[Corruption] Report {report_id} submitted "
@@ -66,8 +66,7 @@ class CorruptionReportService:
         return report
 
     def get_report(self, report_id: str) -> Optional[dict]:
-        cache = get_cache()
-        return cache.get(f"corruption_report:{report_id}")
+        return get_persistence().get_record("corruption_report", report_id)
 
     def format_dvac_reference_note(self, report: dict) -> str:
         """
@@ -118,18 +117,15 @@ class CorruptionReportService:
         Powers a future village-level dashboard showing where corruption
         complaints cluster, useful for NGOs and policy researchers.
         """
-        cache = get_cache()
-        all_ids = cache.get("corruption_reports:all_ids") or []
         office_counts: dict[str, int] = {}
 
-        for rid in all_ids:
-            r = cache.get(f"corruption_report:{rid}")
-            if r:
-                office = r.get("office_name", "Unknown")
-                office_counts[office] = office_counts.get(office, 0) + 1
+        reports = get_persistence().list_records("corruption_report")
+        for report in reports:
+            office = report.get("office_name", "Unknown")
+            office_counts[office] = office_counts.get(office, 0) + 1
 
         return {
-            "total_reports": len(all_ids),
+            "total_reports": len(reports),
             "reports_by_office": office_counts,
         }
 

@@ -1,5 +1,6 @@
 import logging
-from fastapi import APIRouter, Request, Response, Form
+from twilio.request_validator import RequestValidator
+from fastapi import APIRouter, HTTPException, Request, Response, Form
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from app.core.config import get_settings
@@ -34,6 +35,15 @@ async def whatsapp_webhook(
     This reuses the exact same RAG pipeline and AI service as the web chat —
     no duplicate logic, no separate knowledge base.
     """
+    signature = request.headers.get("X-Twilio-Signature", "")
+    if not settings.twilio_auth_token:
+        raise HTTPException(status_code=503, detail="WhatsApp webhook is not configured.")
+
+    form_data = await request.form()
+    validator = RequestValidator(settings.twilio_auth_token)
+    if not signature or not validator.validate(str(request.url), dict(form_data), signature):
+        raise HTTPException(status_code=403, detail="Invalid webhook signature.")
+
     wa = get_whatsapp_service()
     reply_text = wa.handle_incoming_message(From, Body)
     twiml = wa.build_twiml_response(reply_text)

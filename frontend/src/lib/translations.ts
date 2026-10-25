@@ -84,20 +84,6 @@ export const translations = {
     printGuide: 'Print Guide',
     backToGuides: '← Back to Guides',
 
-    // Status
-    statusTitle: 'Application Status',
-    statusSubtitle: 'Track your government application with your reference number.',
-    selectService: 'Select Service',
-    refLabel: 'Your Application Number',
-    refPlaceholder: 'e.g. TN2024001234',
-    checkStatus: 'Check Application Status',
-    checking: 'Checking status…',
-    lastUpdated: 'Last updated',
-    yourAction: 'Your Next Action',
-    shareResult: 'Share',
-    checkAnother: 'Check Another',
-    rejectionHelp: 'Need help with a rejection?',
-
     // About
     aboutMission: '"Let everyone understand the law"',
     aboutTitle: 'CivicAid',
@@ -185,20 +171,6 @@ export const translations = {
     steps: 'படிகள்',
     printGuide: 'அச்சிடு',
     backToGuides: '← வழிகாட்டிகளுக்கு திரும்பு',
-
-    // Status
-    statusTitle: 'விண்ணப்ப நிலை',
-    statusSubtitle: 'உங்கள் விண்ணப்ப எண்ணால் நிலையை சரிபாருங்கள்.',
-    selectService: 'சேவையை தேர்வு செய்யுங்கள்',
-    refLabel: 'உங்கள் விண்ணப்ப எண்',
-    refPlaceholder: 'எ.கா. TN2024001234',
-    checkStatus: 'நிலையை சரிபார்க்கவும்',
-    checking: 'சரிபார்க்கிறோம்…',
-    lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது',
-    yourAction: 'உங்கள் அடுத்த செயல்',
-    shareResult: 'பகிர்',
-    checkAnother: 'வேறொன்றை சரிபார்',
-    rejectionHelp: 'நிராகரிப்பில் உதவி வேண்டுமா?',
 
     // About
     aboutMission: '"எல்லோருக்கும் சட்டம் புரியட்டும்"',

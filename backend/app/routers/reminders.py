@@ -1,4 +1,5 @@
 import logging
+import secrets
 from fastapi import APIRouter, HTTPException, Request
 from slowapi import Limiter
 from slowapi.util import get_remote_address
@@ -28,8 +29,11 @@ async def create_reminder(request: Request, body: ReminderCreate):
             deadline_date=body.deadline_date,
             description=body.description,
             source=body.source,
+            access_token=request.headers.get("X-Reminder-Token"),
         )
         return Reminder(**reminder)
+    except PermissionError:
+        raise HTTPException(status_code=401, detail="Reminder access token required.")
     except Exception as e:
         logger.error(f"Reminder creation error: {e}")
         raise HTTPException(status_code=500, detail="Could not create reminder.")
@@ -38,8 +42,10 @@ async def create_reminder(request: Request, body: ReminderCreate):
 @router.get("/{phone}", response_model=ReminderListResponse)
 @limiter.limit("30/minute")
 async def list_reminders(request: Request, phone: str):
-    """Get all upcoming reminders for a phone number, soonest first."""
+    """Get reminders only with the token issued when the first reminder was created."""
     service = get_reminder_service()
+    if not service.verify_access_token(phone, request.headers.get("X-Reminder-Token", "")):
+        raise HTTPException(status_code=401, detail="Reminder access token required.")
     reminders = service.get_reminders_for_phone(phone)
     upcoming = service.count_upcoming(phone, within_days=30)
     return ReminderListResponse(
@@ -49,13 +55,19 @@ async def list_reminders(request: Request, phone: str):
 
 
 @router.post("/sweep/run")
-async def run_reminder_sweep():
+@limiter.limit("5/hour")
+async def run_reminder_sweep(request: Request):
     """
     Admin/cron endpoint — checks for reminders due within 3 days and
     sends WhatsApp notifications. Call this periodically (e.g. every
     6 hours) via a free cron service like cron-job.org pointed at this URL,
     or Render's built-in Cron Jobs feature.
     """
+    configured_token = settings.reminder_sweep_token.strip()
+    supplied_token = request.headers.get("X-Admin-Token", "")
+    if not configured_token or not secrets.compare_digest(supplied_token, configured_token):
+        raise HTTPException(status_code=401, detail="Unauthorized.")
+
     try:
         service = get_reminder_service()
         sent_count = service.send_due_reminders_via_whatsapp()

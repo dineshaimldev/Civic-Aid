@@ -7,20 +7,31 @@ import HomePage from './pages/Home'
 import ChatPage from './pages/Chat'
 import DocumentUploadPage from './pages/DocumentUpload'
 import ProceduresPage from './pages/Procedures'
+import VaultPage from './pages/Vault'
 import AboutPage from './pages/About'
+import ToolkitPage from './pages/Toolkit'
 
 // Application Status feature removed — not implementable for this deployment.
-export type Page = 'home' | 'chat' | 'upload' | 'procedures' | 'about'
+export type Page = 'home' | 'chat' | 'upload' | 'toolkit' | 'procedures' | 'vault' | 'about'
 export type Lang = 'tamil' | 'english'
+
+export interface ActiveDocument {
+  title: string
+  extractedText: string
+  docType: string
+}
 
 interface AppCtx {
   lang: Lang
   setLang: (l: Lang) => void
   addToast: (toast: Omit<ToastItem, 'id'>) => void
   navigate: (p: Page) => void
+  activeDocument: ActiveDocument | null
+  setActiveDocument: (doc: ActiveDocument | null) => void
 }
 export const AppContext = createContext<AppCtx>({
   lang: 'english', setLang: () => {}, addToast: () => {}, navigate: () => {},
+  activeDocument: null, setActiveDocument: () => {},
 })
 export const useApp = () => useContext(AppContext)
 
@@ -29,13 +40,15 @@ const navItems: [Page, string][] = [
   ['home', 'Home'],
   ['chat', 'Legal help'],
   ['upload', 'Document analysis'],
+  ['toolkit', 'Toolkit'],
   ['procedures', 'Procedure guides'],
+  ['vault', 'Document vault'],
   ['about', 'About'],
 ]
 
 const tamilNav: Record<string, string> = {
-  'Home': 'முகப்பு', 'Legal help': 'சட்ட உதவி', 'Document analysis': 'ஆவண வாசிப்பு',
-  'Procedure guides': 'வழிகாட்டிகள்', 'About': 'எங்களைப் பற்றி',
+  'Home': 'முகப்பு', 'Legal help': 'சட்ட உதவி', 'Document analysis': 'ஆவண வாசிப்பு', 'Toolkit': 'கருவிகள்',
+  'Procedure guides': 'வழிகாட்டிகள்', 'Document vault': 'ஆவண பெட்டகம்', 'About': 'எங்களைப் பற்றி',
 }
 
 function PageWrapper({ children }: { children: React.ReactNode }) {
@@ -53,6 +66,7 @@ export default function App() {
   const [loading, setLoading] = useState(true)
   const [lang, setLang] = useState<Lang>('english')
   const [isOnline, setIsOnline] = useState(navigator.onLine)
+  const [activeDocument, setActiveDocument] = useState<ActiveDocument | null>(null)
 
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 1800)
@@ -79,7 +93,7 @@ export default function App() {
   if (loading) return <LoadingSplash />
 
   return (
-    <AppContext.Provider value={{ lang, setLang, addToast, navigate }}>
+    <AppContext.Provider value={{ lang, setLang, addToast, navigate, activeDocument, setActiveDocument }}>
       <main className="min-h-screen bg-[#f4f1e9] text-[#193426] selection:bg-[#e6ad36]">
         <div
           className="pointer-events-none fixed inset-0 opacity-[.26]"
@@ -99,9 +113,24 @@ export default function App() {
         {/* Top Header — exact match to supplied design */}
         <header className="relative z-20 border-b border-[#d2d7cd] bg-[#f4f1e9]/90 backdrop-blur sticky top-0">
           <div className="mx-auto flex h-[74px] max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-14">
-            <button onClick={() => navigate('home')} className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-[#193d2c] text-[#f6f1e6]">✦</span>
-              <span className="font-['DM_Sans'] text-lg font-bold tracking-[-.05em]">CivicAid</span>
+            <button onClick={() => navigate('home')} className="flex items-center gap-2.5">
+              {/* Inline SVG logo — no background box, matches page colour */}
+              <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34 8.5A17 17 0 1 0 34 31.5" stroke="#193d2c" strokeWidth="3.2" strokeLinecap="round"/>
+                <circle cx="20" cy="10" r="2" fill="#193d2c"/>
+                <line x1="20" y1="12" x2="20" y2="28" stroke="#193d2c" strokeWidth="1.8" strokeLinecap="round"/>
+                <line x1="12" y1="16" x2="28" y2="16" stroke="#193d2c" strokeWidth="1.8" strokeLinecap="round"/>
+                <line x1="13" y1="16" x2="11" y2="22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round"/>
+                <line x1="13" y1="16" x2="15" y2="22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round"/>
+                <line x1="27" y1="16" x2="25" y2="22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round"/>
+                <line x1="27" y1="16" x2="29" y2="22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round"/>
+                <path d="M10 22 Q13 25.5 16 22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+                <path d="M24 22 Q27 25.5 30 22" stroke="#193d2c" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+                <line x1="17" y1="28" x2="23" y2="28" stroke="#193d2c" strokeWidth="1.6" strokeLinecap="round"/>
+              </svg>
+              <span style={{ fontFamily: 'DM Sans', fontWeight: 700, fontSize: 18, letterSpacing: '-0.03em' }}>
+                <span style={{ color: '#193d2c' }}>Civic</span><span style={{ color: '#2d7a52' }}>Aid</span>
+              </span>
             </button>
 
             <nav className="hidden items-center gap-5 lg:flex">
@@ -148,30 +177,23 @@ export default function App() {
           )}
         </header>
 
-        {/* Status strip */}
-        <div className="relative z-10 border-b border-[#dfe3da] bg-[#e7ede3] px-5 py-2 md:px-10 lg:px-14">
-          <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 font-['DM_Mono'] text-[9px] uppercase tracking-[.12em] text-[#507050]">
-            <span className="flex items-center gap-2">
-              <i className="h-1.5 w-1.5 rounded-full bg-[#4e8b4e] inline-block" />
-              Answers are drawn from a curated Tamil Nadu legal knowledge base — unverified sources are marked
-            </span>
-            
-          </div>
-        </div>
+
 
         {/* Page content */}
         <PageWrapper>
           {activePage === 'home' && <HomePage />}
           {activePage === 'chat' && <ChatPage />}
           {activePage === 'upload' && <DocumentUploadPage />}
+          {activePage === 'toolkit' && <ToolkitPage />}
           {activePage === 'procedures' && <ProceduresPage />}
+          {activePage === 'vault' && <VaultPage />}
           {activePage === 'about' && <AboutPage />}
         </PageWrapper>
 
         {/* Footer — exact match to supplied design */}
         <footer className="relative z-10 border-t border-[#d2d7cd] px-5 py-7 font-['DM_Sans'] text-xs text-[#667066] md:px-10 lg:px-14">
           <div className="mx-auto flex max-w-[1440px] flex-wrap justify-between gap-3">
-            <span>© 2025 CivicAid</span>
+            <span>© 2026 CivicAid</span>
             <button onClick={() => navigate('about')} className="font-semibold text-[#31583d] underline underline-offset-4">
               Share feedback ↗
             </button>
