@@ -215,4 +215,4 @@ CivicAid is not a law firm and does not provide legal advice. All information is
 
 ---
 
-*Final Year AIML Project — Tamil Nadu · 2024–2025*
+
